@@ -234,6 +234,11 @@ p {
     display: none;
 }
 
+.gif-under-construction {
+    height: 75%;
+    width : 75%;
+}
+
 .list-group-item {
     background: #2c3e50;
     border    : none;
