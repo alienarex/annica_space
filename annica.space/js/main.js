@@ -20,17 +20,17 @@ jQuery(document).ready(function( $ ) {
 
   // JavaScript Chart
   var doughnutData = [{
-      value: 70,
+      value: 50,
       color: "#1abc9c"
     },
     {
-      value: 30,
+      value: 50,
       color: "#ecf0f1"
     }
   ];
   var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
 
-  // Bootstrap Chart
+  // .NET Chart
   var doughnutData = [{
     value: 90,
     color: "#1abc9c"
@@ -40,7 +40,7 @@ jQuery(document).ready(function( $ ) {
     color: "#ecf0f1"
   }
   ];
-  var myDoughnut = new Chart(document.getElementById("bootstrap").getContext("2d")).Doughnut(doughnutData);
+  var myDoughnut = new Chart(document.getElementById(".NET").getContext("2d")).Doughnut(doughnutData);
 
   // WordPress Chart
   var doughnutData = [{

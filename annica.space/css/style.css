@@ -230,7 +230,15 @@ p {
     color         : white;
 }
 
+.list-group-item {
+    background: #2c3e50;
+    border    : none;
+    text-align: left;
+    padding: 0%;
+}
+
 #skillswrap h5,
+h3,
 p {
     color: white;
 }
