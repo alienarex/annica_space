@@ -1,10 +1,10 @@
 body {
-    background-color          : #f2f2f2;
-    font-family               : "Lato";
-    font-weight               : 300;
-    font-size                 : 16px;
-    color                     : #555;
-    -webkit-font-smoothing    : antialiased;
+    background-color: #f2f2f2;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+    -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -19,57 +19,96 @@ h5,
 h6 {
     font-family: "Raleway";
     font-weight: 300;
-    color      : #333;
+    color: #333;
+}
+
+#education h2,
+h3,
+h4 {
+    color: #111;
+}
+
+#work h2,
+h3,
+h4 {
+    color: #111;
 }
 
 
 /* Paragraph & Typographic */
 
 p {
-    line-height  : 28px;
+    line-height: 28px;
     margin-bottom: 25px;
+}
+
+.edu-item {
+    margin-top: 20%;
+    margin-bottom: 0;
+    margin-left: 20%;
+    font-size: 12px;
+}
+
+.edu-year {
+    margin-left: 20%;
+    font-size: 12px;
 }
 
 .centered {
     text-align: center;
 }
 
+.quote-paragraph {
+    max-width: 23%;
+    max-height: 50%;
+    margin: auto;
+    font-style: italic;
+}
+
+.hidden-item {
+    display: none;
+}
+
 
 /* Links */
 
+.edu-item a {
+    color: #000;
+}
+
 a {
-    color             : #1abc9c;
-    word-wrap         : break-word;
+    color: #1abc9c;
+    word-wrap: break-word;
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -moz-transition   : color 0.1s ease-in, background 0.1s ease-in;
-    -ms-transition    : color 0.1s ease-in, background 0.1s ease-in;
-    -o-transition     : color 0.1s ease-in, background 0.1s ease-in;
-    transition        : color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
 a:hover,
 a:focus {
-    color          : #7b7b7b;
+    color: #7b7b7b;
     text-decoration: none;
-    outline        : 0;
+    outline: 0;
 }
 
 a:before,
 a:after {
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -moz-transition   : color 0.1s ease-in, background 0.1s ease-in;
-    -ms-transition    : color 0.1s ease-in, background 0.1s ease-in;
-    -o-transition     : color 0.1s ease-in, background 0.1s ease-in;
-    transition        : color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
 hr {
-    display   : block;
-    height    : 1px;
-    border    : 0;
+    display: block;
+    height: 1px;
+    border: 0;
     border-top: 1px solid #ccc;
-    margin    : 1em 0;
-    padding   : 0;
+    margin: 1em 0;
+    padding: 0;
 }
 
 
@@ -79,12 +118,12 @@ hr {
 
 #section-topbar {
     position: fixed;
-    top     : 0;
-    left    : 0;
-    right   : 0;
-    z-index : 10000;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
     overflow: visible;
-    font    : normal 16px/24px 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: normal 16px/24px 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #section-topbar a {
@@ -92,9 +131,9 @@ hr {
 }
 
 #topbar-inner {
-    background : #111;
+    background: #222;
     line-height: 0;
-    text-align : center;
+    text-align: center;
 }
 
 
@@ -105,54 +144,38 @@ By default, top navigation bar uses "fixed" position
 */
 
 #section-topbar ul#nav {
-    display     : inline-block;
-    position    : relative;
-    margin      : 0;
-    padding     : 0;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
     border-right: 1px solid #222;
     /* For IE, the outcast */
-    zoom        : 1;
-    *display    : inline;
+    zoom: 1;
+    *display: inline;
 }
 
 #section-topbar ul#nav>li {
     display: block;
-    float  : left;
+    float: left;
     padding: 0;
 }
 
 #section-topbar ul#nav a {
-    display        : block;
-    font           : normal 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: block;
+    font: normal 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-decoration: none;
-    padding        : 18px 20px 18px 20px;
-    border-left    : 1px solid #222;
+    padding: 18px 20px 18px 20px;
+    border-left: 1px solid #222;
 }
-
-/* #section-topbar ul#nav a:focus {
-    background     : #44bbaa;
-    text-decoration: none;
-    border-left    : 1px solid #111;
-} */
-
-/* #section-topbar ul#nav a:hover {
-    background: #4a5c59;
-}
-
-#section-topbar ul#nav .active a,
-#section-topbar ul#nav .active a:hover {
-    background: #90d1c7;
-} */
-
 
 #section-topbar ul#nav a:hover {
-    background     : #44bbaa;
+    background: #44bbaa;
     text-decoration: none;
-    border-left    : 1px solid #111;
+    border-left: 1px solid #111;
 }
 
 #section-topbar ul#nav .active a {
-    background : #2f6e65;
+    background: #2f6e65;
     border-left: 1px solid #111;
 }
 
@@ -173,93 +196,102 @@ SECTION WRAPS
 /* Header Wrap */
 
 #headerwrap {
-    background             : url(../img/02.jpg) no-repeat center top;
-    margin-top             : 60px;
-    padding-top            : 140px;
-    text-align             : center;
-    background-attachment  : relative;
-    background-position    : center center;
-    min-height             : 500px;
-    width                  : 100%;
+    background: url(../img/02.jpg) no-repeat center top;
+    margin-top: 60px;
+    padding-top: 140px;
+    text-align: center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 300px;
+    width: 100%;
     -webkit-background-size: 100%;
-    -moz-background-size   : 100%;
-    -o-background-size     : 100%;
-    background-size        : 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
     -webkit-background-size: cover;
-    -moz-background-size   : cover;
-    -o-background-size     : cover;
-    background-size        : cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #headerwrap h1 {
     font-size: 80px;
-    color    : white;
+    color: white;
 }
 
 #headerwrap h3 {
     font-size: 20px;
-    color    : white;
 }
 
 
 /* Intnro Wrap */
 
 #intro {
-    background    : #2c3e50;
-    padding-top   : 60px;
+    background: #2c3e50;
+    padding-top: 60px;
     padding-bottom: 60px;
-    color         : white;
+    color: white;
 }
 
 #intro h5,
+h2,
 p {
     color: white;
 }
 
 #intro i {
-    color         : white;
-    font-size     : 20px;
-    padding-right : 8px;
+    color: white;
+    font-size: 20px;
+    padding-right: 8px;
     vertical-align: middle;
 }
 
-#skillswrap {
-    background    : #2c3e50;
-    padding-top   : 60px;
-    padding-bottom: 60px;
-    color         : white;
-}
-.quote-paragraph{
-    max-width: 23%;
-    max-height: 50%;
-    margin: auto;
-    font-style: italic;
-}
-.hiddenitem {
-    display: none;
+
+/*Education*/
+
+#education {
+    color: #111;
 }
 
-.gif-under-construction {
-    height: 75%;
-    width : 75%;
+
+/*Work*/
+
+#work {
+    color: #111;
+}
+
+
+/*Skill*/
+
+#skillswrap {
+    background: #2c3e50;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color: #fff;
+}
+
+#skillswrap h3,
+h5 {
+    color: #fff;
+}
+
+
+/*Projects*/
+
+#project h2 {
+    color: #000;
 }
 
 .list-group-item {
     background: #2c3e50;
-    border    : none;
+    border: none;
     text-align: left;
-    padding   : 0%;
-}
-
-#skillswrap h5,
-h3,
-p {
-    color: white;
+    padding: 0%;
 }
 
 #footwrap {
-    background    : #2f2f2f;
-    padding-top   : 50px;
+    background: #2f2f2f;
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 
@@ -277,7 +309,7 @@ p {
 
 #footwrap i {
     padding-right: 8px;
-    color        : #1abc9c;
+    color: #1abc9c;
 }
 
 
@@ -285,10 +317,10 @@ p {
 
 #copyrights {
     background: #222222;
-    padding   : 20px 0;
+    padding: 20px 0;
     text-align: center;
-    color     : #fff;
-    font-size : 16px;
+    color: #fff;
+    font-size: 16px;
 }
 
 #copyrights p {
@@ -306,28 +338,39 @@ p {
     padding-top: 50px;
 }
 
+.divider {
+    border-bottom: #555;
+    border-width: 0.5px;
+    border-style: solid;
+}
+
 .desc p {
     color: #2f2f2f;
 }
 
-.desc t {
-    color      : #34495e;
+
+/* .desc t {
+    color: #34495e;
     font-weight: 700;
-}
+} */
 
-.desc imp {
-    padding   : 6px;
-    color     : white;
+
+/* .desc imp {
+    padding: 6px;
+    color: white;
     background: #34495e;
-}
+} */
 
+
+/* 
 .desc more {
     color: #95a5a6;
-}
+} */
 
-sm {
+
+/* sm {
     font-size: 12px;
-}
+} */
 
 
 /* Contact Form */
@@ -338,11 +381,11 @@ sm {
 
 .contact-form input,
 .contact-form textarea {
-    padding      : 10px 12px;
+    padding: 10px 12px;
     border-radius: 0;
-    box-shadow   : none;
-    font-size    : 14px;
-    height       : auto;
+    box-shadow: none;
+    font-size: 14px;
+    height: auto;
 }
 
 .contact-form .form-send {
@@ -351,11 +394,11 @@ sm {
 
 .contact-form .form-send button {
     background: #44bbaa;
-    border    : 0;
-    padding   : 10px 30px;
-    color     : #fff;
+    border: 0;
+    padding: 10px 30px;
+    color: #fff;
     transition: 0.4s;
-    cursor    : pointer;
+    cursor: pointer;
 }
 
 .contact-form .form-send button:hover {
@@ -363,74 +406,72 @@ sm {
 }
 
 .contact-form .validate {
-    display    : none;
-    color      : red;
-    margin     : 0 0 15px 0;
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
     font-weight: 400;
-    font-size  : 13px;
+    font-size: 13px;
 }
 
 .contact-form .loading {
-    display   : none;
-    color     : #555;
+    display: none;
+    color: #555;
     background: #fff;
     text-align: center;
-    padding   : 15px;
-    margin    : 15px 0;
+    padding: 15px;
+    margin: 15px 0;
 }
 
 .contact-form .loading:before {
-    content          : "";
-    display          : inline-block;
-    border-radius    : 50%;
-    width            : 24px;
-    height           : 24px;
-    border           : 3px solid #18d26e;
-    border-top-color : #eee;
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #18d26e;
+    border-top-color: #eee;
     -webkit-animation: animate-loading 1s linear infinite;
-    animation        : animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
 }
 
 @-webkit-keyframes animate-loading {
     0% {
         -webkit-transform: rotate(0deg);
-        transform        : rotate(0deg);
+        transform: rotate(0deg);
     }
-
     100% {
         -webkit-transform: rotate(360deg);
-        transform        : rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
 @keyframes animate-loading {
     0% {
         -webkit-transform: rotate(0deg);
-        transform        : rotate(0deg);
+        transform: rotate(0deg);
     }
-
     100% {
         -webkit-transform: rotate(360deg);
-        transform        : rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
 .contact-form .error-message {
-    display    : none;
-    color      : #fff;
-    background : #ed3c0d;
-    text-align : center;
-    padding    : 15px;
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: center;
+    padding: 15px;
     font-weight: 600;
-    margin     : 15px 0;
+    margin: 15px 0;
 }
 
 .contact-form .sent-message {
-    display    : none;
-    color      : #fff;
-    background : #18d26e;
-    text-align : center;
-    padding    : 15px;
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
     font-weight: 600;
-    margin     : 15px 0;
+    margin: 15px 0;
 }
