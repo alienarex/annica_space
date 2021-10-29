@@ -229,7 +229,12 @@ p {
     padding-bottom: 60px;
     color         : white;
 }
-
+.quote-paragraph{
+    max-width: 23%;
+    max-height: 50%;
+    margin: auto;
+    font-style: italic;
+}
 .hiddenitem {
     display: none;
 }
