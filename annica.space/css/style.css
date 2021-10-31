@@ -179,9 +179,11 @@ By default, top navigation bar uses "fixed" position
     border-left: 1px solid #111;
 }
 
+
+/*
 #section-topbar ul#nav .active a:hover {
     background: #2f6e65;
-}
+} */
 
 #section-topbar i {
     font-size: 25px;
