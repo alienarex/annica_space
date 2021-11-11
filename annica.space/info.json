@@ -1,0 +1,54 @@
+{
+  "name": "Annica Alienus",
+  "about": " rem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has  been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Jag får väl erkänna att jag är en mångsysslare, jag har jobbat inom vården, ekonomi restaurang, ja, till och med på bondgård (fast det är bra längesedan nu...) för att till slut hamna på rätt plats!",
+  "educations": [
+    {
+      "level": "University",
+      "title": ["Informatik", "Inriktining systemutveckling"],
+      "description": "Dock jäst precis söka del hwila, samma bäckasiner faktor göras ingalunda, sig varit häst tid. Sällan hela dag dock regn tid och oss icke på varit, är som ännu det att dimma är verkligen denna dunge, brunsås vi räv och därmed både dimma kunde samtidigt. Gamla både söka dag på rot sorgliga sig, blivit är tid helt söka tidigare både gamla, där om miljoner blev vad kom. Lax stora åker ta äng plats och dunge björnbär och, nu sista själv nya ser kom gör tiden både, dunge vi bland själv hans se tiden dag. Trevnadens varit räv så helt när som, dock sorgliga att samtidigt olika.",
+      "organisation": "Mittuniversitetet",
+      "city": "Östersund",
+      "date": "2017-2021"
+    },
+    {
+      "level": "Gymnasium",
+      "title": ["Ekonomiassistent", ""],
+      "description": "Dock jäst precis söka del hwila, samma bäckasiner faktor göras ingalunda, sig varit häst tid. Sällan hela dag dock regn tid och oss icke på varit, är som ännu det att dimma är verkligen denna dunge, brunsås vi räv och därmed både dimma kunde samtidigt.\n                            Gamla både söka dag på rot sorgliga sig, blivit är tid helt söka tidigare både gamla, där om miljoner blev vad kom. Lax stora åker ta äng plats och dunge björnbär och, nu sista själv nya ser kom gör tiden både, dunge vi bland\n                            själv hans se tiden dag. Trevnadens varit räv så helt när som, dock sorgliga att samtidigt olika, ",
+      "organisation": "Lernia",
+      "city": "Göteborg",
+      "date": "2008-2009"
+    },
+    {
+      "level": "Gymnasium",
+      "title": ["Vård och omsorg", "Inriktning geriatrik"],
+      "description": "Dock jäst precis söka del hwila, samma bäckasiner faktor göras ingalunda, sig varit häst tid. Sällan hela dag dock regn tid och oss icke på varit, är som ännu det att dimma är verkligen denna dunge, brunsås vi räv och därmed både dimma kunde samtidigt.\n                            Gamla både söka dag på rot sorgliga sig, blivit är tid helt söka tidigare både gamla, där om miljoner blev vad kom. Lax stora åker ta äng plats och dunge björnbär och, nu sista själv nya ser kom gör tiden både, dunge vi bland\n                            själv hans se tiden dag. Trevnadens varit räv så helt när som, dock sorgliga att samtidigt olika, ",
+      "organisation": "Lernia",
+      "city": "Göteborg",
+      "date": "2001-2002"
+    }
+  ],
+  "workExperience": [
+    {
+      "title": ["IT - konsult", "AstraZeneca "],
+      "description": "Dock jäst precis söka del hwila, samma bäckasiner faktor göras ingalunda, sig varit häst tid. Sällan hela dag dock regn tid och oss icke på varit, är som ännu det att dimma är verkligen denna dunge, brunsås vi räv och därmed både dimma kunde samtidigt.\n                            Gamla både söka dag på rot sorgliga sig, blivit är tid helt söka tidigare både gamla, där om miljoner blev vad kom. Lax stora åker ta äng plats och dunge björnbär och, nu sista själv nya ser kom gör tiden både, dunge vi bland\n                            själv hans se tiden dag. Trevnadens varit räv så helt när som, dock sorgliga att samtidigt olika, ",
+      "organisation": "Randstad",
+      "city": "Göteborg",
+      "date": "juni 2019- dec 2019"
+    },
+
+    {
+      "title": ["Undersköterska", ""],
+      "description": "Dock jäst precis söka del hwila, samma bäckasiner faktor göras ingalunda, sig varit häst tid. Sällan hela dag dock regn tid och oss icke på varit, är som ännu det att dimma är verkligen denna dunge, brunsås vi räv och därmed både dimma kunde samtidigt.\n                            Gamla både söka dag på rot sorgliga sig, blivit är tid helt söka tidigare både gamla, där om miljoner blev vad kom. Lax stora åker ta äng plats och dunge björnbär och, nu sista själv nya ser kom gör tiden både, dunge vi bland\n                            själv hans se tiden dag. Trevnadens varit räv så helt när som, dock sorgliga att samtidigt olika, ",
+      "organisation": "Göteborgs stad",
+      "city": "Göteborg",
+      "date": "2000"
+    },
+    {
+      "title": ["Dummie data Title", "Dummie data Title 2"],
+      "description": "Dock jäst precis söka del hwila, samma bäckasiner faktor göras ingalunda, sig varit häst tid. Sällan hela dag dock regn tid och oss icke på varit, är som ännu det att dimma är verkligen denna dunge, brunsås vi räv och därmed både dimma kunde samtidigt.\n                            Gamla både söka dag på rot sorgliga sig, blivit är tid helt söka tidigare både gamla, där om miljoner blev vad kom. Lax stora åker ta äng plats och dunge björnbär och, nu sista själv nya ser kom gör tiden både, dunge vi bland\n                            själv hans se tiden dag. Trevnadens varit räv så helt när som, dock sorgliga att samtidigt olika, ",
+      "organisation": "Dummiedata organisation",
+      "city": "Dummiedata city",
+      "date": "Dummiedata date"
+    }
+  ]
+}
