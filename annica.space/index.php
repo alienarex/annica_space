@@ -113,44 +113,10 @@
     $setClassSecondArticle = 'col-lg-6 col-lg-offset-3';
     $isFirstArticle = true;
 
-    get_html_section_intro($personName, $splitStr[0], $splitStr[1]);
-
+    get_html_section_intro($personName, $personAbout, $splitOnNum);
+    get_html_start_section_for_articles_cv($attributeWork, $attributeWork, $headWork);
     // HTML strings
-    $htmlStartSectionIntro = '
-    <section id="intro" name="intro">
-        <div id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-2 col-lg-offset-1">
-                        <h2>%s</h2>
-                    </div>
-                    <div class="col-lg-6">
-                        <p class="visible-item">%s ...</p>
-                        <p class="hidden-item">
-                            %s
-                        </p>
-                    </div>
-                    <div class="col-lg-3">
-                        <p>
-                            <!-- <a href="#"><i class="icon-file"></i></a>
-                            <sm>DOWNLOAD PDF</sm> -->
-                        </p>
-                    </div>
-                </div>
-                <!--/.row -->
-            </div>
-            <!--/.container -->
-        </div>
-            <!--/ #intro -->
-    </section>';
-    echo sprintf($htmlStartSectionIntro, $personName, $splitStr[0], $splitStr[1]);
-    $htmlStartSection = '
-    <section id="%s" name="%s" class="divider">
-        <div class="container desc ">
-            <div class="row ">
-                <div class="col-lg-2 col-lg-offset-1">
-                    <h2>%s</h2>
-                </div>';
+
     $htmlEndSection = '
             </div>
             <!--/.row -->
@@ -170,29 +136,20 @@
                     </div>
                 </article>';
 
-
-    echo sprintf(
-        $htmlStartSection,
-        $attributeWork,
-        $attributeWork,
-        $headWork
-    );
     foreach ($array["workExperience"] as $value) {
         $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
-        echo  sprintf($htmlArticle, $className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
+        get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
 
         $isFirstArticle = false;
     }
     echo $htmlEndSection;
+    get_html_start_section_for_articles_cv($attributeEdu, $attributeEdu, $headEdu);
 
-    echo sprintf($htmlStartSection, $attributeEdu, $attributeEdu, $headEdu);
     $isFirstArticle = true;
     foreach ($array["educations"] as $value) {
 
         $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
-
-        echo  sprintf($htmlArticle, $className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
-
+        get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
         $isFirstArticle = false;
     }
     echo $htmlEndSection;
