@@ -83,23 +83,51 @@
     </div>
     <!--/.#headerwrap -->
 
-    <section id="about" name="about">
-        <div id="intro">
+    <?php
+    include 'php/main.php';
+    function split_on($string, $num)
+    {
+        $output[0] = substr($string, 0, $num);
+        $output[1] = substr($string, 0);
+        return $output;
+    }
+    $sectionIntro = '';
+
+    // Get the contents of the JSON file 
+    $strJsonFileContents = file_get_contents("C:\Users\annic\OneDrive\Dokument\Code\Projects\annica_space\annica.space\info.json");
+    // Convert to array 
+    $array = json_decode($strJsonFileContents, true);
+
+    // Variables
+    $headWork = 'Arbete';
+    $headEdu = 'Utbildning';
+    $attributeWork = 'work';
+    $attributeEdu = 'education';
+    $personName = $array["name"];
+    $personAbout = $array["about"];
+    $splitOnNum = 300;
+    $splitStr = split_on($personAbout, $splitOnNum);
+
+    // bootstrap classes differ between first and second article.
+    $setClassFirstArticle = 'col-lg-6';
+    $setClassSecondArticle = 'col-lg-6 col-lg-offset-3';
+    $isFirstArticle = true;
+
+    get_html_section_intro($personName, $splitStr[0], $splitStr[1]);
+
+    // HTML strings
+    $htmlStartSectionIntro = '
+    <section id="intro" name="intro">
+        <div id="about">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-2 col-lg-offset-1">
-                        <h2>Annica Alienus</h2>
+                        <h2>%s</h2>
                     </div>
                     <div class="col-lg-6">
-                        <p class="visible-item">
-                            rem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book
-                        </p>
+                        <p class="visible-item">%s ...</p>
                         <p class="hidden-item">
-                            Jag får väl erkänna att jag är en mångsysslare, jag har jobbat inom vården, ekonomi,
-                            restaurang, ja, till och med på bondgård (fast det är bra längesedan nu...) för att till
-                            slut hamna på rätt plats!
+                            %s
                         </p>
                     </div>
                     <div class="col-lg-3">
@@ -113,26 +141,9 @@
             </div>
             <!--/.container -->
         </div>
-        <!--/ #intro -->
-    </section>
-    <?php
-    // Get the contents of the JSON file 
-    $strJsonFileContents = file_get_contents("C:\Users\annic\OneDrive\Dokument\Code\Projects\annica_space\annica.space\info.json");
-    // Convert to array 
-    $array = json_decode($strJsonFileContents, true);
-
-    // Variables
-    $headWork = 'Arbete';
-    $headEdu = 'Utbildning';
-    $attributeWork = 'work';
-    $attributeEducation = 'education';
-
-    // bootstrap classes differ between first and second article.
-    $setClassFirstArticle = 'col-lg-6';
-    $setClassSecondArticle = 'col-lg-6 col-lg-offset-3';
-    $isFirstArticle = true;
-
-    // HTML strings
+            <!--/ #intro -->
+    </section>';
+    echo sprintf($htmlStartSectionIntro, $personName, $splitStr[0], $splitStr[1]);
     $htmlStartSection = '
     <section id="%s" name="%s" class="divider">
         <div class="container desc ">
@@ -174,7 +185,7 @@
     }
     echo $htmlEndSection;
 
-    echo sprintf($htmlStartSection, $attributeEducation, $attributeEducation, $headEdu);
+    echo sprintf($htmlStartSection, $attributeEdu, $attributeEdu, $headEdu);
     $isFirstArticle = true;
     foreach ($array["educations"] as $value) {
 
