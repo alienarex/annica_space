@@ -62,11 +62,12 @@ p {
   margin: auto;
   font-style: italic;
 }
-
+.visible-text {
+  margin-bottom: 0%;
+}
 .hidden-item {
   display: none;
 }
-
 /* Links */
 
 .edu-item a {
@@ -235,7 +236,6 @@ h2,
 p {
   color: white;
 }
-
 #intro i {
   color: white;
   font-size: 20px;
