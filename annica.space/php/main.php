@@ -1,6 +1,8 @@
 <?php
 function get_html_section_intro(string $name, string $strAbout, int $splitStrAboutOn)
 {
+    $addOneCharToOmitPeriod = 1;
+    $strPos = strpos($strAbout, '.', 198) + $addOneCharToOmitPeriod;
     echo sprintf('
     <section id="intro" name="intro">
     <div id="about">
@@ -10,10 +12,8 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
                     <h2>%s</h2>
                 </div>
                 <div class="col-lg-6">
-                    <p class="visible-item">%s ...</p>
-                    <p class="hidden-item">
-                        %s
-                    </p>
+                    <p class = "visible-text">%s</p><p id = "visible-item-id" class="visible-item"></p>
+                    <p class="hidden-item">%s</p>
                 </div>
                 <div class="col-lg-3">
                     <p>
@@ -27,7 +27,7 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
         <!--/.container -->
     </div>
         <!--/ #intro -->
-</section>', $name, substr($strAbout, 0, $splitStrAboutOn), substr($strAbout, 0));
+</section>', $name, substr($strAbout, 0, $strPos), substr($strAbout, $strPos));
 }
 
 function get_html_start_section_for_articles_cv(string $sectionId, string $sectionName = null, string $headValue)
