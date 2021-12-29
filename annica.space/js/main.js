@@ -1,7 +1,4 @@
 jQuery(document).ready(function ($) {
-  // Set initial content to the p controlling show/hide more content
-  document.getElementById("visible-item-id").innerHTML = "Visa mer ...";
-
   // Smooth scroll for the menu and links with .scrollto classes
   $(".smothscroll").on(
     "click",
@@ -29,14 +26,14 @@ jQuery(document).ready(function ($) {
       //getting the next element
       $content = $header.next();
       //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-      $content.slideToggle(400, function () {
-        //execute this after slideToggle is done
-        //change text of header based on visibility of content div
-        $header.text(function () {
-          //change text based on condition
-          return $content.is(":visible") ? "Visa mindre" : "Visa mer ...";
-        });
-      });
+      $content.slideToggle(1000, function () {});
+    }),
+    $(".visible-item").hover(function () {
+      $header = $(this);
+      //getting the next element
+      $content = $header.next();
+      // Slide down content
+      $content.slideDown(1000, function () {});
     })
   );
 });

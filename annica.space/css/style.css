@@ -129,7 +129,7 @@ hr {
 }
 
 #topbar-inner {
-  background: #222;
+  background: #2c3e50;
   line-height: 0;
   text-align: center;
 }
@@ -145,7 +145,7 @@ By default, top navigation bar uses "fixed" position
   position: relative;
   margin: 0;
   padding: 0;
-  border-right: 1px solid #222;
+  border-right: 1px solid #2c3e50;
   /* For IE, the outcast */
   zoom: 1;
   *display: inline;
@@ -162,18 +162,18 @@ By default, top navigation bar uses "fixed" position
   font: normal 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
   padding: 18px 20px 18px 20px;
-  border-left: 1px solid #222;
+  border-left: 1px solid #2c3e50;
 }
 
 #section-topbar ul#nav a:hover {
   background: #44bbaa;
   text-decoration: none;
-  border-left: 1px solid #111;
+  border-left: 1px solid #2c3e50;
 }
 
 #section-topbar ul#nav .active a {
   background: #2f6e65;
-  border-left: 1px solid #111;
+  border-left: 1px solid #2c3e50;
 }
 
 /*
