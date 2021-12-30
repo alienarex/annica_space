@@ -95,7 +95,6 @@
 
     // Get the contents of the JSON file 
     $strJsonFileContents = file_get_contents("info.json");
-    echo $strJsonFileContents;
     // Convert to array 
     $array = json_decode($strJsonFileContents, true);
 
