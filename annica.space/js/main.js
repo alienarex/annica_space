@@ -1,4 +1,7 @@
 jQuery(document).ready(function ($) {
+  $(".hidden-item").hide();
+
+  document.getElementById("visible-item-id").innerText = "Visa mer...";
   // Smooth scroll for the menu and links with .scrollto classes
   $(".smothscroll").on(
     "click",
@@ -21,19 +24,17 @@ jQuery(document).ready(function ($) {
         }
       }
     },
-    $(".visible-item").click(function () {
+    $(".readmore").click(function () {
       $header = $(this);
-      //getting the next element
-      $content = $header.next();
-      //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-      $content.slideToggle(1000, function () {});
-    }),
-    $(".visible-item").hover(function () {
-      $header = $(this);
-      //getting the next element
-      $content = $header.next();
-      // Slide down content
-      $content.slideDown(1000, function () {});
+      console.log($header.next());
+
+      $(".hidden-item").slideToggle(600, function () {
+        $header.text(function () {
+          return $(this).text() == "Visa mindre"
+            ? "Visa mer..."
+            : "Visa mindre";
+        });
+      });
     })
   );
 });
