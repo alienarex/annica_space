@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="utf-8" />
     <title>Annica Alienus</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
+    <!-- <meta content="width=device-width, initial-scale=1.0" name="viewport" /> -->
+    <!-- <meta content="" name="keywords" /> -->
+    <!-- <meta content="" name="description" /> -->
 
     <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon" />
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Google Fonts -->
@@ -36,14 +35,11 @@
                             <li class="menu-item">
                                 <a class="smothscroll" href="#about" title="Om mig"><i class="fa fa-user"></i></a>
                             </li>
-                            <li class="menu-item">
-                                <a class="smothscroll" href="#education" title="Utbildning"><i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                                </a>
-                            </li>
                             <li class="menu-item"><a class="smothscroll" href="#work" title="Work"><i class="fa fa-suitcase"></i></a>
                             </li>
                             <li class="menu-item">
-                                <a class="smothscroll" href="#project" title="Project"><i class="fa fa-file-text-o"></i></a>
+                                <a class="smothscroll" href="#education" title="Utbildning"><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                </a>
                             </li>
                             <li class="menu-item"><a class="smothscroll" href="#contact" title="Contact"><i class="fa fa-envelope"></i></a>
                             </li>
@@ -156,11 +152,11 @@
 
     ?>
     <!--SKILLS DESCRIPTION -->
-    <div id="skillswrap">
+    <div id="skillswrap" class="section-wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2 col-lg-offset-1">
-                    <h3>SKILLS</h5>
+                    <h3>SKILLS</h3>
                 </div>
 
                 <div class="row">
@@ -248,107 +244,27 @@
         <!--/ #skillswrap -->
     </div>
 
-    <section id="project" name="Project">
-        <!--PORTFOLIO DESCRIPTION -->
-        <div class="container desc">
-
-            <div class="row">
-                <div class="col-lg-2 col-lg-offset-1">
-                    <h2>PORTFOLIO</h2>
-                </div>
-                <article>
-                    <div class="col-lg-6 ">
-                        <h3>
-                            webbsida </h3>
-                        <p>
-                            Och plats färdväg där flera erfarenheter kunde kom samtidigt för, groda mot bäckasiner
-                            miljoner sax färdväg händer både, sällan på dimma se mjuka bäckasiner varit sitt. År groda
-                            gör smultron som när söka hans brunsås sorgliga sin sällan miljoner är, sin
-                            ska räv gör ska på från söka dunge från händer. Bra rännil i sax dimma erfarenheter blev
-                            sitt där faktor, strand i bra sällan nu annan smultron det, vi se stig kunde göras är mot
-                            hav. Dock jäst precis söka del hwila, samma
-                            bäckasiner faktor göras ingalunda, sig varit häst tid. Sällan hela dag dock regn tid och oss
-                            icke på varit, är som ännu det att dimma är verkligen denna dunge, brunsås vi räv och därmed
-                            både dimma kunde samtidigt. Gamla både
-                            söka dag på rot sorgliga sig, blivit är tid helt söka tidigare både gamla, där om miljoner
-                            blev vad kom.
-                        </p>
-                    </div>
-                    <div class="col-lg-3">
-                        <p class="edu-item">
-                            <a href="https://annica.space">annica.space</a>
-                        </p>
-                        <p class="edu-year">
-                            2000 - 2001
-                        </p>
-                    </div>
-
-                </article>
-            </div>
-            <!--/.container -->
-        </div>
-    </section>
-
-    <section id="contact" name="contact">
+    <section id="contact" name="contact" class="section-wrapper">
         <!--FOOTER DESCRIPTION -->
         <div id="footwrap">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-2">
+                        <h3>Kontakt</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-lg-offset-2">
                         <address>
-                            <h5>Kontakt</h5>
-                    </div>
-                    <div class="col-lg-4">
-                        <p>
-                            <i class="fa fa-envelope" aria-hidden="true"><a href="mailto:annica@alienus.se"> Maila
-                                    mig!</a></i>
-                        </p>
-                        <p>
-                            <i class="fa fa-mobile" aria-hidden="true"><a href="tel:0760-290292"> Ring mig!</a></i>
-                        </p>
-                        <p style="width: 20%; height: 10%;">
-                            <a href="https://linkedin.com/in/annica-alienus"> <i> LinkedIn</i><img src="img/linkedin.svg"></img>
-                            </a>
-                        </p>
+
+                            <p class="mail-paragraph">
+                                <i class="fa fa-envelope" aria-hidden="true"><a href="mailto:annica@alienus.se"> Mail</a></i>
+                            </p>
+                            <p class="linkedin-icon">
+                                <a href="https://linkedin.com/in/annica-alienus"><img src="img/linkedin.svg"></img> LinkedIn
+                                </a>
+                            </p>
                         </address>
-                    </div>
-                    <div class="col-lg-6">
-                        <p>
-                            <sm>Kontakta mig</sm>
-                        </p>
-                        <form class="contact-form php-mail-form" role="form" action="contactform/contactform.php" method="POST">
-                            <div class="form-group">
-                                <label for="contact-name">Namn</label>
-                                <input type="name" name="name" class="form-control" id="contact-name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                <div class="validate"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="contact-email">Email</label>
-                                <input type="email" name="email" class="form-control" id="contact-email" data-rule="email" data-msg="Please enter a valid email" />
-                                <div class="validate"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="contact-subject">Ämne</label>
-                                <input type="text" name="subject" class="form-control" id="contact-subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                <div class="validate"></div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="contact-message">Meddelande</label>
-                                <textarea class="form-control" name="message" id="contact-message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
-                                <div class="validate"></div>
-                            </div>
-
-                            <div class="loading"></div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">
-                                Vi hörs snart!
-                            </div>
-
-                            <div class="form-send">
-                                <button type="submit" class="btn btn-large">Skicka</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
                 <!--/.row -->
