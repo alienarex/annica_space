@@ -148,6 +148,12 @@
         get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
         $isFirstArticle = false;
     }
+    foreach ($array["courses"] as $value) {
+
+        $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
+        get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
+        $isFirstArticle = false;
+    }
     echo $htmlEndSection;
 
     ?>
