@@ -4,7 +4,7 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
     $addOneCharToOmitPeriod = 1;
     $strPos = strpos($strAbout, '.', 198) + $addOneCharToOmitPeriod;
     echo sprintf('
-    <section id="intro" name="intro">
+    <section id="intro" name="intro" class="divider">
     <div id="about">
         <div class="container">
             <div class="row">
@@ -17,10 +17,6 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
                     <p id = "visible-item-id" class="readmore"></p>
                 </div>
                 <div class="col-lg-3">
-                    <p>
-                        <!-- <a href="#"><i class="icon-file"></i></a>
-                        <sm>DOWNLOAD PDF</sm> -->
-                    </p>
                 </div>
             </div>
             <!--/.row -->

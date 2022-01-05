@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <title>Annica Alienus</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" /> -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
 
     <!-- Favicons -->
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link rel="shortcut icon" href="img\favicon_tag.png">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Raleway:400,300,700" rel="stylesheet" />
 
     <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Libraries CSS Files -->
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
@@ -35,13 +36,13 @@
                             <li class="menu-item">
                                 <a class="smothscroll" href="#about" title="Om mig"><i class="fa fa-user"></i></a>
                             </li>
-                            <li class="menu-item"><a class="smothscroll" href="#work" title="Work"><i class="fa fa-suitcase"></i></a>
+                            <li class="menu-item"><a class="smothscroll" href="#work" title="Arbete"><i class="fa fa-suitcase"></i></a>
                             </li>
                             <li class="menu-item">
                                 <a class="smothscroll" href="#education" title="Utbildning"><i class="fa fa-graduation-cap" aria-hidden="true"></i>
                                 </a>
                             </li>
-                            <li class="menu-item"><a class="smothscroll" href="#contact" title="Contact"><i class="fa fa-envelope"></i></a>
+                            <li class="menu-item"><a class="smothscroll" href="#contact" title="Kontakt"><i class="fa fa-envelope"></i></a>
                             </li>
                         </ul>
                         <!--/ uL#nav -->
@@ -87,7 +88,6 @@
         $output[1] = substr($string, 0);
         return $output;
     }
-    $sectionIntro = '';
 
     // Get the contents of the JSON file 
     $strJsonFileContents = file_get_contents("info.json");
@@ -162,7 +162,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-2 col-lg-offset-1">
-                    <h3>SKILLS</h3>
+                    <h3>Översikt</h3>
                 </div>
 
                 <div class="row">
@@ -250,7 +250,7 @@
         <!--/ #skillswrap -->
     </div>
 
-    <section id="contact" name="contact" class="section-wrapper">
+    <section id="contact" name="contact" class="section-wrapper divider">
         <!--FOOTER DESCRIPTION -->
         <div id="footwrap">
             <div class="container">
@@ -258,19 +258,19 @@
                     <div class="col-lg-2">
                         <h3>Kontakt</h3>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-lg-offset-2">
-                        <address>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <address>
 
-                            <p class="mail-paragraph">
-                                <i class="fa fa-envelope" aria-hidden="true"><a href="mailto:annica@alienus.se"> Mail</a></i>
-                            </p>
-                            <p class="linkedin-icon">
-                                <a href="https://linkedin.com/in/annica-alienus"><img src="img/linkedin.svg"></img> LinkedIn
-                                </a>
-                            </p>
-                        </address>
+                                <p class="mail-paragraph">
+                                    <i class="fa fa-envelope" aria-hidden="true"><a href="mailto:annica@alienus.se"> Mail</a></i>
+                                </p>
+                                <p class="linkedin-icon">
+                                    <a href="https://linkedin.com/in/annica-alienus"><img src="img/linkedin.svg"></img> LinkedIn
+                                    </a>
+                                </p>
+                            </address>
+                        </div>
                     </div>
                 </div>
                 <!--/.row -->
