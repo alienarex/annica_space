@@ -104,7 +104,7 @@
     $splitStr = split_on($personAbout, $splitOnNum);
 
     // bootstrap classes differ between first and second article.
-    $setClassFirstArticle = 'col-lg-6 first-article';
+    $setClassFirstArticle = 'col-lg-6';
     $setClassSecondArticle = 'col-lg-6 col-lg-offset-3';
     $isFirstArticle = true;
 

@@ -64,9 +64,6 @@ p {
 .visible-text {
   margin-bottom: 0%;
 }
-.first-article {
-  margin-top: 2%;
-}
 /* Links */
 
 a {
@@ -223,13 +220,6 @@ SECTION WRAPS
   padding-bottom: 60px;
   margin: auto;
   color: #fff;
-}
-
-.list-group-item {
-  background: #2c3e50;
-  border: none;
-  text-align: left;
-  padding: 0%;
 }
 
 /*Footer*/
