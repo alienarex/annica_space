@@ -1,5 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2b7;
   font-family: "Lato";
   font-weight: 300;
   font-size: 16px;
@@ -18,26 +22,20 @@ h5,
 h6 {
   font-family: "Raleway";
   font-weight: 300;
-  color: #333;
 }
-
-#education h2,
-h3,
-h4 {
-  color: #111;
-}
-
-#work h2,
-h3,
-h4 {
-  color: #111;
-}
-
 /* Paragraph & Typographic */
 
 p {
   line-height: 28px;
   margin-bottom: 25px;
+}
+.readmore {
+  cursor: pointer;
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 110%;
 }
 
 .edu-item {
@@ -61,16 +59,15 @@ p {
   max-height: 50%;
   margin: auto;
   font-style: italic;
+  color: #fff;
 }
 .visible-text {
   margin-bottom: 0%;
 }
-
-/* Links */
-
-.edu-item a {
-  color: #000;
+.first-article {
+  margin-top: 2%;
 }
+/* Links */
 
 a {
   color: #fff;
@@ -122,10 +119,6 @@ hr {
     sans-serif;
 }
 
-/* #section-topbar a {
-  color: #fff;
-} */
-
 #topbar-inner {
   background: #2c3e50;
   line-height: 0;
@@ -144,9 +137,6 @@ By default, top navigation bar uses "fixed" position
   margin: 0;
   padding: 0;
   border-right: 1px solid #2c3e50;
-  /* For IE, the outcast */
-  zoom: 1;
-  *display: inline;
 }
 
 #section-topbar ul#nav > li {
@@ -174,11 +164,6 @@ By default, top navigation bar uses "fixed" position
   border-left: 1px solid #2c3e50;
 }
 
-/*
-#section-topbar ul#nav .active a:hover {
-    background: #2f6e65;
-} */
-
 #section-topbar i {
   font-size: 25px;
 }
@@ -187,9 +172,6 @@ By default, top navigation bar uses "fixed" position
 SECTION WRAPS
 ---------------------------------------------------*/
 
-#test h2 {
-  color: #000;
-}
 /* Header Wrap */
 
 #headerwrap {
@@ -213,7 +195,6 @@ SECTION WRAPS
 
 #headerwrap h1 {
   font-size: 80px;
-  color: white;
 }
 
 #headerwrap h3 {
@@ -224,34 +205,14 @@ SECTION WRAPS
 
 #intro {
   background: #2c3e50;
+  min-height: 400px;
+  /* margin-bottom: 20%; */
+  color: #fff;
+}
+
+#about {
   padding-top: 60px;
   padding-bottom: 60px;
-  min-height: 200px;
-  color: white;
-}
-
-#intro h5,
-h2,
-p {
-  color: white;
-}
-#intro i {
-  color: white;
-  font-size: 20px;
-  padding-right: 8px;
-  vertical-align: middle;
-}
-
-/*Education*/
-
-#education {
-  color: #111;
-}
-
-/*Work*/
-
-#work {
-  color: #111;
 }
 
 /*Skill*/
@@ -260,18 +221,8 @@ p {
   background: #2c3e50;
   padding-top: 60px;
   padding-bottom: 60px;
+  margin: auto;
   color: #fff;
-}
-
-.section-wrapper h3,
-h5 {
-  color: #fff;
-}
-
-/*Projects*/
-
-#project h2 {
-  color: #000;
 }
 
 .list-group-item {
@@ -287,44 +238,10 @@ h5 {
   background: #2f2f2f;
   padding-top: 60px;
   padding-bottom: 60px;
-}
-
-#footwrap p {
-  color: white;
-}
-
-#footwrap t {
-  font-weight: 700;
-}
-
-#footwrap i {
-  padding-right: 8px;
-  color: #1abc9c;
-}
-
-/* Copyright Wrap */
-
-#copyrights {
-  background: #222222;
-  padding: 20px 0;
-  text-align: center;
   color: #fff;
-  font-size: 16px;
-}
-
-#copyrights p {
-  margin: 0 0 5px 0;
-}
-
-.credits {
-  color: #999;
 }
 
 /* Global Values */
-
-.desc {
-  padding-top: 50px;
-}
 
 .divider {
   border-bottom: #555;
@@ -338,26 +255,6 @@ h5 {
 .desc p {
   color: #2f2f2f;
 }
-
-/* .desc t {
-    color: #34495e;
-    font-weight: 700;
-} */
-
-/* .desc imp {
-    padding: 6px;
-    color: white;
-    background: #34495e;
-} */
-
-/* 
-.desc more {
-    color: #95a5a6;
-} */
-
-/* sm {
-    font-size: 12px;
-} */
 
 /* Contact Form */
 

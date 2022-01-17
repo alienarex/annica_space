@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="utf-8" />
@@ -9,7 +9,7 @@
     <meta content="" name="description" />
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="img\favicon_tag.png">
+    <link rel="shortcut icon" href="img/favicon_tag.png">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Raleway:400,300,700" rel="stylesheet" />
@@ -70,7 +70,6 @@
                         Programming isn't about what you know; it's about what you can figure out.
                         <br /> - Chris Pine
                     </p>
-                    <!-- <a href="mailto:annica@alienus.se"> Maila mig </a> -->
                 </div>
                 <!--/.col-lg-12 -->
             </div>
@@ -105,33 +104,23 @@
     $splitStr = split_on($personAbout, $splitOnNum);
 
     // bootstrap classes differ between first and second article.
-    $setClassFirstArticle = 'col-lg-6';
+    $setClassFirstArticle = 'col-lg-6 first-article';
     $setClassSecondArticle = 'col-lg-6 col-lg-offset-3';
     $isFirstArticle = true;
 
     get_html_section_intro($personName, $personAbout, $splitOnNum);
-    get_html_start_section_for_articles_cv($attributeWork, $attributeWork, $headWork);
-    // HTML strings
+    get_html_start_section_for_articles_cv($attributeWork, $headWork);
 
+    // HTML
     $htmlEndSection = '
             </div>
             <!--/.row -->
         </div>
         <!--/.container -->
-    </section>';
-    $htmlArticle = '
-                <article>
-                    <div class="%s">
-                        <h3 class=" ">%s</h3>
-                        <h4>%s</h4>
-                        <p>%s</p> 
-                    </div>
-                    <div class="col-lg-3">
-                        <p class="edu-item">%s</p>
-                        <p class="edu-year">%s</p> 
-                    </div>
-                </article>';
+        </section>
+        ';
 
+    // Work section
     foreach ($array["workExperience"] as $value) {
         $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
         get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
@@ -139,12 +128,15 @@
         $isFirstArticle = false;
     }
     echo $htmlEndSection;
-    get_html_start_section_for_articles_cv($attributeEdu, $attributeEdu, $headEdu);
+
+    // Education section
+    get_html_start_section_for_articles_cv($attributeEdu, $headEdu);
 
     $isFirstArticle = true;
     foreach ($array["educations"] as $value) {
 
         $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
+
         get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
         $isFirstArticle = false;
     }
@@ -158,99 +150,77 @@
 
     ?>
     <!--SKILLS DESCRIPTION -->
-    <div id="skillswrap" class="section-wrapper">
+    <div id="skillswrap">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-2 col-lg-offset-1">
-                    <h3>Översikt</h3>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-9 col-lg-offset-3">
-                        <h5>Databaser</h5>
-                    </div>
-
-                    <div class="col-lg-10 col-lg-offset-2 centered">
-                        <ul class="list-group col-lg-4 col-lg-offset-2">
-                            <li class="list-group-item">Postgresql</li>
-                            <li class="list-group-item">Oracle</li>
-                            <li class="list-group-item">MySQL</li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-9 col-lg-offset-3 ">
-                        <h5>Språk</h5>
-                    </div>
-
-                    <div class="col-lg-10 col-lg-offset-2 centered">
-                        <ul class="list-group col-lg-4 col-lg-offset-2">
-                            <li class="list-group-item">C#</li>
-                            <li class="list-group-item">JavaScript</li>
-                            <li class="list-group-item">MicroPython</li>
-                            <li class="list-group-item">PL/SQL</li>
-                            <li class="list-group-item">CSS</li>
-                        </ul>
-                        <ul class="list-group col-lg-6">
-                            <li class="list-group-item">c++</li>
-                            <li class="list-group-item">HTML</li>
-                            <li class="list-group-item">XML</li>
-                            <li class="list-group-item">JSON</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-9 col-lg-offset-3 ">
-                        <h5>Versionhantering</h5>
-                    </div>
-
-                    <div class="col-lg-10 col-lg-offset-2 centered">
-                        <ul class="list-group col-lg-4 col-lg-offset-2">
-                            <li class="list-group-item">Github</li>
-                            <li class="list-group-item">Bitbucket</li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-9 col-lg-offset-3 ">
-                        <h5>Projektarbete</h5>
-                    </div>
-
-                    <div class="col-lg-10 col-lg-offset-2 centered">
-                        <ul class="list-group col-lg-4 col-lg-offset-2">
-                            <li class="list-group-item">Agile/Scrum</li>
-                            <li class="list-group-item">Projektplanering</li>
-                        </ul>
-                        <ul class="list-group col-lg-6">
-                            <li class="list-group-item">Krav</li>
-                            <li class="list-group-item">Användartest</li>
-                        </ul>
-                    </div>
-
-
-                    <div class="col-lg-9 col-lg-offset-3 ">
-                        <h5>Övrigt</h5>
-                    </div>
-
-                    <div class="col-lg-10 col-lg-offset-2 centered">
-                        <ul class="list-group col-lg-4 col-lg-offset-2">
-                            <li class="list-group-item">Game engine Unity</li>
-                            <li class="list-group-item">WPF</li>
-                            <li class="list-group-item">ASP.NET</li>
-                            <li class="list-group-item">Enity Framework</li>
-                        </ul>
-                        <ul class="list-group col-lg-6">
-                            <li class="list-group-item">Node.js</li>
-                            <li class="list-group-item">SQL Loader</li>
-                            <li class="list-group-item">Migrering databas</li>
-                        </ul>
-                    </div>
-                </div>
-                <!--/.row -->
-                <br />
+            <div>
+                <h3>Översikt</h3>
             </div>
+
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <h4>Databaser</h4>
+                    <ul class="d-flex ">
+                        <li>Postgresql</li>
+                        <li>Oracle</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <h4>Språk</h4>
+                    <ul>
+                        <li>C#</li>
+                        <li>JavaScript</li>
+                        <li>MicroPython</li>
+                        <li>PL/SQL</li>
+                        <li>CSS</li>
+                        <li>c++</li>
+                        <li>HTML</li>
+                        <li>XML</li>
+                        <li>JSON</li>
+                    </ul>
+                </div>
+
+
+                <div class="col-12 col-md-3">
+                    <h4>Versionhantering</h4>
+                    <ul>
+                        <li>Github</li>
+                        <li>Bitbucket</li>
+                    </ul>
+                </div>
+
+
+                <div class="col-12 col-md-3">
+                    <h4>Projektarbete</h4>
+                    <ul>
+                        <li>Agile/Scrum</li>
+                        <li>Projektplanering</li>
+                        <li>Krav</li>
+                        <li>Användartest</li>
+                    </ul>
+                </div>
+
+
+                <div class="col-12 col-md-3">
+                    <h4>Övrigt</h4>
+                    <ul>
+                        <li>Unity game engine</li>
+                        <li>WPF</li>
+                        <li>ASP.NET</li>
+                        <li>Enity Framework</li>
+                        <li>Node.js</li>
+                        <li>SQLloader</li>
+                        <li>Migrering av CMS</li>
+                    </ul>
+                </div>
+            </div><!-- /.row -->
             <!--/.container -->
         </div>
         <!--/ #skillswrap -->
     </div>
 
-    <section id="contact" name="contact" class="section-wrapper divider">
+    <section id="contact" class="section-wrapper divider">
         <!--FOOTER DESCRIPTION -->
         <div id="footwrap">
             <div class="container">
@@ -266,7 +236,7 @@
                                     <i class="fa fa-envelope" aria-hidden="true"><a href="mailto:annica@alienus.se"> Mail</a></i>
                                 </p>
                                 <p class="linkedin-icon">
-                                    <a href="https://linkedin.com/in/annica-alienus"><img src="img/linkedin.svg"></img> LinkedIn
+                                    <a href="https://linkedin.com/in/annica-alienus"><img src="img/linkedin.svg" alt="linkedin" /> LinkedIn
                                     </a>
                                 </p>
                             </address>
