@@ -64,7 +64,7 @@
     <div id="headerwrap">
         <div class="container">
             <div class="row centered">
-                <div class="col-lg-12">
+                <div class="col-12">
 
                     <p class="quote-paragraph">
                         Programming isn't about what you know; it's about what you can figure out.
@@ -104,8 +104,8 @@
     $splitStr = split_on($personAbout, $splitOnNum);
 
     // bootstrap classes differ between first and second article.
-    $setClassFirstArticle = 'col-lg-6';
-    $setClassSecondArticle = 'col-lg-6 col-lg-offset-3';
+    $setClassFirstArticle = 'col-lg-6 col-md-10 col-md-offset-1';
+    $setClassSecondArticle = 'col-lg-6 col-md-10 col-md-offset-1';
     $isFirstArticle = true;
 
     get_html_section_intro($personName, $personAbout, $splitOnNum);
@@ -157,7 +157,7 @@
             </div>
 
             <div class="row">
-                <div class="col-12 col-md-3">
+                <div class="col-md-3">
                     <h4>Databaser</h4>
                     <ul class="d-flex ">
                         <li>Postgresql</li>
@@ -166,7 +166,7 @@
                     </ul>
                 </div>
 
-                <div class="col-12 col-md-3">
+                <div class="col-md-3">
                     <h4>Språk</h4>
                     <ul>
                         <li>C#</li>
@@ -182,7 +182,7 @@
                 </div>
 
 
-                <div class="col-12 col-md-3">
+                <div class="col-md-3">
                     <h4>Versionhantering</h4>
                     <ul>
                         <li>Github</li>
@@ -191,7 +191,7 @@
                 </div>
 
 
-                <div class="col-12 col-md-3">
+                <div class="col-md-3">
                     <h4>Projektarbete</h4>
                     <ul>
                         <li>Agile/Scrum</li>
@@ -202,7 +202,7 @@
                 </div>
 
 
-                <div class="col-12 col-md-3">
+                <div class="col-md-3">
                     <h4>Övrigt</h4>
                     <ul>
                         <li>Unity game engine</li>
@@ -220,31 +220,33 @@
         <!--/ #skillswrap -->
     </div>
 
-    <section id="contact" class="section-wrapper divider">
+    <section id="contact">
         <!--FOOTER DESCRIPTION -->
         <div id="footwrap">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-2">
-                        <h3>Kontakt</h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
+                    <div class="col-lg-8 col-lg-offset-1  col-12">
+                        <div class="col-lg-6 col-lg-offset-2 col-sm-8 col-sm-offset-4">
+
+                            <h3>Kontakt</h3>
+                        </div>
+                        <div class="col-lg-6 col-lg-offset-2 col-md-8 col-md-offset-4 col-sm-3 col-sm-offset-9">
                             <address>
 
-                                <p class="mail-paragraph">
-                                    <i class="fa fa-envelope" aria-hidden="true"><a href="mailto:annica@alienus.se"> Mail</a></i>
+                                <p class="mail-paragraph col-12">
+                                    <i class="fa fa-envelope" aria-hidden="true"><a href="mailto:annica@alienus.se"> e-mail</a></i>
                                 </p>
-                                <p class="linkedin-icon">
+                                <p class="linkedin-icon col-12">
                                     <a href="https://linkedin.com/in/annica-alienus"><img src="img/linkedin.svg" alt="linkedin" /> LinkedIn
                                     </a>
                                 </p>
                             </address>
                         </div>
                     </div>
+                    <!--/.row -->
                 </div>
-                <!--/.row -->
             </div>
+
             <!--/.container -->
         </div>
         <!--/ #footer -->
