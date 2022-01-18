@@ -11,6 +11,12 @@
     <!-- Favicons -->
     <link rel="shortcut icon" href="img/favicon_tag.png">
 
+
+    <!-- Font awsome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Raleway:400,300,700" rel="stylesheet" />
 
@@ -42,7 +48,8 @@
                                 <a class="smothscroll" href="#education" title="Utbildning"><i class="fa fa-graduation-cap" aria-hidden="true"></i>
                                 </a>
                             </li>
-                            <li class="menu-item"><a class="smothscroll" href="#contact" title="Kontakt"><i class="fa fa-envelope"></i></a>
+                            <li class="menu-item">
+                                <a class="smothscroll" href="#contact" title="Kontakt"><i class="fa fa-envelope"></i></a>
                             </li>
                         </ul>
                         <!--/ uL#nav -->
@@ -104,8 +111,8 @@
     $splitStr = split_on($personAbout, $splitOnNum);
 
     // bootstrap classes differ between first and second article.
-    $setClassFirstArticle = 'col-lg-6 col-md-10 col-md-offset-1';
-    $setClassSecondArticle = 'col-lg-6 col-md-10 col-md-offset-1';
+    $setClassFirstArticle = 'col-lg-6  col-md-10 col-md-offset-1';
+    $setClassSecondArticle = 'col-lg-6 col-lg-offset-3  col-md-10 col-md-offset-1';
     $isFirstArticle = true;
 
     get_html_section_intro($personName, $personAbout, $splitOnNum);
@@ -225,21 +232,30 @@
         <div id="footwrap">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-1  col-12">
-                        <div class="col-lg-6 col-lg-offset-2 col-sm-8 col-sm-offset-4">
+                    <div class="col-lg-10 col-12">
+                        <div class="col-lg-12 col-md-12">
 
                             <h3>Kontakt</h3>
                         </div>
-                        <div class="col-lg-6 col-lg-offset-2 col-md-8 col-md-offset-4 col-sm-3 col-sm-offset-9">
+                        <div>
                             <address>
+                                <p class="address-paragraph col-lg-3 col-md-4">
+                                    <i class="fa fa-envelope fa-lg" aria-hidden="true"><a href="mailto:annica@alienus.se"> annica@alienus.se</a></i>
+                                </p>
 
-                                <p class="mail-paragraph col-12">
-                                    <i class="fa fa-envelope" aria-hidden="true"><a href="mailto:annica@alienus.se"> e-mail</a></i>
+                                <p class="address-paragraph  col-lg-3 col-md-4">
+                                    <i class="fab fa-discord fa-lg" aria-hidden="true"><a href="https://discordapp.com/users/alienarex#3358/"> alienarex#3358</a></i>
                                 </p>
-                                <p class="linkedin-icon col-12">
-                                    <a href="https://linkedin.com/in/annica-alienus"><img src="img/linkedin.svg" alt="linkedin" /> LinkedIn
-                                    </a>
+                                <p class="address-paragraph col-lg-3 col-md-4">
+                                    <i class="fa fa-linkedin-square fa-lg" aria-hidden="true">
+                                        <a href="https://linkedin.com/in/annica-alienus">LinkedIn
+                                        </a></i>
                                 </p>
+
+
+
+
+
                             </address>
                         </div>
                     </div>
