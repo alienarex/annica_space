@@ -1,6 +1,20 @@
 {
   "name": "Annica Alienus",
-  "about": "Junior utvecklare med stort intresse för programmering och problemlösningar. Jag tar mig an nya utmaningar med engagemang och beslutsamhet, och med en övertygelse att det finns en lösning på alla problem. Ibland krävs det bara lite mer kreativitet. Jag drivs av att lösa problem i alla dess former och målet är att fortsätta utveckla en bred kunskapsbas och lösa problem i många språk och miljöer. Jag känner en glädje och tillfredsställelse när ett särskilt ihärdigt problem är löst som är svår att förklara, men den driver mig framåt Jag har en inre nyfikenhet som innebär att jag gärna lär mig nytt, både smått och stort. Som person är jag öppen, lösningsfokuserad med en viss dos av envishet vilket driver mig till att vilja lämna en perfekt produkt, men klok nog för att förstå mina begränsningar.",
+  "about": "Hej där! Jag är en nyfiken och vetgirig junior utvecklare som började studera informatik och systemutveckling eftersom jag det var ett okänt område för mig men jag ville lära mig. Och nyfikenheten är, tillsammans med passion, är något som genomsyrar hela mitt liv och driver min vilja att fortsätta lärandet. Som person är jag kommunikativ, lösningsfokuserad och icke-dömande med ett stråk av envishet som ger energi för att ihärdigt arbeta mot mina mål trots motgångar och svårigheter. Jag är en renodlad lagspelare som ofta deltar aktivt i diskussioner och trivs med att bidra till helheten i både stort och smått. För mig är systemutveckling just ett teamwork där de kunskaper och erfarenheter som finns används för att leverera en bra produkt. I studier, arbetet och familjen arbetar jag strukturerat och planerat, men när jag har möjlighet trivs jag med att vara spontan och testa alternativa lösningar. Till mina nästa kollegor kan jag erbjuda kunskaper i bland annat .NET, webb, JavaScript och databas. Jag har även vissa kunskaper ibland annat Java, c++, Node.js, Internet of Things och spelutveckling. Dessutom vill jag, utöver att förankra mina nuvarande kunskaper, gärna lära mig nya språk, verktyg och tillvägagångssätt.  Jag har en önskan att göra livet roligare, enklare och bättre med hjälp av digitala produkter som både är effektiva och användarvänliga.",
+  "contacts": [
+    {
+      "name": "linkedin",
+      "info": "https://linkedin.com/in/annica-alienus"
+    },
+    {
+      "name": "mail",
+      "info": "annica@alienus.se"
+    },
+    {
+      "name": "discord",
+      "info": "https://discordapp.com/users/alienarex#3358/"
+    }
+  ],
   "educations": [
     {
       "level": "University",

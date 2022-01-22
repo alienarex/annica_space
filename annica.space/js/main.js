@@ -13,6 +13,7 @@ jQuery(document).ready(function ($) {
         location.hostname == this.hostname
       ) {
         var target = $(this.hash);
+        console.log(this);
         if (target.length) {
           $("html, body").animate(
             {

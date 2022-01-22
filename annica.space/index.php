@@ -162,18 +162,10 @@
             <div>
                 <h3>Översikt</h3>
             </div>
-
             <div class="row">
-                <div class="col-md-3">
-                    <h4>Databaser</h4>
-                    <ul class="d-flex ">
-                        <li>Postgresql</li>
-                        <li>Oracle</li>
-                        <li>MySQL</li>
-                    </ul>
-                </div>
 
-                <div class="col-md-3">
+
+                <div class="col-md-2 col-sm-6 col-xs-12">
                     <h4>Språk</h4>
                     <ul>
                         <li>C#</li>
@@ -188,28 +180,7 @@
                     </ul>
                 </div>
 
-
-                <div class="col-md-3">
-                    <h4>Versionhantering</h4>
-                    <ul>
-                        <li>Github</li>
-                        <li>Bitbucket</li>
-                    </ul>
-                </div>
-
-
-                <div class="col-md-3">
-                    <h4>Projektarbete</h4>
-                    <ul>
-                        <li>Agile/Scrum</li>
-                        <li>Projektplanering</li>
-                        <li>Krav</li>
-                        <li>Användartest</li>
-                    </ul>
-                </div>
-
-
-                <div class="col-md-3">
+                <div class="col-md-2 col-sm-6 col-xs-12">
                     <h4>Övrigt</h4>
                     <ul>
                         <li>Unity game engine</li>
@@ -221,6 +192,35 @@
                         <li>Migrering av CMS</li>
                     </ul>
                 </div>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <h4>Databaser</h4>
+                    <ul>
+                        <li>Postgresql</li>
+                        <li>Oracle</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <h4>Versionhantering</h4>
+                    <ul>
+                        <li>Github</li>
+                        <li>Bitbucket</li>
+                    </ul>
+                </div>
+
+
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <h4>Projektarbete</h4>
+                    <ul>
+                        <li>Agile/Scrum</li>
+                        <li>Projektplanering</li>
+                        <li>Krav</li>
+                        <li>Användartest</li>
+                    </ul>
+                </div>
+
+
             </div><!-- /.row -->
             <!--/.container -->
         </div>
@@ -232,21 +232,20 @@
         <div id="footwrap">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-10 col-12">
+                    <div>
                         <div class="col-lg-12 col-md-12">
-
                             <h3>Kontakt</h3>
                         </div>
                         <div>
                             <address>
-                                <p class="address-paragraph col-lg-3 col-md-4">
+                                <p class="address-paragraph col-lg-3 col-md-4 col-sm-6  col-xs-12">
                                     <i class="fa fa-envelope fa-lg" aria-hidden="true"><a href="mailto:annica@alienus.se"> annica@alienus.se</a></i>
                                 </p>
 
-                                <p class="address-paragraph  col-lg-3 col-md-4">
+                                <p class="address-paragraph  col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
                                     <i class="fab fa-discord fa-lg" aria-hidden="true"><a href="https://discordapp.com/users/alienarex#3358/"> alienarex#3358</a></i>
                                 </p>
-                                <p class="address-paragraph col-lg-3 col-md-4">
+                                <p class="address-paragraph col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                     <i class="fa fa-linkedin-square fa-lg" aria-hidden="true">
                                         <a href="https://linkedin.com/in/annica-alienus">LinkedIn
                                         </a></i>

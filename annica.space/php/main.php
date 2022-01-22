@@ -8,13 +8,13 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <div class="col-lg-2 col-md-10 col-md-offset-1 col-sm-12">
                     <h2>%s</h2>
                 </div>
-                <div class="col-lg-6 col-md-10 col-lg-offset-1">
-                <p class = "visible-text">%s</p>
-                    <p id="hidden-item-id" class="hidden-item">%s</p>
-                    <p id = "visible-item-id" class="readmore"></p>
+                <div class="col-lg-6 col-md-10 col-md-offset-1 col-lg-offset-1">
+                <p class = "visible-text col-md-12 ">%s</p>
+                    <p id="hidden-item-id" class="hidden-item col-md-12">%s</p>
+                    <p id = "visible-item-id" class="readmore col-md-12 "></p>
                     
                 </div>
             </div>
@@ -33,7 +33,7 @@ function get_html_start_section_for_articles_cv(
     echo sprintf('<section id="%s"  >
     <div class="container desc">
         <div class="row">
-            <div class="col-lg-2  col-md-2 col-sm-12">
+            <div class="col-lg-1 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12">
                 <h2>%s</h2>
             </div>', $sectionId, $headValue);
 }
@@ -47,7 +47,7 @@ function get_html_article(string $className, string $firstheadValue, string $sec
             <h4>%s</h4>
             <p>%s</p> 
         </div>
-        <div class="col-lg-2 col-md-10 col-lg-offset-3">
+        <div class="col-lg-2 col-md-2 col-lg-offset-3 col-md-offset-1">
             <p class="edu-item">%s</p>
             <p class="edu-year">%s</p> 
         </div>
