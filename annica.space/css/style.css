@@ -359,7 +359,7 @@ SECTION WRAPS
   margin: 15px 0;
 }
 .address-paragraph {
-  margin: 3px;
+  margin: 3px, 3px;
   font: inherit;
 }
 .linkedin-icon a img {
