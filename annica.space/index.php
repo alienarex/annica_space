@@ -233,7 +233,7 @@
             <div class="container">
                 <div class="row">
                     <div>
-                        <div class="col-lg-10 col-lg-offset-2 col-md-12 col-sm-10 col-sm-offset-1">
+                        <div class="col-lg-12 col-md-12 col-sm-10 col-sm-offset-1">
                             <h3>Kontakt</h3>
                         </div>
 

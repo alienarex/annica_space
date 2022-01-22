@@ -220,6 +220,7 @@ SECTION WRAPS
 
 #skillswrap {
   background: #2c3e50;
+  min-height: 400px;
   padding-top: 60px;
   padding-bottom: 30px;
   color: #fff;
@@ -254,6 +255,7 @@ SECTION WRAPS
 }
 .desc {
   padding-top: 50px;
+  margin-bottom: 20px;
 }
 
 /* Contact Form */
