@@ -233,28 +233,23 @@
             <div class="container">
                 <div class="row">
                     <div>
-                        <div class="col-lg-12 col-md-12">
+                        <div class="col-lg-10 col-lg-offset-2 col-md-12">
                             <h3>Kontakt</h3>
                         </div>
-                        <div>
+                        <div class="col-lg-10 col-lg-offset-2 col-md-12 col-sm-12 col-xs-12">
                             <address>
-                                <p class="address-paragraph col-lg-3 col-md-4 col-sm-6  col-xs-12">
+                                <p class="address-paragraph col-lg-3 col-lg-offset-4 col-md-4 col-sm-12  col-xs-12">
                                     <i class="fa fa-envelope fa-lg" aria-hidden="true"><a href="mailto:annica@alienus.se"> annica@alienus.se</a></i>
                                 </p>
 
-                                <p class="address-paragraph  col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
+                                <p class="address-paragraph  col-lg-3 col-lg-offset-4 col-md-4 col-sm-12 col-xs-12 ">
                                     <i class="fab fa-discord fa-lg" aria-hidden="true"><a href="https://discordapp.com/users/alienarex#3358/"> alienarex#3358</a></i>
                                 </p>
-                                <p class="address-paragraph col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                <p class="address-paragraph col-lg-3 col-lg-offset-4 col-md-4 col-sm-12 col-xs-12">
                                     <i class="fa fa-linkedin-square fa-lg" aria-hidden="true">
                                         <a href="https://linkedin.com/in/annica-alienus">LinkedIn
                                         </a></i>
                                 </p>
-
-
-
-
-
                             </address>
                         </div>
                     </div>
