@@ -237,19 +237,19 @@
                             <h3>Kontakt</h3>
                         </div>
 
-                        <div class="col-lg-12 col-lg-offset-2 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <address>
-                                <p class="address-paragraph col-lg-2 col-md-3 col-sm-4 col-sm-offset-1  col-xs-6">
+                                <p class="address-paragraph col-lg-2 col-md-3 col-sm-4 col-sm-offset-1  col-xs-12">
                                     <i class="fa fa-envelope fa-lg" aria-hidden="true"><a href="mailto:annica@alienus.se"> annica@alienus.se</a></i>
                                 </p>
-                                <p class="address-paragraph col-lg-2 col-md-3 col-sm-4 col-sm-offset-1 col-xs-6">
+                                <p class="address-paragraph col-lg-2 col-md-3 col-sm-4 col-sm-offset-1 col-xs-12">
                                     <i class="fab fa-github fa-lg" aria-hidden="true"><a href="https://github.com/alienarex?tab=repositories"> alienarex</a></i>
                                 </p>
 
-                                <p class="address-paragraph  col-lg-2 col-md-3 col-sm-4 col-sm-offset-1 col-xs-6 ">
+                                <p class="address-paragraph  col-lg-2 col-md-3 col-sm-4 col-sm-offset-1 col-xs-12">
                                     <i class="fab fa-discord fa-lg" aria-hidden="true"><a href="https://discordapp.com/users/alienarex#3358/"> alienarex#3358</a></i>
                                 </p>
-                                <p class="address-paragraph col-lg-2 col-md-3 col-sm-4 col-sm-offset-1 col-xs-6">
+                                <p class="address-paragraph col-lg-2 col-md-3 col-sm-4 col-sm-offset-1 col-xs-12">
                                     <i class="fa fa-linkedin-square fa-lg" aria-hidden="true">
                                         <a href="https://linkedin.com/in/annica-alienus">LinkedIn
                                         </a></i>
