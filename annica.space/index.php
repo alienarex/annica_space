@@ -156,6 +156,53 @@
     echo $htmlEndSection;
 
     ?>
+
+    <div id="skills">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-1">
+                    <h5>SKILLS</h5>
+                </div>
+                <div class="col-lg-3 centered">
+                    <canvas id="javascript" height="130" width="130"></canvas>
+                    <p>Javascript</p>
+                    <br />
+                </div>
+                <div class="col-lg-3 centered">
+                    <canvas id=".NET" height="130" width="130"></canvas>
+                    <p>Bootstrap</p>
+                    <br />
+                </div>
+                <div class="col-lg-3 centered">
+                    <canvas id="wordpress" height="130" width="130"></canvas>
+                    <p>Wordpress</p>
+                    <br />
+                </div>
+
+                <div class="col-lg-3 col-lg-offset-3 centered">
+                    <canvas id="html" height="130" width="130"></canvas>
+                    <p>HTML/CSS</p>
+                    <br />
+                </div>
+                <div class="col-lg-3 centered">
+                    <canvas id="photoshop" height="130" width="130"></canvas>
+                    <p>Photoshop</p>
+                    <br />
+                </div>
+                <div class="col-lg-3 centered">
+                    <canvas id="illustrator" height="130" width="130"></canvas>
+                    <p>Illustrator</p>
+                    <br />
+                </div>
+            </div>
+            <!--/.row -->
+            <br />
+        </div>
+        <!--/.container -->
+    </div>
+    <!--/ #skillswrap -->
+
+
     <!--SKILLS DESCRIPTION -->
     <div id="skillswrap">
         <div class="container">
