@@ -205,7 +205,6 @@ SECTION WRAPS
 #intro {
   background: #2c3e50;
   min-height: 400px;
-  /* margin-bottom: 20%; */
   color: #fff;
 }
 
@@ -228,14 +227,13 @@ SECTION WRAPS
 /*Footer*/
 #contact {
   background-color: #2f2f2f;
-  min-height: 200px;
+  /* min-height: 200px; */
 }
-address {
-  width: 100%;
-}
+
 #footwrap {
+  padding-bottom: 20px;
   /* display: flex; */
-  display: inline-flex;
+  /* display: inline-flex; */
   background: #2f2f2f;
   color: #fff;
 }
