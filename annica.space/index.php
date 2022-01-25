@@ -235,11 +235,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="col-lg-2 col-lg-offset-3 col-md-12 col-sm-10 col-sm-offset-1">
+                        <div class="col-lg-2 col-lg-offset-1 col-md-12 col-sm-10 col-sm-offset-1">
                             <h3>Kontakt</h3>
                         </div>
 
-                        <div class="col-lg-9 col-md-9 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-sm-9 col-xs-12">
+                        <div class="col-lg-9 col-md-9 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-sm-9 col-xs-offset-2">
                             <address>
                                 <p class="address-paragraph col-lg-3 col-md-6 col-sm-6 col-sm-offset-6 col-xs-12">
                                     <i class="fa fa-envelope fa-lg" aria-hidden="true"><a href="mailto:annica@alienus.se"> annica@alienus.se</a></i>

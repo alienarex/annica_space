@@ -233,7 +233,6 @@ SECTION WRAPS
 
 #footwrap {
   padding-bottom: 20px;
-  display: flex;
   display: inline-flex;
   background: #2f2f2f;
   color: #fff;
