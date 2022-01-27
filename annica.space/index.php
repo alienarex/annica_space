@@ -77,6 +77,7 @@
                         Programming isn't about what you know; it's about what you can figure out.
                         <br /> - Chris Pine
                     </p>
+
                 </div>
                 <!--/.col-lg-12 -->
             </div>
@@ -160,68 +161,71 @@
     <div id="skillswrap">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2 col-lg-offset-1 ">
-                    <h3>Översikt</h3>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="col-lg-2 col-md-2 col-sm-12">
+                        <h3>Översikt</h3>
+                    </div>
+
+                    <div class="col-lg-10 col-lg-offset-2 col-md-ofset-2 col-sm-offset-2" style="display: inline-flex;flex-wrap: wrap;">
+
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <h4>Språk</h4>
+                            <ul>
+                                <li>C#</li>
+                                <li>JavaScript</li>
+                                <li>MicroPython</li>
+                                <li>PL/SQL</li>
+                                <li>CSS</li>
+                                <li>c++</li>
+                                <li>HTML</li>
+                                <li>XML</li>
+                                <li>JSON</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <h4>Övrigt</h4>
+                            <ul>
+                                <li>Unity game engine</li>
+                                <li>WPF</li>
+                                <li>ASP.NET</li>
+                                <li>Enity Framework</li>
+                                <li>Node.js</li>
+                                <li>SQLloader</li>
+                                <li>Migrering av CMS</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <h4>Databaser</h4>
+                            <ul>
+                                <li>Postgresql</li>
+                                <li>Oracle</li>
+                                <li>MySQL</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <h4>Versionhantering</h4>
+                            <ul>
+                                <li>Github</li>
+                                <li>Bitbucket</li>
+                            </ul>
+                        </div>
+
+
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <h4>Projektarbete</h4>
+                            <ul>
+                                <li>Agile/Scrum</li>
+                                <li>Projektplanering</li>
+                                <li>Krav</li>
+                                <li>Användartest</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
-
-                <div class="col-lg-10 col-lg-offset-2 col-md-ofset-2 col-sm-offset-2" style="display: inline-flex;flex-wrap: wrap;">
-
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <h4>Språk</h4>
-                        <ul>
-                            <li>C#</li>
-                            <li>JavaScript</li>
-                            <li>MicroPython</li>
-                            <li>PL/SQL</li>
-                            <li>CSS</li>
-                            <li>c++</li>
-                            <li>HTML</li>
-                            <li>XML</li>
-                            <li>JSON</li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <h4>Övrigt</h4>
-                        <ul>
-                            <li>Unity game engine</li>
-                            <li>WPF</li>
-                            <li>ASP.NET</li>
-                            <li>Enity Framework</li>
-                            <li>Node.js</li>
-                            <li>SQLloader</li>
-                            <li>Migrering av CMS</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <h4>Databaser</h4>
-                        <ul>
-                            <li>Postgresql</li>
-                            <li>Oracle</li>
-                            <li>MySQL</li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <h4>Versionhantering</h4>
-                        <ul>
-                            <li>Github</li>
-                            <li>Bitbucket</li>
-                        </ul>
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <h4>Projektarbete</h4>
-                        <ul>
-                            <li>Agile/Scrum</li>
-                            <li>Projektplanering</li>
-                            <li>Krav</li>
-                            <li>Användartest</li>
-                        </ul>
-                    </div>
-                </div>
-
 
             </div><!-- /.row -->
             <!--/.container -->
@@ -235,26 +239,29 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="col-lg-2 col-lg-offset-1 col-md-12 col-sm-10 col-sm-offset-1">
+                        <div class="col-lg-2 col-md-2 col-sm-12">
                             <h3>Kontakt</h3>
                         </div>
 
-                        <div class="col-lg-9 col-md-9 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-sm-9 col-xs-offset-2">
+                        <div class="col-lg-10 col-lg-offset-2 col-md-ofset-2 col-sm-offset-2">
                             <address>
-                                <p class="address-paragraph col-lg-3 col-md-6 col-sm-6 col-sm-offset-6 col-xs-12">
-                                    <i class="fa fa-envelope fa-lg" aria-hidden="true"><a href="mailto:annica@alienus.se"> annica@alienus.se</a></i>
+                                <p class="social-media col-lg-3 col-md-6 col-sm-6 col-sm-offset-6 col-xs-12">
+                                    <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+                                    <a href="mailto:annica@alienus.se"> annica@alienus.se </a>
                                 </p>
-                                <p class="address-paragraph col-lg-3 col-md-6 col-sm-6 col-sm-offset-6 col-xs-12 ">
-                                    <i class="fab fa-github fa-lg" aria-hidden="true"><a href="https://github.com/alienarex?tab=repositories"> alienarex</a></i>
+                                <p class="social-media col-lg-3 col-md-6 col-sm-6 col-sm-offset-6 col-xs-12 ">
+                                    <i class="fab fa-github fa-lg" aria-hidden="true"></i>
+                                    <a href="https://github.com/alienarex?tab=repositories"> alienarex</a>
                                 </p>
 
-                                <p class="address-paragraph col-lg-3 col-md-6 col-sm-6 col-sm-offset-6 col-xs-12">
-                                    <i class="fab fa-discord fa-lg" aria-hidden="true"><a href="https://discordapp.com/users/alienarex#3358/"> alienarex#3358</a></i>
+                                <p class="social-media col-lg-3 col-md-6 col-sm-6 col-sm-offset-6 col-xs-12">
+                                    <i class="fab fa-discord fa-lg" aria-hidden="true">
+                                    </i>
+                                    <a href="https://discordapp.com/users/alienarex#3358/"> alienarex#3358</a>
                                 </p>
-                                <p class="address-paragraph  col-lg-3 col-md-6 col-sm-6 col-sm-offset-6  col-xs-12 ">
-                                    <i class="fa fa-linkedin-square fa-lg" aria-hidden="true">
-                                        <a href="https://linkedin.com/in/annica-alienus">LinkedIn
-                                        </a></i>
+                                <p class="social-media  col-lg-3 col-md-6 col-sm-6 col-sm-offset-6  col-xs-12 ">
+                                    <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
+                                    <a href="https://linkedin.com/in/annica-alienus">LinkedIn </a>
                                 </p>
                             </address>
                         </div>

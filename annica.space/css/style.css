@@ -233,12 +233,27 @@ SECTION WRAPS
 
 #footwrap {
   padding-bottom: 20px;
-  display: inline-flex;
   background: #2f2f2f;
   color: #fff;
   min-height: 200px;
   min-width: 100;
 }
+.social-media {
+  margin-left: auto;
+  font: inherit;
+  display: flex;
+  align-items: center;
+}
+.social-media i {
+  padding-right: 3px;
+}
+.fa-discord {
+  color: #5865f2;
+}
+.fa-linkedin-square {
+  color: #0077b5;
+}
+
 /* Global Values */
 
 .divider {
@@ -359,15 +374,4 @@ SECTION WRAPS
   padding: 15px;
   font-weight: 600;
   margin: 15px 0;
-}
-.address-paragraph {
-  margin-left: auto;
-  padding: 0%;
-  font: inherit;
-}
-.fa-discord {
-  color: #5865f2;
-}
-.fa-linkedin-square {
-  color: #0077b5;
 }

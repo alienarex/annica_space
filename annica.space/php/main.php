@@ -8,10 +8,10 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2 col-md-10 col-md-offset-1 col-sm-12">
+                <div class="col-lg-2 col-md-2 col-sm-12">
                     <h2>%s</h2>
                 </div>
-                <div class="col-lg-6 col-md-10 col-md-offset-1 col-lg-offset-1">
+                <div class=" col-lg-7 col-md-7 col-sm-12">
                 <p class = "visible-text col-md-12 ">%s</p>
                     <p id="hidden-item-id" class="hidden-item col-md-12">%s</p>
                     <p id = "visible-item-id" class="readmore col-md-12 "></p>
