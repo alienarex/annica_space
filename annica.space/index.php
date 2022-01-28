@@ -13,7 +13,8 @@
 
 
     <!-- Font awsome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"> -->
+
 
 
 
@@ -77,7 +78,6 @@
                         Programming isn't about what you know; it's about what you can figure out.
                         <br /> - Chris Pine
                     </p>
-
                 </div>
                 <!--/.col-lg-12 -->
             </div>
@@ -235,43 +235,18 @@
 
     <section id="contact">
         <!--FOOTER DESCRIPTION -->
-        <div id="footwrap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <h3>Kontakt</h3>
-                        </div>
-
-                        <div class="col-lg-10 col-lg-offset-2 col-md-ofset-2 col-sm-offset-2">
-                            <address>
-                                <p class="social-media col-lg-3 col-md-6 col-sm-6 col-sm-offset-6 col-xs-12">
-                                    <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
-                                    <a href="mailto:annica@alienus.se"> annica@alienus.se </a>
-                                </p>
-                                <p class="social-media col-lg-3 col-md-6 col-sm-6 col-sm-offset-6 col-xs-12 ">
-                                    <i class="fab fa-github fa-lg" aria-hidden="true"></i>
-                                    <a href="https://github.com/alienarex?tab=repositories"> alienarex</a>
-                                </p>
-
-                                <p class="social-media col-lg-3 col-md-6 col-sm-6 col-sm-offset-6 col-xs-12">
-                                    <i class="fab fa-discord fa-lg" aria-hidden="true">
-                                    </i>
-                                    <a href="https://discordapp.com/users/alienarex#3358/"> alienarex#3358</a>
-                                </p>
-                                <p class="social-media  col-lg-3 col-md-6 col-sm-6 col-sm-offset-6  col-xs-12 ">
-                                    <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
-                                    <a href="https://linkedin.com/in/annica-alienus">LinkedIn </a>
-                                </p>
-                            </address>
-                        </div>
-                    </div>
-                    <!--/.row -->
-                </div>
+        <div class="container">
+            <div class="row">
+                <ul class="socials d-flex">
+                    <li class="envelope"><a href="mailto:annica@alienus.se">annica@alienus.se</a></li>
+                    <li class="github"><a href="https://github.com/alienarex?tab=repositories">alienarex</a></li>
+                    <li class="discord"><a href="https://discordapp.com/users/alienarex#3358/">alienarex</a></li>
+                    <li class="linkedin"><a href="https://linkedin.com/in/annica-alienus">LinkedIn</a></li>
+                </ul>
             </div>
-
-            <!--/.container -->
+            <!--/.row -->
         </div>
+        <!--/.container -->
         <!--/ #footer -->
     </section>
 

@@ -9,6 +9,7 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
         <div class="container">
             <div class="row">
                 <div class="col-lg-2 col-md-2 col-sm-12">
+                    <img class ="profile-pic" src="img\profilPic.jpg" alt="profile picture" />
                     <h2>%s</h2>
                 </div>
                 <div class=" col-lg-7 col-md-7 col-sm-12">

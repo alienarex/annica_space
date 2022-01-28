@@ -1,3 +1,6 @@
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+/* Medium devices (tablets, 768px and up) */
+
 html {
   scroll-behavior: smooth;
 }
@@ -24,7 +27,11 @@ h6 {
   font-weight: 300;
 }
 /* Paragraph & Typographic */
-
+.profile-pic {
+  display: none;
+  height: 0;
+  width: 0;
+}
 p {
   line-height: 28px;
 }
@@ -81,11 +88,7 @@ a:focus {
   text-decoration: none;
   outline: 0;
 }
-address a:hover,
-a:focus {
-  color: #23c8b1;
-  font-size: large;
-}
+
 a:before,
 a:after {
   -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -228,29 +231,65 @@ SECTION WRAPS
 
 /*Footer*/
 #contact {
-  background-color: #2f2f2f;
-}
-
-#footwrap {
   padding-bottom: 20px;
   background: #2f2f2f;
   color: #fff;
-  min-height: 200px;
-  min-width: 100;
+  padding: 50px;
 }
-.social-media {
+.socials {
   margin-left: auto;
   font: inherit;
   display: flex;
   align-items: center;
 }
-.social-media i {
-  padding-right: 3px;
+ul.socials {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  flex-wrap: wrap;
+  padding-left: 23%;
+  padding-right: 23%;
 }
-.fa-discord {
+
+ul.socials li {
+  display: flex;
+  align-items: center;
+  font-size: large;
+  margin: auto;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+ul.socials li a {
+  margin-left: 3px;
+}
+ul.socials li a:hover,
+a:focus {
+  color: #23c8b1;
+}
+ul.socials li.envelope::before {
+  content: "\f0e0";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+ul.socials li.github::before {
+  content: "\f09b";
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 900;
+}
+
+ul.socials li.discord::before {
+  content: "\f392";
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 900;
   color: #5865f2;
 }
-.fa-linkedin-square {
+
+ul.socials li.linkedin::before {
+  content: "\f0e1";
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 900;
   color: #0077b5;
 }
 
@@ -272,106 +311,18 @@ SECTION WRAPS
   padding-top: 50px;
   margin-bottom: 20px;
 }
-
-/* Contact Form */
-
-.contact-form label {
-  color: #999;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 10px 12px;
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  height: auto;
-}
-
-.contact-form .form-send {
-  text-align: center;
-}
-
-.contact-form .form-send button {
-  background: #44bbaa;
-  border: 0;
-  padding: 10px 30px;
-  color: #fff;
-  transition: 0.4s;
-  cursor: pointer;
-}
-
-.contact-form .form-send button:hover {
-  background: #23c8b1;
-}
-
-.contact-form .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.contact-form .loading {
-  display: none;
-  color: #555;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-  margin: 15px 0;
-}
-
-.contact-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-@-webkit-keyframes animate-loading {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+@media (min-width: 768px) {
+  .profile-pic {
+    display: block;
+    height: 200px;
+    width: auto;
   }
 }
-
-@keyframes animate-loading {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+@media (max-width: 767px) {
+  .profile-pic {
+    display: flex;
+    height: auto;
+    width: 30%;
+    float: right;
   }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.contact-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-  margin: 15px 0;
-}
-
-.contact-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-  margin: 15px 0;
 }
