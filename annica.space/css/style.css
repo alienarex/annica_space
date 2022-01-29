@@ -210,15 +210,10 @@ SECTION WRAPS
   background: #2c3e50;
   min-height: 400px;
   color: #fff;
-}
-
-#about {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-#about p {
-  padding: 0;
-}
+
 /*Skill*/
 
 #skillswrap {
@@ -230,7 +225,7 @@ SECTION WRAPS
 }
 
 /*Footer*/
-#contact {
+#footer {
   padding-bottom: 20px;
   background: #2f2f2f;
   color: #fff;
@@ -311,6 +306,7 @@ ul.socials li.linkedin::before {
   padding-top: 50px;
   margin-bottom: 20px;
 }
+
 @media (min-width: 768px) {
   .profile-pic {
     display: block;
@@ -324,7 +320,10 @@ ul.socials li.linkedin::before {
     height: auto;
     width: 30%;
     float: right;
-    padding-right: inherit;
-    padding-bottom: 30px;
+    padding: inherit;
+  }
+  #about div h2,
+  img {
+    padding-left: 15px;
   }
 }

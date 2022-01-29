@@ -233,7 +233,7 @@
         <!--/ #skillswrap -->
     </div>
 
-    <section id="contact">
+    <section id="footer">
         <!--FOOTER DESCRIPTION -->
         <div class="container">
             <div class="row">
