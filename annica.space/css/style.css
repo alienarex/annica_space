@@ -324,5 +324,7 @@ ul.socials li.linkedin::before {
     height: auto;
     width: 30%;
     float: right;
+    padding-right: inherit;
+    padding-bottom: 30px;
   }
 }
