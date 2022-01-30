@@ -223,6 +223,10 @@ SECTION WRAPS
   padding-bottom: 30px;
   color: #fff;
 }
+.skills {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
 
 /*Footer*/
 #footer {
