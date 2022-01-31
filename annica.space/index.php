@@ -117,7 +117,7 @@
     $isFirstArticle = true;
 
     get_html_section_intro($personName, $personAbout, $splitOnNum);
-    get_html_start_section_for_articles_cv($attributeWork, $headWork);
+    get_html_start_section_for_articles_cv($attributeWork, $array["work"]["header"]);
 
     // HTML
     $htmlEndSection = '
@@ -129,7 +129,7 @@
         ';
 
     // Work section
-    foreach ($array["workExperience"] as $value) {
+    foreach ($array["work"]["workExperiences"] as $value) {
         $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
         get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
 
@@ -138,100 +138,51 @@
     echo $htmlEndSection;
 
     // Education section
-    get_html_start_section_for_articles_cv($attributeEdu, $headEdu);
+    get_html_start_section_for_articles_cv($attributeEdu, $array["education"]["header"]);
 
     $isFirstArticle = true;
-    foreach ($array["educations"] as $value) {
+    foreach ($array["education"]["educations"] as $value1) {
 
-        $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
+        foreach ($value1["programs"] as $value) {
 
-        get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
-        $isFirstArticle = false;
+
+            $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
+
+            get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
+            $isFirstArticle = false;
+        }
     }
-    foreach ($array["courses"] as $value) {
 
-        $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
-        get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
-        $isFirstArticle = false;
-    }
     echo $htmlEndSection;
 
-    ?>
+    echo sprintf('
     <!--SKILLS DESCRIPTION -->
     <div id="skillswrap">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-                    <div class="col-lg-2 col-md-2 col-sm-12">
-                        <h3>Översikt</h3>
-                    </div>
-
-                    <div class="col-lg-10 col-lg-offset-2 col-md-ofset-2 col-sm-offset-2 skills">
-
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <h4>Språk</h4>
-                            <ul>
-                                <li>C#</li>
-                                <li>JavaScript</li>
-                                <li>MicroPython</li>
-                                <li>PL/SQL</li>
-                                <li>CSS</li>
-                                <li>c++</li>
-                                <li>HTML</li>
-                                <li>XML</li>
-                                <li>JSON</li>
-                            </ul>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <h4>Övrigt</h4>
-                            <ul>
-                                <li>Unity game engine</li>
-                                <li>WPF</li>
-                                <li>ASP.NET</li>
-                                <li>Enity Framework</li>
-                                <li>Node.js</li>
-                                <li>SQLloader</li>
-                                <li>Migrering av CMS</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <h4>Databaser</h4>
-                            <ul>
-                                <li>Postgresql</li>
-                                <li>Oracle</li>
-                                <li>MySQL</li>
-                            </ul>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <h4>Versionhantering</h4>
-                            <ul>
-                                <li>Github</li>
-                                <li>Bitbucket</li>
-                            </ul>
-                        </div>
-
-
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <h4>Projektarbete</h4>
-                            <ul>
-                                <li>Agile/Scrum</li>
-                                <li>Projektplanering</li>
-                                <li>Krav</li>
-                                <li>Användartest</li>
-                            </ul>
-                        </div>
-                    </div>
-
+                <div class="col-lg-2 col-md-2 col-sm-12">
+                    <h3>%s</h3>
                 </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-10 col-lg-offset-2 col-md-ofset-2 col-sm-offset-2 skills">
+                        ', $array["competence"]["header"]);
 
-            </div><!-- /.row -->
-            <!--/.container -->
+    foreach ($array["competence"]["competences"] as $competence) {
+        echo sprintf('<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"><h4>%s</h4> <ul>', $competence["title"]);
+
+        foreach ($competence["skills"] as $val) {
+            echo sprintf('<li>%s</li>', $val["skill"]);
+        }
+        echo '</ul></div>';
+    }
+    echo '  </div><!-- /.row -->
+    <!--/.container -->
+        </div>
+        </div>
         </div>
         <!--/ #skillswrap -->
-    </div>
+    </div>';
+    ?>
 
     <section id="footer">
         <!--FOOTER DESCRIPTION -->
