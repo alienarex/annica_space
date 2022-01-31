@@ -224,8 +224,12 @@ SECTION WRAPS
   color: #fff;
 }
 .skills {
-  display: inline-flex;
-  flex-wrap: wrap;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 15em));
+}
+.skills div {
+  width: auto;
 }
 
 /*Footer*/
@@ -247,8 +251,9 @@ ul.socials {
   justify-content: center;
   padding-top: 10px;
   flex-wrap: wrap;
-  padding-left: 23%;
-  padding-right: 23%;
+  margin: auto;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 ul.socials li {
@@ -256,8 +261,7 @@ ul.socials li {
   align-items: center;
   font-size: large;
   margin: auto;
-  padding-left: 4%;
-  padding-right: 4%;
+  inline-size: 10em;
 }
 ul.socials li a {
   margin-left: 3px;
