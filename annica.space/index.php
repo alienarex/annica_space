@@ -184,7 +184,7 @@
     </div>';
     ?>
 
-    <section id="footer">
+    <section id="contact">
         <!--FOOTER DESCRIPTION -->
         <div class="container">
             <div class="row">
