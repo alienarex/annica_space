@@ -213,7 +213,9 @@ SECTION WRAPS
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
+#about {
+  padding-top: 60px;
+}
 /*Skill*/
 
 #skillswrap {
