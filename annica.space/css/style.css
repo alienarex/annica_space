@@ -85,13 +85,6 @@ a {
   transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-a:hover,
-a:focus {
-  color: #19303b79;
-  text-decoration: none;
-  outline: 0;
-}
-
 a:before,
 a:after {
   -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -187,7 +180,7 @@ SECTION WRAPS
   text-align: center;
   background-attachment: relative;
   background-position: center center;
-  min-height: 300px;
+  min-height: 200px;
   width: 100%;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
@@ -211,7 +204,7 @@ SECTION WRAPS
 
 #intro {
   background: #2c3e50;
-  min-height: 400px;
+  min-height: 300px;
   color: #fff;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -226,7 +219,6 @@ SECTION WRAPS
   font-size: 24px;
   margin-right: 10px;
   color: #fff;
-  font-style: normal;
 }
 #about a.download:hover {
   color: rgb(7, 238, 255);
@@ -332,6 +324,7 @@ ul.socials li.linkedin::before {
   margin-bottom: 20px;
 }
 
+/* media queries*/
 @media (min-width: 768px) {
   .profile-pic {
     display: block;
@@ -352,6 +345,8 @@ ul.socials li.linkedin::before {
     padding-left: 15px;
   }
 }
+
+/* For printing */
 @media print {
   #section-topbar {
     display: none;
