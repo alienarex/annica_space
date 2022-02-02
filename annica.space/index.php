@@ -190,8 +190,8 @@
             <div class="row">
                 <ul class="socials d-flex">
                     <li class="envelope"><a href="mailto:annica@alienus.se">annica@alienus.se</a></li>
-                    <li class="github"><a href="https://github.com/alienarex?tab=repositories">alienarex</a></li>
-                    <li class="discord"><a href="https://discordapp.com/users/alienarex#3358/">alienarex</a></li>
+                    <li class="github"><a href="https://github.com/alienarex">Github </a></li>
+                    <li class="discord"><a href="https://discordapp.com/users/alienarex#3358/">Discord</a></li>
                     <li class="linkedin"><a href="https://linkedin.com/in/annica-alienus">LinkedIn</a></li>
                 </ul>
             </div>

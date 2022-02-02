@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-  $(".hidden-item").hide();
+  // $(".hidden-item").hide();
 
   document.getElementById("visible-item-id").innerText = "Visa mer...";
   // Smooth scroll for the menu and links with .scrollto classes

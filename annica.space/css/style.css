@@ -43,6 +43,9 @@ p {
   margin-right: auto;
   font-size: 110%;
 }
+.hidden-item {
+  display: none;
+}
 .edu-item {
   margin-bottom: 0;
   font-size: 12px;
@@ -216,6 +219,19 @@ SECTION WRAPS
 #about {
   padding-top: 60px;
 }
+#about a.download::before {
+  content: "\f019";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 24px;
+  margin-right: 10px;
+  color: #fff;
+  font-style: normal;
+}
+#about a.download:hover {
+  color: rgb(7, 238, 255);
+  font-style: normal;
+}
 /*Skill*/
 
 #skillswrap {
@@ -297,7 +313,6 @@ ul.socials li.linkedin::before {
   font-weight: 900;
   color: #0077b5;
 }
-
 /* Global Values */
 
 .divider {
@@ -332,8 +347,41 @@ ul.socials li.linkedin::before {
     float: right;
     padding: inherit;
   }
-  #about div h2,
+  #about div h1,
   img {
     padding-left: 15px;
+  }
+}
+@media print {
+  #section-topbar {
+    display: none;
+  }
+  #headerwrap {
+    display: none;
+  }
+  #visible-item-id {
+    display: none;
+  }
+  #contact ul.socials li a::after {
+    content: none;
+  }
+  @page {
+    size: 210mm, 297mm;
+    margin: 0;
+    orphans: 40;
+    widows: 6;
+  }
+  article {
+    page-break-inside: avoid;
+  }
+  body {
+    padding-top: 0;
+  }
+  ul.socials li {
+    display: flex;
+    align-items: center;
+    font-size: large;
+    margin: auto;
+    inline-size: 9em;
   }
 }
