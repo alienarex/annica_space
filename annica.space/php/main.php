@@ -11,7 +11,7 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
                 <div class="col-lg-2 col-md-2 col-sm-12">
                     <img class ="profile-pic" src="img\profilPic.jpg" alt="profile picture" />
                     <h1>%s</h1>
-                   <a class ="download" href="docs/CV- AnnicaAlienus.pdf" download ="AnnicaAlienus-CV">Ladda ner cv</a>
+                   <a class ="download" href="docs/AnnicaAlienus.pdf" download ="AnnicaAlienus">Ladda ner cv</a>
                 </div>
                 <div class=" col-lg-7 col-md-7 col-sm-12">
                 <p class = "visible-text col-md-12 ">%s</p>
