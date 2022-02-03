@@ -27,6 +27,7 @@ h6 {
   font-weight: 300;
 }
 /* Paragraph & Typographic */
+
 .profile-pic {
   display: none;
   height: 0;
@@ -69,6 +70,7 @@ p {
 .visible-text {
   margin: 0, 0, 0, 3%;
 }
+
 /* Links */
 
 a {
@@ -176,7 +178,7 @@ SECTION WRAPS
 #headerwrap {
   background: url(../img/02.jpg) no-repeat center top;
   margin-top: 60px;
-  padding-top: 140px;
+  padding-top: 70px;
   text-align: center;
   background-attachment: relative;
   background-position: center center;
@@ -206,11 +208,10 @@ SECTION WRAPS
   background: #2c3e50;
   min-height: 300px;
   color: #fff;
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
-#about {
-  padding-top: 60px;
+
+#presentation-profile {
+  padding-left: 2em;
 }
 #about a.download::before {
   content: "\f019";
@@ -224,13 +225,15 @@ SECTION WRAPS
   color: rgb(7, 238, 255);
   font-style: normal;
 }
+#work {
+  padding-bottom: 0;
+}
+
 /*Skill*/
 
 #skillswrap {
   background: #2c3e50;
   min-height: 400px;
-  padding-top: 60px;
-  padding-bottom: 30px;
   color: #fff;
 }
 .skills {
@@ -244,7 +247,6 @@ SECTION WRAPS
 
 /*Footer*/
 #contact {
-  padding-bottom: 20px;
   background: #2f2f2f;
   color: #fff;
   padding: 50px;
@@ -316,14 +318,10 @@ ul.socials li.linkedin::before {
   border-bottom-style: solid;
 }
 
-.desc p {
-  color: #2f2f2f;
-}
 .desc {
-  padding-top: 50px;
-  margin-bottom: 20px;
+  padding-top: 3em;
+  padding-bottom: 2em;
 }
-
 /* media queries*/
 @media (min-width: 768px) {
   .profile-pic {
@@ -340,10 +338,10 @@ ul.socials li.linkedin::before {
     float: right;
     padding: inherit;
   }
-  #about div h1,
+  /* #about div h1,
   img {
     padding-left: 15px;
-  }
+  } */
 }
 
 /* For printing */

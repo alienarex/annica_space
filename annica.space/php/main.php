@@ -4,11 +4,11 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
     $includePeriod = 1;
     $strPos = strpos($strAbout, '.', $splitStrAboutOn) + $includePeriod;
     echo sprintf('
-    <div id="intro">
+    <div id="intro" class="desc">
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-12">
+                <div id="presentation-profile" class="col-lg-2 col-md-2 col-sm-12">
                     <img class ="profile-pic" src="img\profilPic.jpg" alt="profile picture" />
                     <h1>%s</h1>
                    <a class ="download" href="docs/AnnicaAlienus.pdf" download ="AnnicaAlienus">Ladda ner cv</a>
@@ -31,9 +31,11 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
 function get_html_start_section_for_articles_cv(
     string $sectionId,
     string $headValue
+
 ) {
-    echo sprintf('<section id="%s"  >
-    <div class="container desc">
+
+    echo sprintf('<section id="%s" class="desc">
+    <div class="container">
         <div class="row">
             <div class="col-lg-2 col-md-2 col-sm-12">
                 <h2>%s</h2>

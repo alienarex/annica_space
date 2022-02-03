@@ -41,7 +41,7 @@
                     <div class="dropdown">
                         <ul id="nav" class="nav">
                             <li class="menu-item">
-                                <a class="smothscroll" href="#about" title="Om mig"><i class="fa fa-user"></i></a>
+                                <a class="smothscroll" href="#headerwrap" title="Om mig"><i class="fa fa-user"></i></a>
                             </li>
                             <li class="menu-item"><a class="smothscroll" href="#work" title="Arbete"><i class="fa fa-suitcase"></i></a>
                             </li>
@@ -157,7 +157,7 @@
 
     echo sprintf('
     <!--SKILLS DESCRIPTION -->
-    <div id="skillswrap">
+    <div id="skillswrap" class="desc">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2 col-md-2 col-sm-12">
