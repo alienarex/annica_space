@@ -4,7 +4,6 @@
 html {
   scroll-behavior: smooth;
 }
-
 body {
   background-color: #f2f2f2b7;
   font-family: "Lato";
@@ -26,40 +25,15 @@ h6 {
   font-family: "Raleway";
   font-weight: 300;
 }
+
 /* Paragraph & Typographic */
 
-.profile-pic {
-  display: none;
-  height: 0;
-  width: 0;
-}
 p {
   line-height: 28px;
 }
-.readmore {
-  font-weight: 500;
-  cursor: pointer;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 110%;
-}
-.hidden-item {
-  display: none;
-}
-.edu-item {
-  margin-bottom: 0;
-  font-size: 12px;
-}
-
-.edu-year {
-  font-size: 12px;
-}
-
 .centered {
   text-align: center;
 }
-
 .quote-paragraph {
   max-width: 75%;
   max-height: 50%;
@@ -86,7 +60,6 @@ a {
   -o-transition: color 0.1s ease-in, background 0.1s ease-in;
   transition: color 0.1s ease-in, background 0.1s ease-in;
 }
-
 a:before,
 a:after {
   -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -95,7 +68,6 @@ a:after {
   -o-transition: color 0.1s ease-in, background 0.1s ease-in;
   transition: color 0.1s ease-in, background 0.1s ease-in;
 }
-
 hr {
   display: block;
   height: 1px;
@@ -119,7 +91,6 @@ hr {
   font: normal 16px/24px "Open Sans", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
 }
-
 #topbar-inner {
   background: #2c3e50;
   line-height: 0;
@@ -139,13 +110,11 @@ By default, top navigation bar uses "fixed" position
   padding: 0;
   border-right: 1px solid #2c3e50;
 }
-
 #section-topbar ul#nav > li {
   display: block;
   float: left;
   padding: 0;
 }
-
 #section-topbar ul#nav a {
   display: block;
   font: normal 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -153,18 +122,15 @@ By default, top navigation bar uses "fixed" position
   padding: 18px 20px 18px 20px;
   border-left: 1px solid #2c3e50;
 }
-
 #section-topbar ul#nav a:hover {
   background: #44bbaa;
   text-decoration: none;
   border-left: 1px solid #2c3e50;
 }
-
 #section-topbar ul#nav .active a {
   background: #2f6e65;
   border-left: 1px solid #2c3e50;
 }
-
 #section-topbar i {
   font-size: 25px;
 }
@@ -193,25 +159,37 @@ SECTION WRAPS
   -o-background-size: cover;
   background-size: cover;
 }
-
 #headerwrap h1 {
   font-size: 80px;
 }
-
 #headerwrap h3 {
   font-size: 20px;
 }
 
 /* Intro Wrap */
-
 #intro {
   background: #2c3e50;
   min-height: 300px;
   color: #fff;
 }
-
 #presentation-profile {
   padding-left: 2em;
+}
+.profile-pic {
+  display: none;
+  height: 0;
+  width: 0;
+}
+.readmore {
+  font-weight: 500;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 110%;
+}
+.hidden-item {
+  display: none;
 }
 #about a.download::before {
   content: "\f019";
@@ -225,12 +203,22 @@ SECTION WRAPS
   color: rgb(7, 238, 255);
   font-style: normal;
 }
+
+/* Work */
 #work {
   padding-bottom: 0;
 }
 
-/*Skill*/
+/* Education */
+.edu-item {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+.edu-year {
+  font-size: 12px;
+}
 
+/*Skill*/
 #skillswrap {
   background: #2c3e50;
   min-height: 400px;
@@ -267,7 +255,6 @@ ul.socials {
   padding-left: 0;
   padding-right: 0;
 }
-
 ul.socials li {
   display: flex;
   align-items: center;
@@ -287,28 +274,25 @@ ul.socials li.envelope::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
-
 ul.socials li.github::before {
   content: "\f09b";
   font-family: "Font Awesome 5 Brands";
   font-weight: 900;
 }
-
 ul.socials li.discord::before {
   content: "\f392";
   font-family: "Font Awesome 5 Brands";
   font-weight: 900;
   color: #5865f2;
 }
-
 ul.socials li.linkedin::before {
   content: "\f0e1";
   font-family: "Font Awesome 5 Brands";
   font-weight: 900;
   color: #0077b5;
 }
-/* Global Values */
 
+/* Global Values */
 .divider {
   border-bottom: #555;
   border-top-style: none;
@@ -317,11 +301,11 @@ ul.socials li.linkedin::before {
   border-width: 0.5px;
   border-bottom-style: solid;
 }
-
 .desc {
   padding-top: 3em;
   padding-bottom: 2em;
 }
+
 /* media queries*/
 @media (min-width: 768px) {
   .profile-pic {
@@ -338,10 +322,6 @@ ul.socials li.linkedin::before {
     float: right;
     padding: inherit;
   }
-  /* #about div h1,
-  img {
-    padding-left: 15px;
-  } */
 }
 
 /* For printing */
