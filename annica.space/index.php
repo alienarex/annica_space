@@ -89,12 +89,6 @@
 
     <?php
     include 'php/main.php';
-    function split_on($string, $num)
-    {
-        $output[0] = substr($string, 0, $num);
-        $output[1] = substr($string, 0);
-        return $output;
-    }
 
     // Get the contents of the JSON file 
     $strJsonFileContents = file_get_contents("info.json");
@@ -109,7 +103,6 @@
     $personName = $array["name"];
     $personAbout = $array["about"];
     $splitOnNum = 300;
-    $splitStr = split_on($personAbout, $splitOnNum);
 
     // bootstrap classes differ between first and second article.
     $setClassFirstArticle = ' col-lg-7 col-md-7 col-sm-12';
@@ -119,8 +112,8 @@
     get_html_section_intro($personName, $personAbout, $splitOnNum);
     get_html_start_section_for_articles_cv($attributeWork, $array["work"]["header"]);
 
-    // HTML
-    $htmlEndSection = '
+    // End the section wrapping articles
+    $htmlEndSectionForArticles = '
             </div>
             <!--/.row -->
         </div>
@@ -135,7 +128,7 @@
 
         $isFirstArticle = false;
     }
-    echo $htmlEndSection;
+    echo $htmlEndSectionForArticles;
 
     // Education section
     get_html_start_section_for_articles_cv($attributeEdu, $array["education"]["header"]);
@@ -153,8 +146,11 @@
         }
     }
 
-    echo $htmlEndSection;
+    echo $htmlEndSectionForArticles;
 
+
+    //TODO Create new function in main.php and move this.
+    // Prints the HTML for the skill section
     echo sprintf('
     <!--SKILLS DESCRIPTION -->
     <div id="skillswrap" class="desc">
