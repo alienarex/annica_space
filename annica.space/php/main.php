@@ -1,4 +1,13 @@
 <?php
+
+/**
+ * Prints the html for intro section. 
+ * Splits the about string on the period after given index
+ * @param string $name The persons name to show
+ * @param string $strAbout The info about the person
+ * @param int $splitStrAboutOn The index for spitting the string.
+ * 
+ */
 function get_html_section_intro(string $name, string $strAbout, int $splitStrAboutOn)
 {
     $includePeriod = 1;
@@ -28,12 +37,13 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
 </div>', $name, substr($strAbout, 0, $strPos), substr($strAbout, $strPos));
 }
 
-function get_html_start_section_for_articles_cv(
-    string $sectionId,
-    string $headValue
-
-) {
-
+/**
+ * Builds the beginning of the section that are populated by articles.
+ * @param string $sectionId The id of the specific section
+ * @param string $headValue Sections header.
+ */
+function get_html_start_section_for_articles_cv(string $sectionId, string $headValue)
+{
     echo sprintf('<section id="%s" class="desc">
     <div class="container">
         <div class="row">
@@ -42,6 +52,16 @@ function get_html_start_section_for_articles_cv(
             </div>', $sectionId, $headValue);
 }
 
+/**
+ * A general template for creating articles
+ * @param string $className 
+ * @param string $firstheadValue Giving the name on the object
+ * @param string $secondHeadValue HTML creates even if param has no value. Otherwise it messes up the layout.
+ * @param string $description A description for the object
+ * @param string $organisation 
+ * @param string $date
+ *  
+ */
 function get_html_article(string $className, string $firstheadValue, string $secondHeadValue = null, string $description, string $organisation, string $date)
 {
     echo sprintf('
