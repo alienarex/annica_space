@@ -1,5 +1,6 @@
 jQuery(document).ready(function ($) {
   document.getElementById("visible-item-id").innerText = "Visa mer...";
+
   // Smooth scroll for the menu and links with .scrollto classes
   $(".smothscroll").on(
     "click",
@@ -36,4 +37,30 @@ jQuery(document).ready(function ($) {
       });
     })
   );
+  function test() {
+    var lang = $(this).val();
+    console.log(lang);
+    return jsonURL;
+  }
+  // $("#lang-switch").change(function () {
+  //   // $('[lang="en"]').hide();
+  //   // $('[lang="sv"]').hide();
+  //   var lang = $(this).val();
+
+  //   console.log($(this).val());
+  //   switch (lang) {
+  //     case "en":
+  //       $('[lang="en"]').show();
+
+  //       $("[lang]").hide();
+  //       break;
+  //     case "sv":
+  //       // $("[lang]").hide();
+  //       $('[lang="sv"]').show();
+  //       break;
+  //     default:
+  //       // $("[lang]").hide();
+  //       $('[lang="sv"]').show();
+  //   }
+  // });
 });

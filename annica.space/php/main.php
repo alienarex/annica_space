@@ -58,11 +58,11 @@ function get_html_start_section_for_articles_cv(string $sectionId, string $headV
  * @param string $firstheadValue Giving the name on the object
  * @param string $secondHeadValue HTML creates even if param has no value. Otherwise it messes up the layout.
  * @param string $description A description for the object
- * @param string $organisation 
+ * @param string $organization 
  * @param string $date
  *  
  */
-function get_html_article(string $className, string $firstheadValue, string $secondHeadValue = null, string $description, string $organisation, string $date)
+function get_html_article(string $className, string $firstheadValue, string $secondHeadValue = null, string $description, string $organization, string $date)
 {
     echo sprintf('
     <article>
@@ -75,5 +75,5 @@ function get_html_article(string $className, string $firstheadValue, string $sec
             <p class="edu-item">%s</p>
             <p class="edu-year">%s</p> 
         </div>
-    </article>', $className, $firstheadValue, $secondHeadValue, $description, $organisation, $date);
+    </article>', $className, $firstheadValue, $secondHeadValue, $description, $organization, $date);
 }

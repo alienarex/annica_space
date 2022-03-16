@@ -26,7 +26,7 @@
             "level": "University",
             "title": ["Informatik", "Inriktining systemutveckling"],
             "description": "Under studietiden designade och utvecklades it-lösningar utifrån ett användarcentrerat perspektiv, ofta tillsammans med andra studenter, där färdigheter i kommunikation och samarbete tillsammans med utvecklare, användare och beställare utvecklas. Dessutom genomfördes samtliga projekt distribuerat och gav god erfarenhet av systemutveckling i distribuerade team och många av de verktyg som användes i distribuerade projekt. Den tekniska kompetensen är bland annat inom webb, databaser och utvecklingsmiljöer som bland annat Visual Studio och VS Code,  tillsammans med tekniker som agila metoder, SQL, ASP.NET och C#. Upplägget gav kunskap och erfarenhet av hela stacken och en bred kompetens ett antal verktyg och metoder.",
-            "organisation": "Mittuniversitetet",
+            "organization": "Mittuniversitetet",
             "city": "Östersund",
             "date": "2017 - 2021",
             "points": "180 hp"
@@ -35,7 +35,7 @@
             "level": "Gymnasie",
             "title": ["Ekonomi", "inriktning ekonomiassistent"],
             "description": "Gymnasiala kärnämnen inklusive företagsekonomi, redovisning och beskattning samt rättskunskap. Utbildningen gav goda teoretiska kunskaper i företagsredovisning, bokföring, skatter och regulatoriska regler.",
-            "organisation": "Lernia",
+            "organization": "Lernia",
             "city": "Göteborg",
             "date": "aug 2008 - juni 2010"
           },
@@ -43,7 +43,7 @@
             "level": "Gymnasie",
             "title": ["Vård och omsorg", "Inriktning geriatrik"],
             "description": "Inkluderade ämnen som handledning, etik, människan socialt och kulturellt, social omsorg, omvårdnad psykologi, arbetsmiljö och säkerhet m.fl. Studierna inkluderade även LIA som genomfördes på Sekelbo vård- och omsorgsboende i Göteborg i slutet av utbildningen.",
-            "organisation": "Lernia",
+            "organization": "Lernia",
             "city": "Göteborg",
             "date": "juni 2002 - nov 2003"
           }
@@ -56,7 +56,7 @@
             "level": "Univeristy",
             "title": ["Tillämpad IoT", "Datavetenskap"],
             "description": "Kursen ger kunskaper och erfarenhet av att använda mikrokontroller för att hantera olika typer av sensorer. Språket var micropython och hårdvara var Pycom LoPy4. Inkluderade även kunskap och erfarenhet av 3D-design för utskrift och hur dessa fungerar.",
-            "organisation": "Linnéuniversitetet",
+            "organization": "Linnéuniversitetet",
             "city": "Distans",
             "date": "juni - aug 2020",
             "points": "7.5 hp"
@@ -65,7 +65,7 @@
             "level": "Univeristy",
             "title": ["Introduktion till spelutveckling", "Datavetenskap"],
             "description": "Utbildningen omfattade planering, design och utförande av ett 3D-spel med C# och Unity game engine, där två av karaktärerna är en mycket enkel AI.",
-            "organisation": "Linnéuniversitetet",
+            "organization": "Linnéuniversitetet",
             "city": "Distans",
             "date": "juni - aug 2020",
             "points": "7.5 hp"
@@ -74,7 +74,7 @@
             "level": "Univeristy",
             "title": ["Projektledning", "Maskinteknik"],
             "description": "Gav grundläggande kunskaper i projektarbete, projektorganisering, projektledning, projektstyrning och projektekonomi. Kursen gav dessutom en förståelse för formering av projekt, val av lämplig projektmodell, projektets målformulering, planering, uppföljning och utvärdering. Inkluderade förståelse för både traditionell och agil projektarbete.",
-            "organisation": "Mittuniversitetet",
+            "organization": "Mittuniversitetet",
             "city": "Distans",
             "date": "juni - aug 2018",
             "points": "7.5 hp"
@@ -83,7 +83,7 @@
             "level": "Univeristy",
             "title": ["Företagsetik", "Företagsekonomi"],
             "description": "Kursen gav teoretiska kunskaper kring etik och företagande med hjälp av skilda etiska modeller och olika sätt att skriva normativ företagsetik. Kursen gav en grundläggande färdighet att reflektera kring etiska frågeställningar både i företagande och i allmänhet.",
-            "organisation": "Mittuniversitetet",
+            "organization": "Mittuniversitetet",
             "city": "Distans",
             "date": "juni - aug 2010",
             "points": "7.5 hp"
@@ -98,49 +98,49 @@
       {
         "title": ["IT-konsult", "AstraZeneca"],
         "description": "Planerar, designar och bygger relationsdatabas för att spåra dokument vid försäljning och förvärv av läkemedel. Hanterade större mängder data som bearbetades och importerades med SQL*Loader. Utöver ovanstående projektet ingick jag även i ett projekt av migrering av ett cms-system och analyserade, städade och mappade data.",
-        "organisation": "Randstad",
+        "organization": "Randstad",
         "city": "Göteborg",
         "date": "juni 2019- dec 2019"
       },
       {
         "title": ["Ekonomiassistent", ""],
         "description": "Hanterar löpande bokföring, enklare frågor kring skatteavdrag och momsfrågor samt andra administrativa uppgifter.",
-        "organisation": "Alienus Visuals",
+        "organization": "Alienus Visuals",
         "city": "Göteborg",
         "date": "2011"
       },
       {
         "title": ["Undersköterska", ""],
         "description": "Ambulerande timvikariat inom vård och omsorg samt habilitering/LSS. Arbetet innebar att ta hand om vårdtagare som bodde på särskilt boende efter behov, vilket kunde innebära personlig hygien, matstöd, förflyttning och medicinering efter ordination. Arbetet ställde höga krav på flexibilitet och ett pedagogiskt, metodisk och lågaffektivt arbetssätt.",
-        "organisation": "Mölndals stad",
+        "organization": "Mölndals stad",
         "city": "Mölndal",
         "date": "2010-2011"
       },
       {
         "title": ["Personlig assistent/samordnare", ""],
         "description": "Utöver sedvanliga uppgifter för att stötta brukaren i vardagen ingår även planering av läkartider och andra viktiga möten, uppföljning av arbetsrutiner och planering av arbetspass.",
-        "organisation": "Aleris Group AB",
+        "organization": "Aleris Group AB",
         "city": "Göteborg",
         "date": "2009-2010"
       },
       {
         "title": ["Undersköterska", "Gerås hus"],
         "description": "Stöttar vårdtagare med allmän daglig livsföring som personlig hygien, äta och kommunicera. Andra vanligt förekommande arbetsuppgifter var förflyttning av vårdtagare, medicinutdelning samt dokumentation och avvikelserapporter.",
-        "organisation": "Göteborgs stad",
+        "organization": "Göteborgs stad",
         "city": "Göteborg",
         "date": "2008"
       },
       {
         "title": ["Undersköterska", "Lovisagården"],
         "description": "Arbetar med vårdtagare med olika typer av demenssjukdomar med stöttning i allmän daglig livsföring som personlig hygien, mat, fysiskt aktivering och kommunikation. Utöver sedvanliga uppgifter inom äldreomsorgen ingick även konflikthantering och lågaffektivt bemötande.",
-        "organisation": "Lovisa gården vård AB",
+        "organization": "Lovisa gården vård AB",
         "city": "Stockholm",
         "date": "2008"
       },
       {
         "title": ["Undersköterska", ""],
         "description": "Vård och omsorg av äldre med olika typer av problematik och behov. Sedvanliga arbetsuppgifter såsom personlig hygien, äta och kommunicera samt förflyttningar, såromläggningar, medicinutdelning samt vård i livets slutskede. Arbetet innefattar även dokumentation som avvike- och fallrapporter samt uppföljning av planeringar.",
-        "organisation": "Göteborgs stad",
+        "organization": "Göteborgs stad",
         "city": "Göteborg",
         "date": "2003-2007"
       }

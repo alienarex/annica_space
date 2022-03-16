@@ -53,11 +53,13 @@
                                 <a class="smothscroll" href="#contact" title="Kontakt"><i class="fa fa-envelope"></i></a>
                             </li>
                         </ul>
+
                         <!--/ uL#nav -->
                     </div>
                     <!-- /.dropdown -->
 
                     <div class="clear"></div>
+
                 </div>
                 <!--/.row -->
             </div>
@@ -66,6 +68,13 @@
             <div class="clear"></div>
         </div>
         <!--/ #topbar-inner -->
+        <div class="col-lg-7 col-md-7 col-sm-12">
+            <select id="lang-switch">
+                <option value="sv">svenska</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+
     </div>
     <!--/ #section-topbar -->
 
@@ -84,36 +93,39 @@
             <!--/.row -->
         </div>
         <!--/.container -->
+
     </div>
     <!--/.#headerwrap -->
 
-    <?php
-    include 'php/main.php';
+    <main lang="sv">
 
-    // Get the contents of the JSON file 
-    $strJsonFileContents = file_get_contents("info.json");
-    // Convert to array 
-    $array = json_decode($strJsonFileContents, true);
+        <?php
+        include 'php/main.php';
 
-    // Variables
-    $headWork = 'Arbete';
-    $headEdu = 'Utbildning';
-    $attributeWork = 'work';
-    $attributeEdu = 'education';
-    $personName = $array["name"];
-    $personAbout = $array["about"];
-    $splitOnNum = 300;
+        // Get the contents of the JSON file 
+        $strJsonFileContents = file_get_contents("info.json");
+        // Convert to array 
+        $array = json_decode($strJsonFileContents, true);
 
-    // bootstrap classes differ between first and second article.
-    $setClassFirstArticle = ' col-lg-7 col-md-7 col-sm-12';
-    $setClassSecondArticle = ' col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-12';
-    $isFirstArticle = true;
+        // Variables
+        $headWork = 'Arbete';
+        $headEdu = 'Utbildning';
+        $attributeWork = 'work';
+        $attributeEdu = 'education';
+        $personName = $array["name"];
+        $personAbout = $array["about"];
+        $splitOnNum = 300;
 
-    get_html_section_intro($personName, $personAbout, $splitOnNum);
-    get_html_start_section_for_articles_cv($attributeWork, $array["work"]["header"]);
+        // bootstrap classes differ between first and second article.
+        $setClassFirstArticle = ' col-lg-7 col-md-7 col-sm-12';
+        $setClassSecondArticle = ' col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-12';
+        $isFirstArticle = true;
 
-    // End the section wrapping articles
-    $htmlEndSectionForArticles = '
+        get_html_section_intro($personName, $personAbout, $splitOnNum);
+        get_html_start_section_for_articles_cv($attributeWork, $array["work"]["header"]);
+
+        // End the section wrapping articles
+        $htmlEndSectionForArticles = '
             </div>
             <!--/.row -->
         </div>
@@ -121,37 +133,37 @@
         </section>
         ';
 
-    // Work section
-    foreach ($array["work"]["workExperiences"] as $value) {
-        $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
-        get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
-
-        $isFirstArticle = false;
-    }
-    echo $htmlEndSectionForArticles;
-
-    // Education section
-    get_html_start_section_for_articles_cv($attributeEdu, $array["education"]["header"]);
-
-    $isFirstArticle = true;
-    foreach ($array["education"]["educations"] as $value1) {
-
-        foreach ($value1["programs"] as $value) {
-
-
+        // Work section
+        foreach ($array["work"]["workExperiences"] as $value) {
             $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
+            get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organization"],  $value["date"]);
 
-            get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
             $isFirstArticle = false;
         }
-    }
+        echo $htmlEndSectionForArticles;
 
-    echo $htmlEndSectionForArticles;
+        // Education section
+        get_html_start_section_for_articles_cv($attributeEdu, $array["education"]["header"]);
+
+        $isFirstArticle = true;
+        foreach ($array["education"]["educations"] as $value1) {
+
+            foreach ($value1["programs"] as $value) {
 
 
-    //TODO Create new function in main.php and move this.
-    // Prints the HTML for the skill section
-    echo sprintf('
+                $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
+
+                get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organization"],  $value["date"]);
+                $isFirstArticle = false;
+            }
+        }
+
+        echo $htmlEndSectionForArticles;
+
+
+        //TODO Create new function in main.php and move this.
+        // Prints the HTML for the skill section
+        echo sprintf('
     <!--SKILLS DESCRIPTION -->
     <div id="skillswrap" class="desc">
         <div class="container">
@@ -163,23 +175,133 @@
                     <div class="col-lg-10 col-lg-offset-2 col-md-ofset-2 col-sm-offset-2 skills">
                         ', $array["competence"]["header"]);
 
-    foreach ($array["competence"]["competences"] as $competence) {
-        echo sprintf('<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"><h4>%s</h4> <ul>', $competence["title"]);
+        foreach ($array["competence"]["competences"] as $competence) {
+            echo sprintf('<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"><h4>%s</h4> <ul>', $competence["title"]);
 
-        foreach ($competence["skills"] as $val) {
-            echo sprintf('<li>%s</li>', $val["skill"]);
+            foreach ($competence["skills"] as $val) {
+                echo sprintf('<li>%s</li>', $val["skill"]);
+            }
+            echo '</ul></div>';
         }
-        echo '</ul></div>';
-    }
-    echo '  </div><!-- /.row -->
+        echo '  </div><!-- /.row -->
     <!--/.container -->
         </div>
         </div>
         </div>
         <!--/ #skillswrap -->
     </div>';
-    ?>
+        ?>
 
+    </main>
+
+    <main lang="en">
+        <?php
+        // include 'php/main.php';
+
+        // Get the contents of the JSON file 
+        $strJsonFileContents = file_get_contents("info_eng.json");
+        // Convert to array 
+        $array = json_decode($strJsonFileContents, true);
+
+        // Variables
+        $headWork = 'Arbete';
+        $headEdu = 'Utbildning';
+        $attributeWork = 'work';
+        $attributeEdu = 'education';
+        $personName = $array["name"];
+        $personAbout = $array["about"];
+        $splitOnNum = 300;
+
+        // bootstrap classes differ between first and second article.
+        $setClassFirstArticle = ' col-lg-7 col-md-7 col-sm-12';
+        $setClassSecondArticle = ' col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-12';
+        $isFirstArticle = true;
+
+        get_html_section_intro($personName, $personAbout, $splitOnNum);
+        get_html_start_section_for_articles_cv($attributeWork, $array["work"]["header"]);
+
+        // End the section wrapping articles
+        $htmlEndSectionForArticles = '
+            </div>
+            <!--/.row -->
+        </div>
+        <!--/.container -->
+        </section>
+        ';
+
+        // Work section
+        foreach ($array["work"]["workExperiences"] as $value) {
+            $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
+            get_html_article(
+                $className,
+                $value["title"][0],
+                $value["title"][1],
+                $value["description"],
+                $value["organization"],
+                $value["date"]
+            );
+            $isFirstArticle = false;
+        }
+        echo $htmlEndSectionForArticles;
+
+        // Education section
+        get_html_start_section_for_articles_cv($attributeEdu, $array["education"]["header"]);
+
+        $isFirstArticle = true;
+        foreach ($array["education"]["educations"] as $value1) {
+
+            foreach ($value1["programs"] as $value) {
+
+
+                $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
+
+                get_html_article(
+                    $className,
+                    $value["title"][0],
+                    $value["title"][1],
+                    $value["description"],
+                    $value["organization"],
+                    $value["date"]
+                );
+                $isFirstArticle = false;
+            }
+        }
+
+        echo $htmlEndSectionForArticles;
+
+
+        //TODO Create new function in main.php and move this.
+        // Prints the HTML for the skill section
+        echo sprintf('
+    <!--SKILLS DESCRIPTION -->
+    <div id="skillswrap" class="desc">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-12">
+                    <h3>%s</h3>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-10 col-lg-offset-2 col-md-ofset-2 col-sm-offset-2 skills">
+                        ', $array["competence"]["header"]);
+
+        foreach ($array["competence"]["competences"] as $competence) {
+            echo sprintf('<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"><h4>%s</h4> <ul>', $competence["title"]);
+
+            foreach ($competence["skills"] as $val) {
+                echo sprintf('<li>%s</li>', $val["skill"]);
+            }
+            echo '</ul></div>';
+        }
+        echo '  </div><!-- /.row -->
+    <!--/.container -->
+        </div>
+        </div>
+        </div>
+        <!--/ #skillswrap -->
+    </div>';
+        ?>
+
+    </main>
     <section id="contact">
         <!--FOOTER DESCRIPTION -->
         <div class="container">
