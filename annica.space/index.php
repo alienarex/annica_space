@@ -90,9 +90,7 @@
     <?php
     include 'php/main.php';
 
-    // Get the contents of the JSON file 
     $strJsonFileContents = file_get_contents("info.json");
-    // Convert to array 
     $array = json_decode($strJsonFileContents, true);
 
     // Variables
@@ -123,9 +121,9 @@
 
     // Work section
     foreach ($array["work"]["workExperiences"] as $value) {
+
         $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
         get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
-
         $isFirstArticle = false;
     }
     echo $htmlEndSectionForArticles;
@@ -138,19 +136,16 @@
 
         foreach ($value1["programs"] as $value) {
 
-
             $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
-
             get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
             $isFirstArticle = false;
         }
     }
-
     echo $htmlEndSectionForArticles;
 
 
     //TODO Create new function in main.php and move this.
-    // Prints the HTML for the skill section
+    // Skills section
     echo sprintf('
     <!--SKILLS DESCRIPTION -->
     <div id="skillswrap" class="desc">
@@ -164,19 +159,25 @@
                         ', $array["competence"]["header"]);
 
     foreach ($array["competence"]["competences"] as $competence) {
-        echo sprintf('<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"><h4>%s</h4> <ul>', $competence["title"]);
 
+        echo sprintf(
+            '<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <h4>%s</h4>
+                <ul>',
+            $competence["title"]
+        );
         foreach ($competence["skills"] as $val) {
             echo sprintf('<li>%s</li>', $val["skill"]);
         }
         echo '</ul></div>';
     }
-    echo '  </div><!-- /.row -->
+    echo '</div>
+    </div>
+    <!-- /.row -->
+    </div>
     <!--/.container -->
-        </div>
-        </div>
-        </div>
-        <!--/ #skillswrap -->
+    </div>
+    <!--/ #skillswrap -->
     </div>';
     ?>
 
