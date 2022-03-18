@@ -26,10 +26,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
     <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
 
 </head>
 
@@ -38,7 +38,8 @@
         <div id="topbar-inner">
             <div class="container">
                 <div class="row">
-                    <div class="dropdown">
+                    <div class="dropdown col-md-9 col-md-offset-1">
+
                         <ul id="nav" class="nav">
                             <li class="menu-item">
                                 <a class="smothscroll" href="#headerwrap" title="Om mig"><i class="fa fa-user"></i></a>
@@ -53,28 +54,33 @@
                                 <a class="smothscroll" href="#contact" title="Kontakt"><i class="fa fa-envelope"></i></a>
                             </li>
                         </ul>
-
                         <!--/ uL#nav -->
                     </div>
                     <!-- /.dropdown -->
-
                     <div class="clear"></div>
+
+                    <form class="lang-form col-md-1 col-md-offset-1" method="GET" action="">
+                        <select class="lang-select" name="lang" id="lang-select" onchange="this.form.submit()">
+                            <option value="sv" <?php if (isset($_GET['lang']) && $_GET['lang'] == 'sv') echo "selected='selected'" ?>>Svenska</option>
+                            <option value="en" <?php if (isset($_GET['lang']) && $_GET['lang'] == 'en') echo "selected='selected'" ?>>English</option>
+                        </select>
+                    </form>
 
                 </div>
                 <!--/.row -->
             </div>
             <!--/.container -->
-
-            <div class="clear"></div>
         </div>
         <!--/ #topbar-inner -->
-        <div class="col-lg-7 col-md-7 col-sm-12">
-            <select id="lang-switch">
-                <option value="sv">svenska</option>
-                <option value="en">English</option>
-            </select>
-        </div>
 
+        <?php include './php/main.php'; ?>
+
+        <?php
+        if (isset($_GET["lang"])) {
+            $curr_lang = $_GET["lang"];
+            $array = get_info($curr_lang);
+        }
+        ?>
     </div>
     <!--/ #section-topbar -->
 
@@ -82,7 +88,6 @@
         <div class="container">
             <div class="row centered">
                 <div class="col-12">
-
                     <p class="quote-paragraph">
                         Programming isn't about what you know; it's about what you can figure out.
                         <br /> - Chris Pine
@@ -93,115 +98,11 @@
             <!--/.row -->
         </div>
         <!--/.container -->
-
     </div>
     <!--/.#headerwrap -->
-
-    <main lang="sv">
-
-        <?php
-        include 'php/main.php';
-
-        // Get the contents of the JSON file 
-        $strJsonFileContents = file_get_contents("info.json");
-        // Convert to array 
-        $array = json_decode($strJsonFileContents, true);
-
-        // Variables
-        $headWork = 'Arbete';
-        $headEdu = 'Utbildning';
-        $attributeWork = 'work';
-        $attributeEdu = 'education';
-        $personName = $array["name"];
-        $personAbout = $array["about"];
-        $splitOnNum = 300;
-
-        // bootstrap classes differ between first and second article.
-        $setClassFirstArticle = ' col-lg-7 col-md-7 col-sm-12';
-        $setClassSecondArticle = ' col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-12';
-        $isFirstArticle = true;
-
-        get_html_section_intro($personName, $personAbout, $splitOnNum);
-        get_html_start_section_for_articles_cv($attributeWork, $array["work"]["header"]);
-
-        // End the section wrapping articles
-        $htmlEndSectionForArticles = '
-            </div>
-            <!--/.row -->
-        </div>
-        <!--/.container -->
-        </section>
-        ';
-
-        // Work section
-        foreach ($array["work"]["workExperiences"] as $value) {
-            $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
-            get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organization"],  $value["date"]);
-
-            $isFirstArticle = false;
-        }
-        echo $htmlEndSectionForArticles;
-
-        // Education section
-        get_html_start_section_for_articles_cv($attributeEdu, $array["education"]["header"]);
-
-        $isFirstArticle = true;
-        foreach ($array["education"]["educations"] as $value1) {
-
-            foreach ($value1["programs"] as $value) {
-
-
-                $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
-
-                get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organization"],  $value["date"]);
-                $isFirstArticle = false;
-            }
-        }
-
-        echo $htmlEndSectionForArticles;
-
-
-        //TODO Create new function in main.php and move this.
-        // Prints the HTML for the skill section
-        echo sprintf('
-    <!--SKILLS DESCRIPTION -->
-    <div id="skillswrap" class="desc">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-12">
-                    <h3>%s</h3>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="col-lg-10 col-lg-offset-2 col-md-ofset-2 col-sm-offset-2 skills">
-                        ', $array["competence"]["header"]);
-
-        foreach ($array["competence"]["competences"] as $competence) {
-            echo sprintf('<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"><h4>%s</h4> <ul>', $competence["title"]);
-
-            foreach ($competence["skills"] as $val) {
-                echo sprintf('<li>%s</li>', $val["skill"]);
-            }
-            echo '</ul></div>';
-        }
-        echo '  </div><!-- /.row -->
-    <!--/.container -->
-        </div>
-        </div>
-        </div>
-        <!--/ #skillswrap -->
-    </div>';
-        ?>
-
-    </main>
-
     <main lang="en">
         <?php
-        // include 'php/main.php';
 
-        // Get the contents of the JSON file 
-        $strJsonFileContents = file_get_contents("info_eng.json");
-        // Convert to array 
-        $array = json_decode($strJsonFileContents, true);
 
         // Variables
         $headWork = 'Arbete';
@@ -320,11 +221,11 @@
     </section>
 
     <!-- JavaScript Libraries -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/php-mail-form/validate.js"></script>
-    <script src="lib/chart/chart.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/php-mail-form/validate.js"></script>
+    <script src="../lib/chart/chart.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>

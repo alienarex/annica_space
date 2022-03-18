@@ -1,5 +1,29 @@
 <?php
 
+/** Get json in selected language
+ * @param string $lang Selected language
+ * @return array $array Converted json 
+ */
+function get_info(string $lang)
+{
+    switch ($lang) {
+        case 'en':
+            $strJsonFileContents = file_get_contents("info_eng.json");
+            $array = json_decode($strJsonFileContents, true);
+            break;
+        case 'sv':
+            $strJsonFileContents = file_get_contents("info.json");
+            $array = json_decode($strJsonFileContents, true);
+            break;
+        default:
+            $strJsonFileContents = file_get_contents("info.json");
+            $array = json_decode($strJsonFileContents, true);
+            break;
+    }
+
+    return $array;
+}
+
 /**
  * Prints the html for intro section. 
  * Splits the about string on the period after given index
@@ -18,7 +42,7 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
         <div class="container">
             <div class="row">
                 <div id="presentation-profile" class="col-lg-2 col-md-2 col-sm-12">
-                    <img class ="profile-pic" src="img\profilPic.jpg" alt="profile picture" />
+                    <img class ="profile-pic" src="../img/profilPic.jpg" alt="profile picture" />
                     <h1>%s</h1>
                    <a class ="download" href="docs/AnnicaAlienus.pdf" download ="AnnicaAlienus">Ladda ner cv</a>
                 </div>

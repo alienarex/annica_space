@@ -37,11 +37,31 @@ jQuery(document).ready(function ($) {
       });
     })
   );
-  function test() {
-    var lang = $(this).val();
-    console.log(lang);
-    return jsonURL;
-  }
+  jQuery("#lang-select").hover(
+    function () {
+      jQuery(this).attr("size", jQuery("option").length);
+    },
+    function () {
+      jQuery(this).attr("size", 1);
+    }
+  );
+
+  // $("#lang-select")
+  //   .chosen()
+  //   .next(".chzn-container")
+  //   .hover(
+  //     function () {
+  //       $("#lang-select").trigger("liszt:open");
+  //     },
+  //     function () {
+  //       $(this).trigger("click");
+  //     }
+  //   );
+
+  $.post("../eng/index.php", { data: "value1" }, function (data) {
+    console.log(data);
+    $("#response").text(data);
+  });
   // $("#lang-switch").change(function () {
   //   // $('[lang="en"]').hide();
   //   // $('[lang="sv"]').hide();
@@ -50,9 +70,9 @@ jQuery(document).ready(function ($) {
   //   console.log($(this).val());
   //   switch (lang) {
   //     case "en":
+  //       $("[lang]").hide();
   //       $('[lang="en"]').show();
 
-  //       $("[lang]").hide();
   //       break;
   //     case "sv":
   //       // $("[lang]").hide();

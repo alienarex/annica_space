@@ -5,7 +5,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: #f2f2f2b7;
+  /* background-color: #f2f2f2b7; */
   font-family: "Lato";
   font-weight: 300;
   font-size: 16px;
@@ -134,7 +134,36 @@ By default, top navigation bar uses "fixed" position
 #section-topbar i {
   font-size: 25px;
 }
-
+.lang-form {
+  padding-top: 0.5em;
+}
+.lang-select {
+  -webkit-appearance: none;
+  /* -moz-appearance: none; */
+  /* text-indent: 1px; */
+  text-overflow: "";
+  overflow-y: auto;
+  scrollbar-width: none;
+  width: 6em;
+  height: 2em;
+  background: #ccc;
+  border: none;
+  border-radius: 0.5em;
+  text-align: center;
+}
+.lang-select[multiple] {
+  height: 2em;
+}
+.lang-select[size] {
+  height: 2em;
+}
+.lang-select[size]:hover {
+  height: auto;
+}
+.lang-select option:hover {
+  background: rgb(230, 223, 223);
+  color: black;
+}
 /*---------------------------------------------------
 SECTION WRAPS
 ---------------------------------------------------*/
