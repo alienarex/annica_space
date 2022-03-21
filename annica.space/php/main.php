@@ -49,7 +49,7 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
                 <div class=" col-lg-7 col-md-7 col-sm-12">
                 <p class = "visible-text col-md-12 ">%s</p>
                     <p id="hidden-item-id" class="hidden-item col-md-12">%s</p>
-                    <p id = "visible-item-id" class="readmore col-md-12 "></p>
+                    <p id = "visible-item-id" class="readmore col-md-12 "> <i id = "readmore-icon" class ="fas fa-chevron-down"></i></p>
                     
                 </div>
             </div>
