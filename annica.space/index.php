@@ -30,7 +30,6 @@
 
     <!-- Main Stylesheet File -->
     <link href="../css/style.css" rel="stylesheet" />
-
 </head>
 
 <body data-spy="scroll" data-offset="64" data-target="#section-topbar">
@@ -78,8 +77,10 @@
         <?php
         if (isset($_GET["lang"])) {
             $curr_lang = $_GET["lang"];
-            $array = get_info($curr_lang);
+        } else {
+            $curr_lang = "sv";
         }
+        $array = get_info($curr_lang);
         ?>
     </div>
     <!--/ #section-topbar -->
@@ -100,10 +101,8 @@
         <!--/.container -->
     </div>
     <!--/.#headerwrap -->
-    <main lang="en">
+    <main>
         <?php
-
-
         // Variables
         $headWork = 'Arbete';
         $headEdu = 'Utbildning';
@@ -112,7 +111,6 @@
         $personName = $array["name"];
         $personAbout = $array["about"];
         $splitOnNum = 300;
-
         // bootstrap classes differ between first and second article.
         $setClassFirstArticle = ' col-lg-7 col-md-7 col-sm-12';
         $setClassSecondArticle = ' col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-12';
