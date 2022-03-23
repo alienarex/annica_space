@@ -1,6 +1,4 @@
 jQuery(document).ready(function ($) {
-  // document.getElementById("visible-item-id").innerText = "Visa mer...";
-  let lang;
   // Smooth scroll for the menu and links with .scrollto classes
   $(".smothscroll").on(
     "click",
