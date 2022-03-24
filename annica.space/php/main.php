@@ -6,22 +6,13 @@
  */
 function get_info(string $lang)
 {
-    switch ($lang) {
-        case 'en':
-            $strJsonFileContents = file_get_contents("info_eng.json");
-            $array = json_decode($strJsonFileContents, true);
-            break;
-        case 'sv':
-            $strJsonFileContents = file_get_contents("info.json");
-            $array = json_decode($strJsonFileContents, true);
-            break;
-        default:
-            $strJsonFileContents = file_get_contents("info.json");
-            $array = json_decode($strJsonFileContents, true);
-            break;
+    $strJsonFileContents = file_get_contents("info.json");
+    $array = json_decode($strJsonFileContents, true);
+    foreach ($array["versions"] as $value) {
+        if ($value["lang"] == $lang) {
+            return $value;
+        }
     }
-
-    return $array;
 }
 
 /**
@@ -32,7 +23,7 @@ function get_info(string $lang)
  * @param int $splitStrAboutOn The index for spitting the string.
  * 
  */
-function get_html_section_intro(string $name, string $strAbout, int $splitStrAboutOn)
+function get_html_section_intro(string $name, string $strAbout, int $splitStrAboutOn, array $download = null)
 {
     $includePeriod = 1;
     $strPos = strpos($strAbout, '.', $splitStrAboutOn) + $includePeriod;
@@ -44,7 +35,7 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
                 <div id="presentation-profile" class="col-lg-2 col-md-2 col-sm-12">
                     <img class ="profile-pic" src="../img/profilPic.jpg" alt="profile picture" />
                     <h1>%s</h1>
-                   <a class ="download" href="docs/AnnicaAlienus.pdf" download ="AnnicaAlienus">Ladda ner cv</a>
+                   <a class ="download" href="%s" download ="Annica Alienus">%s</a>
                 </div>
                 <div class=" col-lg-7 col-md-7 col-sm-12">
                 <p class = "visible-text col-md-12 ">%s</p>
@@ -58,7 +49,7 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
         <!--/.container -->
     </div>
         <!--/ #intro -->
-</div>', $name, substr($strAbout, 0, $strPos), substr($strAbout, $strPos));
+</div>', $name, $download["url"], $download["comment"], substr($strAbout, 0, $strPos), substr($strAbout, $strPos));
 }
 
 /**

@@ -134,8 +134,22 @@ By default, top navigation bar uses "fixed" position
 #section-topbar i {
   font-size: 25px;
 }
+#lang-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+#language-control {
+  display: flex;
+  width: 100%;
+}
+#language-control i {
+  font-size: xx-large;
+}
 .lang-form {
-  padding-top: 0.5em;
+  padding: 0;
+  margin-left: 0;
+  width: 100%;
+  display: flex;
 }
 .lang-select {
   -webkit-appearance: none;
@@ -144,15 +158,20 @@ By default, top navigation bar uses "fixed" position
   text-overflow: "";
   overflow-y: auto;
   scrollbar-width: none;
-  width: 6em;
+  /* width: auto; */
   height: 2em;
-  background: #ccc;
+  /* background: #2c3e50; */
+  background: #fff;
+  color: #000;
   border: none;
-  border-radius: 0.5em;
+  border-radius: 0.3em;
   text-align: center;
+  display: none;
+  position: absolute;
 }
-.lang-select[multiple] {
-  height: 2em;
+.lang-select option {
+  width: auto;
+  padding: 10px;
 }
 .lang-select[size] {
   height: 2em;
@@ -231,6 +250,9 @@ SECTION WRAPS
 #about a.download:hover {
   color: rgb(7, 238, 255);
   font-style: normal;
+}
+#about a.download:empty {
+  visibility: hidden;
 }
 
 /* Work */

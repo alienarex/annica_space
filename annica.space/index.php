@@ -57,14 +57,18 @@
                     </div>
                     <!-- /.dropdown -->
                     <div class="clear"></div>
-
-                    <form class="lang-form col-md-1 col-md-offset-1" method="GET" action="">
-                        <select class="lang-select" name="lang" id="lang-select" onchange="this.form.submit()">
-                            <option value="sv" <?php if (isset($_GET['lang']) && $_GET['lang'] == 'sv') echo "selected='selected'" ?>>Svenska</option>
-                            <option value="en" <?php if (isset($_GET['lang']) && $_GET['lang'] == 'en') echo "selected='selected'" ?>>English</option>
-                        </select>
-                    </form>
-
+                    <div id="lang-wrap">
+                        <a id="language-control">
+                            <i class="fa fa-language"></i>
+                        </a>
+                        <form class="lang-form col-md-1 col-md-offset-1" method="GET" action="">
+                            <select class="lang-select" name="lang" id="lang-select" onchange="this.form.submit()">
+                                <option value="sv" <?php if (isset($_GET['lang']) && $_GET['lang'] == 'sv') echo "selected='selected'" ?>>sv</option>
+                                <option value="en" <?php if (isset($_GET['lang']) && $_GET['lang'] == 'en') echo "selected='selected'" ?>>en</option>
+                                <!-- </i></a> -->
+                            </select>
+                        </form>
+                    </div>
                 </div>
                 <!--/.row -->
             </div>
@@ -81,6 +85,7 @@
             $curr_lang = "sv";
         }
         $array = get_info($curr_lang);
+        // var_dump($array);
         ?>
     </div>
     <!--/ #section-topbar -->
@@ -111,12 +116,14 @@
         $personName = $array["name"];
         $personAbout = $array["about"];
         $splitOnNum = 300;
+        $download = $array["download"];
+
         // bootstrap classes differ between first and second article.
         $setClassFirstArticle = ' col-lg-7 col-md-7 col-sm-12';
         $setClassSecondArticle = ' col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-12';
         $isFirstArticle = true;
 
-        get_html_section_intro($personName, $personAbout, $splitOnNum);
+        get_html_section_intro($personName, $personAbout, $splitOnNum, $download);
         get_html_start_section_for_articles_cv($attributeWork, $array["work"]["header"]);
 
         // End the section wrapping articles
