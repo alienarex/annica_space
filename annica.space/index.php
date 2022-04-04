@@ -2,12 +2,30 @@
 <html lang="sv">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Annica Alienus</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
+    <title>Annica Alienus | Kreativ utvecklare</title>
+    <!-- Freddo start -->
 
+    <!-- Facebook, LinkedIn -->
+    <meta property="og:title" content="Annica Alienus | Kreativ utvecklare">
+    <meta property="og:description" content="Jag är en engagerad, nyfiken och vetgirig utvecklare som söker efter mitt nya drömjobb.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://annica.space" />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image" content="image for facebook" />
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Annica Alienus | Kreativ utvecklare" />
+    <meta name="twitter:description" content="Jag är en engagerad, nyfiken och vetgirig utvecklare som söker efter mitt nya drömjobb." />
+    <meta name="twitter:site" content="https://annica.space" />
+    <!-- Card Sets twitter preview image on twitter-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="image for twitter" />
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Jag är en engagerad, nyfiken och vetgirig utvecklare som söker efter mitt nya drömjobb.">
+    <meta name="keywords" content="Annica, Alienus, junior, utvecklare, programmerare, utvecklare, systemutvecklare, c#, javascript, java, html, css, fullstack, backend, databas, sql, unity, xml, xaml, .net, asp.net, versionshantering, git, arbetssökande, c++, mdi, informatik, spofire, oracle, postgresql, node.js, php, mölndal, göteborg, västra götaland, kungsbacka">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicons -->
     <link rel="shortcut icon" href="img/favicon_tag.png">
 
