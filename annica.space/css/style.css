@@ -1,11 +1,9 @@
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
-/* Medium devices (tablets, 768px and up) */
 
 html {
   scroll-behavior: smooth;
 }
 body {
-  /* background-color: #f2f2f2b7; */
   font-family: "Lato";
   font-weight: 300;
   font-size: 16px;
@@ -99,7 +97,6 @@ hr {
 
 /*
 Top Bar
-
 By default, top navigation bar uses "fixed" position
 */
 
@@ -124,12 +121,9 @@ By default, top navigation bar uses "fixed" position
 }
 #section-topbar ul#nav a:hover {
   background: #44bbaa;
-  text-decoration: none;
-  border-left: 1px solid #2c3e50;
 }
 #section-topbar ul#nav .active a {
   background: #2f6e65;
-  border-left: 1px solid #2c3e50;
 }
 #section-topbar i {
   font-size: 25px;
@@ -323,6 +317,7 @@ ul.socials li.linkedin::before {
     width: auto;
   }
 }
+/* Medium devices (tablets, 768px and up) */
 @media (max-width: 767px) {
   .profile-pic {
     display: flex;
@@ -335,10 +330,19 @@ ul.socials li.linkedin::before {
 
 /* For printing */
 @media print {
+  @page {
+    size: 210mm, 297mm;
+    margin: 2.5cm;
+    orphans: 4;
+    widows: 2;
+  }
   #section-topbar {
     display: none;
   }
   #headerwrap {
+    display: none;
+  }
+  .download {
     display: none;
   }
   #visible-item-id {
@@ -347,17 +351,11 @@ ul.socials li.linkedin::before {
   #contact ul.socials li a::after {
     content: none;
   }
-  @page {
-    size: 210mm, 297mm;
-    margin: 0;
-    orphans: 40;
-    widows: 6;
-  }
   article {
     page-break-inside: avoid;
   }
-  body {
-    padding-top: 0;
+  ul.socials li a[href]::after {
+    content: " (" attr(href) ")";
   }
   ul.socials li {
     display: flex;

@@ -1,15 +1,16 @@
 <?php
 
 /** Get json in selected language
- * @param string $lang Selected language
  * @return array $array Converted json 
  */
-function get_info(string $lang)
+function get_json()
 {
+    $getLang = $_GET["lang"];
+
     $strJsonFileContents = file_get_contents("info.json");
     $array = json_decode($strJsonFileContents, true);
     foreach ($array["versions"] as $value) {
-        if ($value["lang"] == $lang) {
+        if ($value["lang"] == $getLang) {
             return $value;
         }
     }

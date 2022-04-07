@@ -12,12 +12,6 @@
     <link rel="shortcut icon" href="img/favicon_tag.png">
 
 
-    <!-- Font awsome -->
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"> -->
-
-
-
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Raleway:400,300,700" rel="stylesheet" />
 
@@ -37,7 +31,7 @@
         <div id="topbar-inner">
             <div class="container">
                 <div class="row">
-                    <div class="dropdown col-md-9 col-md-offset-1">
+                    <div class="col-md-9 col-md-offset-1">
 
                         <ul id="nav" class="nav">
                             <li class="menu-item">
@@ -56,7 +50,6 @@
                         <!--/ uL#nav -->
                     </div>
                     <div class="clear"></div>
-                    <!-- /.dropdown -->
                     <div id="lang">
                         <ul class="socials d-flex">
                             <li>
@@ -66,25 +59,15 @@
                                 <a href="?lang=en">English</a>
                             </li>
                         </ul>
+                        <!-- .socials -->
                     </div>
+                    <!-- #lang -->
                 </div>
                 <!--/.row -->
             </div>
             <!--/.container -->
         </div>
         <!--/ #topbar-inner -->
-
-        <?php include './php/main.php'; ?>
-
-        <?php
-        if (isset($_GET["lang"])) {
-            $curr_lang = $_GET["lang"];
-        } else {
-            $curr_lang = "sv";
-        }
-        $array = get_info($curr_lang);
-        // var_dump($array);
-        ?>
     </div>
     <!--/ #section-topbar -->
 
@@ -104,8 +87,12 @@
         <!--/.container -->
     </div>
     <!--/.#headerwrap -->
+
     <main>
+        <?php include './php/main.php'; ?>
         <?php
+        //Get data
+        $array = get_json();
         // Variables
         $headWork = 'Arbete';
         $headEdu = 'Utbildning';
@@ -116,7 +103,7 @@
         $splitOnNum = 300;
         $download = $array["download"];
 
-        // bootstrap classes differ between first and second article.
+        // Diffferent classes on first article.
         $setClassFirstArticle = ' col-lg-7 col-md-7 col-sm-12';
         $setClassSecondArticle = ' col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-12';
         $isFirstArticle = true;
@@ -126,14 +113,14 @@
 
         // End the section wrapping articles
         $htmlEndSectionForArticles = '
+                </div>
+                <!--/.row -->
             </div>
-            <!--/.row -->
-        </div>
-        <!--/.container -->
+            <!--/.container -->
         </section>
         ';
 
-        // Work section
+        // WORK START
         foreach ($array["work"]["workExperiences"] as $value) {
             $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
             get_html_article(
@@ -148,7 +135,10 @@
         }
         echo $htmlEndSectionForArticles;
 
-        // Education section
+        // WORK END
+
+
+        // EDUCATION START
         get_html_start_section_for_articles_cv($attributeEdu, $array["education"]["header"]);
 
         $isFirstArticle = true;
@@ -172,40 +162,50 @@
         }
 
         echo $htmlEndSectionForArticles;
-
+        // EDUCATION END
 
         //TODO Create new function in main.php and move this.
         // Prints the HTML for the skill section
         echo sprintf('
-    <!--SKILLS DESCRIPTION -->
-    <div id="skillswrap" class="desc">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-12">
-                    <h3>%s</h3>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="col-lg-10 col-lg-offset-2 col-md-ofset-2 col-sm-offset-2 skills">
-                        ', $array["competence"]["header"]);
+        <!--SKILLS DESCRIPTION -->
+        <div id="skillswrap" class="desc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-12">
+                        <h3>%s</h3>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-10 col-lg-offset-2 col-md-ofset-2 col-sm-offset-2 skills">
+                            ', $array["competence"]["header"]);
 
         foreach ($array["competence"]["competences"] as $competence) {
-            echo sprintf('<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"><h4>%s</h4> <ul>', $competence["title"]);
+            echo sprintf('
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <h4>%s</h4>
+                    <ul>', $competence["title"]);
 
             foreach ($competence["skills"] as $val) {
-                echo sprintf('<li>%s</li>', $val["skill"]);
+                echo sprintf('
+                            <li>%s</li>
+                            ', $val["skill"]);
             }
-            echo '</ul></div>';
+            echo '
+                    </ul>
+                </div>';
         }
-        echo '  </div><!-- /.row -->
-    <!--/.container -->
-        </div>
-        </div>
-        </div>
-        <!--/ #skillswrap -->
-    </div>';
+        echo '
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!--/.container -->
+                </div>
+                <!--/ #skillswrap -->
+                ';
         ?>
-
     </main>
+
     <section id="contact">
         <!--FOOTER DESCRIPTION -->
         <div class="container">
@@ -220,8 +220,8 @@
             <!--/.row -->
         </div>
         <!--/.container -->
-        <!--/ #footer -->
     </section>
+    <!--/ #footer -->
 
     <!-- JavaScript Libraries -->
     <script src="../lib/jquery/jquery.min.js"></script>
