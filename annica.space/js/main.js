@@ -22,17 +22,6 @@ jQuery(document).ready(function ($) {
         }
       }
     },
-    $("#language-control").on("click", function () {
-      $("#lang-select").slideToggle();
-      $("#lang-select").hover(
-        function () {
-          $(this).attr("size", jQuery("option").length);
-        },
-        function () {
-          $(this).attr("size", 1);
-        }
-      );
-    }),
     // Toggle for the read more function
     $(".readmore").click(function () {
       $("#readmore-icon").toggleClass("fas fa-chevron-down fas fa-chevron-up");

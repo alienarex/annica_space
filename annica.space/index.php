@@ -55,19 +55,17 @@
                         </ul>
                         <!--/ uL#nav -->
                     </div>
-                    <!-- /.dropdown -->
                     <div class="clear"></div>
-                    <div id="lang-wrap">
-                        <a id="language-control">
-                            <i class="fa fa-language"></i>
-                        </a>
-                        <form class="lang-form col-md-1 col-md-offset-1" method="GET" action="">
-                            <select class="lang-select" name="lang" id="lang-select" onchange="this.form.submit()">
-                                <option value="sv" <?php if (isset($_GET['lang']) && $_GET['lang'] == 'sv') echo "selected='selected'" ?>>sv</option>
-                                <option value="en" <?php if (isset($_GET['lang']) && $_GET['lang'] == 'en') echo "selected='selected'" ?>>en</option>
-                                <!-- </i></a> -->
-                            </select>
-                        </form>
+                    <!-- /.dropdown -->
+                    <div id="lang">
+                        <ul class="socials d-flex">
+                            <li>
+                                <a href="?lang=sv">Svenska</a>
+                            </li>
+                            <li>
+                                <a href="?lang=en">English</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <!--/.row -->
