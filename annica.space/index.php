@@ -49,7 +49,7 @@
         <div id="topbar-inner">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9 col-md-offset-1">
+                    <div class="col-md-9 col-md-offset-1 col-xs-9">
 
                         <ul id="nav" class="nav">
                             <li class="menu-item">
@@ -68,7 +68,7 @@
                         <!--/ uL#nav -->
                     </div>
                     <div class="clear"></div>
-                    <div id="lang">
+                    <div class="col-xs-3 col-md-2" id="lang">
                         <ul class="socials d-flex">
                             <li>
                                 <a href="?lang=sv">Svenska</a>

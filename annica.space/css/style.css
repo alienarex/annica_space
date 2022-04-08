@@ -319,6 +319,16 @@ ul.socials li.linkedin::before {
 }
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 767px) {
+  #lang {
+    margin-top: 0;
+  }
+  #lang .socials {
+    display: flex;
+    flex-wrap: wrap;
+    height: 4em;
+    margin-top: 0;
+  }
+
   .profile-pic {
     display: flex;
     height: auto;
