@@ -236,10 +236,10 @@
     {
       "lang": "en",
       "name": "Annica Alienus",
-      "about": "Hi there! <br/> I am a curious and driven junior developer, looking for my new dream job. <br/>My curiosity, together with my commitment, is something that permeates my whole life and drives me to continue learning, big as small things. I am as a person communicative, solution-focused and non-judgmental with a tad of tenacity, giving me the energy to persistently work to achieve my goals, despite adversity and difficulties. I am a sincere team player that participates actively in discussions and enjoys contributing to the big picture. <br/> For me, system development is precisely teamwork where the resources in the team members are used to deliver a good product. In situations as studies, work, and family life, I have a structured and planned approach, but every now and then I can enjoy my spontaneous side and test alternative solutions. To my next colleagues, I can offer knowledge in i.e. , .NET, web, JavaScript, and databases. Additionally I have some basic knowledge in Java, c++, Node.js, Internet of Things and game development. In addition to anchoring my current knowledge, I would like to learn new languages, tools, and approaches. I have a dream of making life more fun, easier and better with the help of digital products that are both efficient and user-friendly.",
+      "about": "Hi there! <br/> I am a curious and driven junior developer, looking for my new dream job. <br/>My curiosity, together with my commitment, is something that permeates my whole life and drives me to continue learning, big as small things. I am as a person communicative, solution-focused and non-judgmental with a tad of tenacity, giving me the energy to persistently work to achieve my goals, despite adversity and difficulties. I am a sincere team player that participates actively in discussions and enjoys contributing to the big picture. <br/> For me, system development is a teamwork where the resources in the team members are used to deliver a good product. In situations as studies, work, and family life, I have a structured and planned approach, but every now and then I can enjoy my spontaneous side and test alternative solutions. To my next colleagues, I can offer knowledge in i.e. , .NET, web, JavaScript, and databases. Additionally I have some basic knowledge in Java, c++, Node.js, Internet of Things and game development. In addition to anchoring my current knowledge, I would like to learn new languages, tools, and approaches. I have a dream of making life more fun, easier and better with the help of digital products that are both efficient and user-friendly.",
       "download": {
-        "url": "",
-        "comment": ""
+        "url": "docs/AnnicaAlienus_eng.pdf",
+        "comment": "Download"
       },
       "contacts": [
         {
@@ -289,7 +289,7 @@
               },
               {
                 "level": "High school",
-                "title": ["Health and social care", "Targeting geriatrics"],
+                "title": ["Health and social care", "focus geriatrics"],
                 "description": "Included topics such as supervision, ethics, human social and cultural, social care, nursing psychology, work environment and safety, etc. The studies also included LIA, which was conducted at Sekelbo nursing home in Gothenburg at the end of the education.",
                 "organization": "Lernia",
                 "city": "Gothenburg",
@@ -298,7 +298,7 @@
             ]
           },
           {
-            "type": "Independent courses",
+            "type": "Singel courses",
             "programs": [
               {
                 "level": "University",
@@ -438,7 +438,7 @@
               { "skill": "ASP.Net" },
               { "skill": "Entity framework" },
               { "skill": "SQL*Loader" },
-              { "skill": "Versionshantering" }
+              { "skill": "Git" }
             ]
           },
           {
@@ -466,7 +466,7 @@
           },
           {
             "projectname": "SalamiTV",
-            "info": "Tvtablå in MVC, ASP.Net Identity and data from own database. The website and server have been taken down and it can no longer be viewed live in its entirety on the web. The source code is available on GitHub.",
+            "info": "Tvtablå in MVC, ASP.Net Identity and data from own database. The server are no longer alive. The source code is available on GitHub.",
             "link": "https://github.com/alienarex/SalamiTV.git"
           },
           {
