@@ -236,7 +236,7 @@
     {
       "lang": "en",
       "name": "Annica Alienus",
-      "about": "Hello there! <br/>I am a curious and curious developer looking for my new dream job. <br/>My curiosity, together with my commitment, is something that permeates my whole life and drives my willingness to continue learning big and small. As a person, I am communicative, solution-focused and non-judgmental with a streak of stubbornness that gives energy to persistently work towards my goals despite adversity and difficulties. I am a pure team player who often participates actively in discussions and enjoys contributing to the whole in both big and small. <br/> For me, system development is precisely teamwork where the knowledge and experience available is used to deliver a good product. In studies, work and family, I work structured and planned, but when I have the opportunity, I enjoy being spontaneous and testing alternative solutions. To my next colleagues, I can offer knowledge in , among other things, .NET, web, JavaScript and database. I also have some knowledge sometimes other Java, c++, Node.js, Internet of Things and game development. In addition, in addition to anchoring my current knowledge, I would like to learn new languages, tools and approaches.  I have a desire to make life more fun, easier and better with the help of digital products that are both efficient and user-friendly.",
+      "about": "Hi there! <br/> I am a curious and driven junior developer, looking for my new dream job. <br/>My curiosity, together with my commitment, is something that permeates my whole life and drives me to continue learning, big as small things. I am as a person communicative, solution-focused and non-judgmental with a tad of tenacity, giving me the energy to persistently work to achieve my goals, despite adversity and difficulties. I am a sincere team player that participates actively in discussions and enjoys contributing to the big picture. <br/> For me, system development is precisely teamwork where the resources in the team members are used to deliver a good product. In situations as studies, work, and family life, I have a structured and planned approach, but every now and then I can enjoy my spontaneous side and test alternative solutions. To my next colleagues, I can offer knowledge in i.e. , .NET, web, JavaScript, and databases. Additionally I have some basic knowledge in Java, c++, Node.js, Internet of Things and game development. In addition to anchoring my current knowledge, I would like to learn new languages, tools, and approaches. I have a dream of making life more fun, easier and better with the help of digital products that are both efficient and user-friendly.",
       "download": {
         "url": "",
         "comment": ""
@@ -244,15 +244,23 @@
       "contacts": [
         {
           "name": "LinkedIn",
-          "info": "https://linkedin.com/in/annica-alienus"
+          "info": "https://linkedin.com/in/annica-alienus",
+          "iconclass": "linkedin"
         },
         {
           "name": "mail",
-          "info": "annica@alienus.se"
+          "info": "annica@alienus.se",
+          "iconclass": "envelope"
         },
         {
           "name": "discord",
-          "info": "https://discordapp.com/users/alienarex#3358/"
+          "info": "https://discordapp.com/users/alienarex#3358/",
+          "iconclass": "discord"
+        },
+        {
+          "name": "github",
+          "info": "https://github.com/alienarex",
+          "iconclass": "github"
         }
       ],
       "education": {
