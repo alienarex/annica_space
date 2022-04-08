@@ -30,12 +30,6 @@
     <link rel="shortcut icon" href="img/favicon_tag.png">
 
 
-    <!-- Font awsome -->
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"> -->
-
-
-
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Raleway:400,300,700" rel="stylesheet" />
 
@@ -44,11 +38,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
     <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet" />
-
+    <link href="../css/style.css" rel="stylesheet" />
 </head>
 
 <body data-spy="scroll" data-offset="64" data-target="#section-topbar">
@@ -56,7 +49,8 @@
         <div id="topbar-inner">
             <div class="container">
                 <div class="row">
-                    <div class="dropdown">
+                    <div class="col-md-9 col-md-offset-1">
+
                         <ul id="nav" class="nav">
                             <li class="menu-item">
                                 <a class="smothscroll" href="#headerwrap" title="Om mig"><i class="fa fa-user"></i></a>
@@ -73,15 +67,23 @@
                         </ul>
                         <!--/ uL#nav -->
                     </div>
-                    <!-- /.dropdown -->
-
                     <div class="clear"></div>
+                    <div id="lang">
+                        <ul class="socials d-flex">
+                            <li>
+                                <a href="?lang=sv">Svenska</a>
+                            </li>
+                            <li>
+                                <a href="?lang=en">English</a>
+                            </li>
+                        </ul>
+                        <!-- .socials -->
+                    </div>
+                    <!-- #lang -->
                 </div>
                 <!--/.row -->
             </div>
             <!--/.container -->
-
-            <div class="clear"></div>
         </div>
         <!--/ #topbar-inner -->
     </div>
@@ -91,7 +93,6 @@
         <div class="container">
             <div class="row centered">
                 <div class="col-12">
-
                     <p class="quote-paragraph">
                         Programming isn't about what you know; it's about what you can figure out.
                         <br /> - Chris Pine
@@ -105,99 +106,123 @@
     </div>
     <!--/.#headerwrap -->
 
-    <?php
-    include 'php/main.php';
+    <main>
+        <?php include './php/main.php'; ?>
+        <?php
+        //Get data
+        $array = get_json();
+        // Variables
+        $headWork = 'Arbete';
+        $headEdu = 'Utbildning';
+        $attributeWork = 'work';
+        $attributeEdu = 'education';
+        $personName = $array["name"];
+        $personAbout = $array["about"];
+        $splitOnNum = 300;
+        $download = $array["download"];
 
-    $strJsonFileContents = file_get_contents("info.json");
-    $array = json_decode($strJsonFileContents, true);
+        // Diffferent classes on first article.
+        $setClassFirstArticle = ' col-lg-7 col-md-7 col-sm-12';
+        $setClassSecondArticle = ' col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-12';
+        $isFirstArticle = true;
 
-    // Variables
-    $headWork = 'Arbete';
-    $headEdu = 'Utbildning';
-    $attributeWork = 'work';
-    $attributeEdu = 'education';
-    $personName = $array["name"];
-    $personAbout = $array["about"];
-    $splitOnNum = 300;
+        get_html_section_intro($personName, $personAbout, $splitOnNum, $download);
+        get_html_start_section_for_articles_cv($attributeWork, $array["work"]["header"]);
 
-    // bootstrap classes differ between first and second article.
-    $setClassFirstArticle = ' col-lg-7 col-md-7 col-sm-12';
-    $setClassSecondArticle = ' col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-12';
-    $isFirstArticle = true;
-
-    get_html_section_intro($personName, $personAbout, $splitOnNum);
-    get_html_start_section_for_articles_cv($attributeWork, $array["work"]["header"]);
-
-    // End the section wrapping articles
-    $htmlEndSectionForArticles = '
+        // End the section wrapping articles
+        $htmlEndSectionForArticles = '
+                </div>
+                <!--/.row -->
             </div>
-            <!--/.row -->
-        </div>
-        <!--/.container -->
+            <!--/.container -->
         </section>
         ';
 
-    // Work section
-    foreach ($array["work"]["workExperiences"] as $value) {
-
-        $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
-        get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
-        $isFirstArticle = false;
-    }
-    echo $htmlEndSectionForArticles;
-
-    // Education section
-    get_html_start_section_for_articles_cv($attributeEdu, $array["education"]["header"]);
-
-    $isFirstArticle = true;
-    foreach ($array["education"]["educations"] as $value1) {
-
-        foreach ($value1["programs"] as $value) {
-
+        // WORK START
+        foreach ($array["work"]["workExperiences"] as $value) {
             $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
-            get_html_article($className, $value["title"][0], $value["title"][1], $value["description"], $value["organisation"],  $value["date"]);
+            get_html_article(
+                $className,
+                $value["title"][0],
+                $value["title"][1],
+                $value["description"],
+                $value["organization"],
+                $value["date"]
+            );
             $isFirstArticle = false;
         }
-    }
-    echo $htmlEndSectionForArticles;
+        echo $htmlEndSectionForArticles;
+
+        // WORK END
 
 
-    //TODO Create new function in main.php and move this.
-    // Skills section
-    echo sprintf('
-    <!--SKILLS DESCRIPTION -->
-    <div id="skillswrap" class="desc">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-12">
-                    <h3>%s</h3>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="col-lg-10 col-lg-offset-2 col-md-ofset-2 col-sm-offset-2 skills">
-                        ', $array["competence"]["header"]);
+        // EDUCATION START
+        get_html_start_section_for_articles_cv($attributeEdu, $array["education"]["header"]);
 
-    foreach ($array["competence"]["competences"] as $competence) {
+        $isFirstArticle = true;
+        foreach ($array["education"]["educations"] as $value1) {
 
-        echo sprintf(
-            '<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <h4>%s</h4>
-                <ul>',
-            $competence["title"]
-        );
-        foreach ($competence["skills"] as $val) {
-            echo sprintf('<li>%s</li>', $val["skill"]);
+            foreach ($value1["programs"] as $value) {
+
+
+                $className = ($isFirstArticle == true) ? $setClassFirstArticle : $setClassSecondArticle;
+
+                get_html_article(
+                    $className,
+                    $value["title"][0],
+                    $value["title"][1],
+                    $value["description"],
+                    $value["organization"],
+                    $value["date"]
+                );
+                $isFirstArticle = false;
+            }
         }
-        echo '</ul></div>';
-    }
-    echo '</div>
-    </div>
-    <!-- /.row -->
-    </div>
-    <!--/.container -->
-    </div>
-    <!--/ #skillswrap -->
-    </div>';
-    ?>
+
+        echo $htmlEndSectionForArticles;
+        // EDUCATION END
+
+        //TODO Create new function in main.php and move this.
+        // Prints the HTML for the skill section
+        echo sprintf('
+        <!--SKILLS DESCRIPTION -->
+        <div id="skillswrap" class="desc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-12">
+                        <h3>%s</h3>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-10 col-lg-offset-2 col-md-ofset-2 col-sm-offset-2 skills">
+                            ', $array["competence"]["header"]);
+
+        foreach ($array["competence"]["competences"] as $competence) {
+            echo sprintf('
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <h4>%s</h4>
+                    <ul>', $competence["title"]);
+
+            foreach ($competence["skills"] as $val) {
+                echo sprintf('
+                            <li>%s</li>
+                            ', $val["skill"]);
+            }
+            echo '
+                    </ul>
+                </div>';
+        }
+        echo '
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!--/.container -->
+                </div>
+                <!--/ #skillswrap -->
+                ';
+        ?>
+    </main>
 
     <section id="contact">
         <!--FOOTER DESCRIPTION -->
@@ -213,15 +238,15 @@
             <!--/.row -->
         </div>
         <!--/.container -->
-        <!--/ #footer -->
     </section>
+    <!--/ #footer -->
 
     <!-- JavaScript Libraries -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/php-mail-form/validate.js"></script>
-    <script src="lib/chart/chart.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/php-mail-form/validate.js"></script>
+    <script src="../lib/chart/chart.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>

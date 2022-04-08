@@ -1,5 +1,22 @@
 <?php
 
+/** Get json in selected language
+ * @return array $array Converted json 
+ */
+function get_json()
+{
+    $getLang = empty($_GET["lang"]) ? "sv" : $_GET["lang"]; //set default if empty
+
+    $strJsonFileContents = file_get_contents("info.json");
+    $array = json_decode($strJsonFileContents, true);
+
+    foreach ($array["versions"] as $value) {
+        if ($value["lang"] == $getLang) {
+            return $value;
+        }
+    }
+}
+
 /**
  * Prints the html for intro section. 
  * Splits the about string on the period after given index
@@ -8,7 +25,7 @@
  * @param int $splitStrAboutOn The index for spitting the string.
  * 
  */
-function get_html_section_intro(string $name, string $strAbout, int $splitStrAboutOn)
+function get_html_section_intro(string $name, string $strAbout, int $splitStrAboutOn, array $download = null)
 {
     $includePeriod = 1;
     $strPos = strpos($strAbout, '.', $splitStrAboutOn) + $includePeriod;
@@ -18,14 +35,14 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
         <div class="container">
             <div class="row">
                 <div id="presentation-profile" class="col-lg-2 col-md-2 col-sm-12">
-                    <img class ="profile-pic" src="img\profilPic.jpg" alt="profile picture" />
+                    <img class ="profile-pic" src="../img/profilPic.jpg" alt="profile picture" />
                     <h1>%s</h1>
-                   <a class ="download" href="docs/AnnicaAlienus.pdf" download ="AnnicaAlienus">Ladda ner cv</a>
+                   <a class ="download" href="%s" download ="Annica Alienus">%s</a>
                 </div>
                 <div class=" col-lg-7 col-md-7 col-sm-12">
                 <p class = "visible-text col-md-12 ">%s</p>
                     <p id="hidden-item-id" class="hidden-item col-md-12">%s</p>
-                    <p id = "visible-item-id" class="readmore col-md-12 "></p>
+                    <p id = "visible-item-id" class="readmore col-md-12 "> <i id = "readmore-icon" class ="fas fa-chevron-down"></i></p>
                     
                 </div>
             </div>
@@ -34,7 +51,7 @@ function get_html_section_intro(string $name, string $strAbout, int $splitStrAbo
         <!--/.container -->
     </div>
         <!--/ #intro -->
-</div>', $name, substr($strAbout, 0, $strPos), substr($strAbout, $strPos));
+</div>', $name, $download["url"], $download["comment"], substr($strAbout, 0, $strPos), substr($strAbout, $strPos));
 }
 
 /**
@@ -58,11 +75,11 @@ function get_html_start_section_for_articles_cv(string $sectionId, string $headV
  * @param string $firstheadValue Giving the name on the object
  * @param string $secondHeadValue HTML creates even if param has no value. Otherwise it messes up the layout.
  * @param string $description A description for the object
- * @param string $organisation 
+ * @param string $organization 
  * @param string $date
  *  
  */
-function get_html_article(string $className, string $firstheadValue, string $secondHeadValue = null, string $description, string $organisation, string $date)
+function get_html_article(string $className, string $firstheadValue, string $secondHeadValue = null, string $description, string $organization, string $date)
 {
     echo sprintf('
     <article>
@@ -75,5 +92,5 @@ function get_html_article(string $className, string $firstheadValue, string $sec
             <p class="edu-item">%s</p>
             <p class="edu-year">%s</p> 
         </div>
-    </article>', $className, $firstheadValue, $secondHeadValue, $description, $organisation, $date);
+    </article>', $className, $firstheadValue, $secondHeadValue, $description, $organization, $date);
 }

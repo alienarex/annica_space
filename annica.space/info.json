@@ -1,228 +1,473 @@
 {
-  "name": "Annica Alienus",
-  "about": "Hej där! <br/>Jag är en nyfiken och vetgirig utvecklare som söker efter mitt nya drömjobb. <br/>Min nyfikenhet är, tillsammans med mitt engagemang, något som genomsyrar hela mitt liv och driver min vilja att fortsätta lära i stort och smått. Som person är jag kommunikativ, lösningsfokuserad och icke-dömande med ett stråk av envishet som ger energi för att ihärdigt arbeta mot mina mål trots motgångar och svårigheter. Jag är en renodlad lagspelare som ofta deltar aktivt i diskussioner och trivs med att bidra till helheten i både stort och smått. <br/> För mig är systemutveckling just ett teamwork där de kunskaper och erfarenheter som finns används för att leverera en bra produkt. I studier, arbetet och familjen arbetar jag strukturerat och planerat, men när jag har möjlighet trivs jag med att vara spontan och testa alternativa lösningar. Till mina nästa kollegor kan jag erbjuda kunskaper i bland annat .NET, webb, JavaScript och databas. Jag har även vissa kunskaper ibland annat Java, c++, Node.js, Internet of Things och spelutveckling. Dessutom vill jag, utöver att förankra mina nuvarande kunskaper, gärna lära mig nya språk, verktyg och tillvägagångssätt.  Jag har en önskan att göra livet roligare, enklare och bättre med hjälp av digitala produkter som både är effektiva och användarvänliga.",
-  "contacts": [
+  "versions": [
     {
-      "name": "linkedin",
-      "info": "https://linkedin.com/in/annica-alienus"
+      "lang": "sv",
+      "name": "Annica Alienus",
+      "about": "Hej där! <br/>Jag är en nyfiken och vetgirig utvecklare som söker efter mitt nya drömjobb. <br/>Min nyfikenhet är, tillsammans med mitt engagemang, något som genomsyrar hela mitt liv och driver min vilja att fortsätta lära i stort och smått. Som person är jag kommunikativ, lösningsfokuserad och icke-dömande med ett stråk av envishet som ger energi för att ihärdigt arbeta mot mina mål trots motgångar och svårigheter. Jag är en renodlad lagspelare som ofta deltar aktivt i diskussioner och trivs med att bidra till helheten i både stort och smått. <br/> För mig är systemutveckling just ett teamwork där de kunskaper och erfarenheter som finns används för att leverera en bra produkt. I studier, arbetet och familjen arbetar jag strukturerat och planerat, men när jag har möjlighet trivs jag med att vara spontan och testa alternativa lösningar. Till mina nästa kollegor kan jag erbjuda kunskaper i bland annat .NET, webb, JavaScript och databas. Jag har även vissa kunskaper ibland annat Java, c++, Node.js, Internet of Things och spelutveckling. Dessutom vill jag, utöver att förankra mina nuvarande kunskaper, gärna lära mig nya språk, verktyg och tillvägagångssätt.  Jag har en önskan att göra livet roligare, enklare och bättre med hjälp av digitala produkter som både är effektiva och användarvänliga.",
+      "download": {
+        "url": "docs/AnnicaAlienus.pdf",
+        "comment": "Ladda ner"
+      },
+      "contacts": [
+        {
+          "name": "linkedin",
+          "info": "https://linkedin.com/in/annica-alienus"
+        },
+        {
+          "name": "mail",
+          "info": "annica@alienus.se"
+        },
+        {
+          "name": "discord",
+          "info": "https://discordapp.com/users/alienarex#3358/"
+        }
+      ],
+      "education": {
+        "header": "Utbildning",
+        "educations": [
+          {
+            "type": "Program",
+
+            "programs": [
+              {
+                "level": "University",
+                "title": ["Informatik", "Inriktining systemutveckling"],
+                "description": "Under studietiden designade och utvecklades it-lösningar utifrån ett användarcentrerat perspektiv, ofta tillsammans med andra studenter, där färdigheter i kommunikation och samarbete tillsammans med utvecklare, användare och beställare utvecklas. Dessutom genomfördes samtliga projekt distribuerat och gav god erfarenhet av systemutveckling i distribuerade team och många av de verktyg som användes i distribuerade projekt. Den tekniska kompetensen är bland annat inom webb, databaser och utvecklingsmiljöer som bland annat Visual Studio och VS Code,  tillsammans med tekniker som agila metoder, SQL, ASP.NET och C#. Upplägget gav kunskap och erfarenhet av hela stacken och en bred kompetens ett antal verktyg och metoder.",
+                "organization": "Mittuniversitetet",
+                "city": "Östersund",
+                "date": "2017 - 2021",
+                "points": "180 hp"
+              },
+              {
+                "level": "Gymnasie",
+                "title": ["Ekonomi", "inriktning ekonomiassistent"],
+                "description": "Gymnasiala kärnämnen inklusive företagsekonomi, redovisning och beskattning samt rättskunskap. Utbildningen gav goda teoretiska kunskaper i företagsredovisning, bokföring, skatter och regulatoriska regler.",
+                "organization": "Lernia",
+                "city": "Göteborg",
+                "date": "aug 2008 - juni 2010"
+              },
+              {
+                "level": "Gymnasie",
+                "title": ["Vård och omsorg", "Inriktning geriatrik"],
+                "description": "Inkluderade ämnen som handledning, etik, människan socialt och kulturellt, social omsorg, omvårdnad psykologi, arbetsmiljö och säkerhet m.fl. Studierna inkluderade även LIA som genomfördes på Sekelbo vård- och omsorgsboende i Göteborg i slutet av utbildningen.",
+                "organization": "Lernia",
+                "city": "Göteborg",
+                "date": "juni 2002 - nov 2003"
+              }
+            ]
+          },
+          {
+            "type": "Fristående kurser",
+            "programs": [
+              {
+                "level": "Univeristy",
+                "title": ["Tillämpad IoT", "Datavetenskap"],
+                "description": "Kursen ger kunskaper och erfarenhet av att använda mikrokontroller för att hantera olika typer av sensorer. Språket var micropython och hårdvara var Pycom LoPy4. Inkluderade även kunskap och erfarenhet av 3D-design för utskrift och hur dessa fungerar.",
+                "organization": "Linnéuniversitetet",
+                "city": "Distans",
+                "date": "juni - aug 2020",
+                "points": "7.5 hp"
+              },
+              {
+                "level": "Univeristy",
+                "title": ["Introduktion till spelutveckling", "Datavetenskap"],
+                "description": "Utbildningen omfattade planering, design och utförande av ett 3D-spel med C# och Unity game engine, där två av karaktärerna är en mycket enkel AI.",
+                "organization": "Linnéuniversitetet",
+                "city": "Distans",
+                "date": "juni - aug 2020",
+                "points": "7.5 hp"
+              },
+              {
+                "level": "Univeristy",
+                "title": ["Projektledning", "Maskinteknik"],
+                "description": "Gav grundläggande kunskaper i projektarbete, projektorganisering, projektledning, projektstyrning och projektekonomi. Kursen gav dessutom en förståelse för formering av projekt, val av lämplig projektmodell, projektets målformulering, planering, uppföljning och utvärdering. Inkluderade förståelse för både traditionell och agil projektarbete.",
+                "organization": "Mittuniversitetet",
+                "city": "Distans",
+                "date": "juni - aug 2018",
+                "points": "7.5 hp"
+              },
+              {
+                "level": "Univeristy",
+                "title": ["Företagsetik", "Företagsekonomi"],
+                "description": "Kursen gav teoretiska kunskaper kring etik och företagande med hjälp av skilda etiska modeller och olika sätt att skriva normativ företagsetik. Kursen gav en grundläggande färdighet att reflektera kring etiska frågeställningar både i företagande och i allmänhet.",
+                "organization": "Mittuniversitetet",
+                "city": "Distans",
+                "date": "juni - aug 2010",
+                "points": "7.5 hp"
+              }
+            ]
+          }
+        ]
+      },
+      "work": {
+        "header": "Arbete",
+        "workExperiences": [
+          {
+            "title": ["IT-konsult", "AstraZeneca"],
+            "description": "Planerar, designar och bygger relationsdatabas för att spåra dokument vid försäljning och förvärv av läkemedel. Hanterade större mängder data som bearbetades och importerades med SQL*Loader. Utöver ovanstående projektet ingick jag även i ett projekt av migrering av ett cms-system och analyserade, städade och mappade data.",
+            "organization": "Randstad",
+            "city": "Göteborg",
+            "date": "juni 2019- dec 2019"
+          },
+          {
+            "title": ["Ekonomiassistent", ""],
+            "description": "Hanterar löpande bokföring, enklare frågor kring skatteavdrag och momsfrågor samt andra administrativa uppgifter.",
+            "organization": "Alienus Visuals",
+            "city": "Göteborg",
+            "date": "2011"
+          },
+          {
+            "title": ["Undersköterska", ""],
+            "description": "Ambulerande timvikariat inom vård och omsorg samt habilitering/LSS. Arbetet innebar att ta hand om vårdtagare som bodde på särskilt boende efter behov, vilket kunde innebära personlig hygien, matstöd, förflyttning och medicinering efter ordination. Arbetet ställde höga krav på flexibilitet och ett pedagogiskt, metodisk och lågaffektivt arbetssätt.",
+            "organization": "Mölndals stad",
+            "city": "Mölndal",
+            "date": "2010-2011"
+          },
+          {
+            "title": ["Personlig assistent/samordnare", ""],
+            "description": "Utöver sedvanliga uppgifter för att stötta brukaren i vardagen ingår även planering av läkartider och andra viktiga möten, uppföljning av arbetsrutiner och planering av arbetspass.",
+            "organization": "Aleris Group AB",
+            "city": "Göteborg",
+            "date": "2009-2010"
+          },
+          {
+            "title": ["Undersköterska", "Gerås hus"],
+            "description": "Stöttar vårdtagare med allmän daglig livsföring som personlig hygien, äta och kommunicera. Andra vanligt förekommande arbetsuppgifter var förflyttning av vårdtagare, medicinutdelning samt dokumentation och avvikelserapporter.",
+            "organization": "Göteborgs stad",
+            "city": "Göteborg",
+            "date": "2008"
+          },
+          {
+            "title": ["Undersköterska", "Lovisagården"],
+            "description": "Arbetar med vårdtagare med olika typer av demenssjukdomar med stöttning i allmän daglig livsföring som personlig hygien, mat, fysiskt aktivering och kommunikation. Utöver sedvanliga uppgifter inom äldreomsorgen ingick även konflikthantering och lågaffektivt bemötande.",
+            "organization": "Lovisa gården vård AB",
+            "city": "Stockholm",
+            "date": "2008"
+          },
+          {
+            "title": ["Undersköterska", ""],
+            "description": "Vård och omsorg av äldre med olika typer av problematik och behov. Sedvanliga arbetsuppgifter såsom personlig hygien, äta och kommunicera samt förflyttningar, såromläggningar, medicinutdelning samt vård i livets slutskede. Arbetet innefattar även dokumentation som avvike- och fallrapporter samt uppföljning av planeringar.",
+            "organization": "Göteborgs stad",
+            "city": "Göteborg",
+            "date": "2003-2007"
+          }
+        ]
+      },
+      "competence": {
+        "header": "Översikt",
+        "competences": [
+          {
+            "title": "Språk",
+            "skills": [
+              { "skill": "C#" },
+              { "skill": "JavaScript" },
+              { "skill": "HTML/HTML5" },
+              { "skill": "CSS" },
+              { "skill": "SQL" },
+              { "skill": "XML, XSD, DTD" },
+              { "skill": "Micropython" },
+              { "skill": "PL/SQL" },
+              { "skill": "c++" },
+              { "skill": "JSON" },
+              { "skill": "XAML" }
+            ]
+          },
+          {
+            "title": "Projektarbete",
+            "skills": [
+              { "skill": "SCRUM / Agile" },
+              { "skill": "Projektplanering" },
+              { "skill": "Kravhantering" },
+              { "skill": "Förstudie" },
+              { "skill": "User stories" },
+              { "skill": "Backlog" },
+              { "skill": "Användartest" }
+            ]
+          },
+
+          {
+            "title": "Övrigt",
+            "skills": [
+              { "skill": "Enhetstest" },
+              { "skill": "Unity game engine" },
+              { "skill": "MVC" },
+              { "skill": "ASP.Net" },
+              { "skill": "Entity framework" },
+              { "skill": "SQL*Loader" },
+              { "skill": "Versionshantering" }
+            ]
+          },
+          {
+            "title": "Databaser",
+            "skills": [
+              { "skill": "PostgreSQL" },
+              { "skill": "Oracle" },
+              { "skill": "MySQL" }
+            ]
+          }
+        ]
+      },
+      "portpolio": {
+        "header": "Projekt",
+        "projects": [
+          {
+            "projectname": "SpiderFeed",
+            "info": "Spelet går ut på att hålla sig vid liv så länge som möjligt genom att äta människor. Ju längre man hållit sig vid liv, desto färre människor genereras.",
+            "link": " https://github.com/alienarex/SpiderFeed.git"
+          },
+          {
+            "projectname": "Tv Tablå - XML.",
+            "info": "Tv tablå i XHTML med XSL, DTD. Även logga i SVG",
+            "link": "https://github.com/alienarex/xml_final_project.git"
+          },
+          {
+            "projectname": "SalamiTV",
+            "info": "Tvtablå i MVC, ASP.Net Identity och data från egen databas. Webbplatsen och servern har tagits ner och den kan inte längre ses på live i sin helhet på webben. Källkoden finns tillgånglig på github.",
+            "link": "https://github.com/alienarex/SalamiTV.git"
+          },
+          {
+            "projectname": "Fukt- och temperaturövervakning",
+            "info": "IoT projekt i MicroPython med Node.js och mikrokontroller. En av tyngdpunkterna i kursen var behovet av samarbete och dela varandras kunskap och projektresultatet redovisades med publiceringen av en publik tutorial på hackmd.io.",
+            "link": "hackmd.io/W4BD7bZNQw6ScU0zW_Q0tg#Humidity-and-temperature-monitoring"
+          }
+        ]
+      }
     },
     {
-      "name": "mail",
-      "info": "annica@alienus.se"
-    },
-    {
-      "name": "discord",
-      "info": "https://discordapp.com/users/alienarex#3358/"
+      "lang": "en",
+      "name": "Annica Alienus",
+      "about": "Hello there! <br/>I am a curious and curious developer looking for my new dream job. <br/>My curiosity, together with my commitment, is something that permeates my whole life and drives my willingness to continue learning big and small. As a person, I am communicative, solution-focused and non-judgmental with a streak of stubbornness that gives energy to persistently work towards my goals despite adversity and difficulties. I am a pure team player who often participates actively in discussions and enjoys contributing to the whole in both big and small. <br/> For me, system development is precisely teamwork where the knowledge and experience available is used to deliver a good product. In studies, work and family, I work structured and planned, but when I have the opportunity, I enjoy being spontaneous and testing alternative solutions. To my next colleagues, I can offer knowledge in , among other things, .NET, web, JavaScript and database. I also have some knowledge sometimes other Java, c++, Node.js, Internet of Things and game development. In addition, in addition to anchoring my current knowledge, I would like to learn new languages, tools and approaches.  I have a desire to make life more fun, easier and better with the help of digital products that are both efficient and user-friendly.",
+      "download": {
+        "url": "",
+        "comment": ""
+      },
+      "contacts": [
+        {
+          "name": "LinkedIn",
+          "info": "https://linkedin.com/in/annica-alienus"
+        },
+        {
+          "name": "mail",
+          "info": "annica@alienus.se"
+        },
+        {
+          "name": "discord",
+          "info": "https://discordapp.com/users/alienarex#3358/"
+        }
+      ],
+      "education": {
+        "header": "Education",
+        "educations": [
+          {
+            "type": "Program",
+
+            "programs": [
+              {
+                "level": "University",
+                "title": ["Informatic", "With focus system development"],
+                "description": "During the study period, IT solutions were designed and developed from a user-centric perspective, often together with other students, where skills in communication and collaboration together with developers, users and clients are developed. In addition, all projects were carried out distributed and provided good experience of system development in distributed teams and many of the tools used in distributed projects. The technical expertise includes web, databases and development environments such as Visual Studio and VS Code, together with techniques such as agile methods, SQL, ASP.NET and C#. The setup provided knowledge and experience of the entire stack and a broad competence a number of tools and methods.",
+                "organization": "Mid Sweden University",
+                "city": "Östersund",
+                "date": "2017 - 2021",
+                "points": "180 hp"
+              },
+              {
+                "level": "High school",
+                "title": ["Finance", "focus financial assistant"],
+                "description": "Upper secondary core subjects including business administration, accounting and taxation, and legal knowledge. The training provided good theoretical knowledge in corporate accounting, accounting, taxes and regulatory rules.",
+                "organization": "Lernia",
+                "city": "Gothenburg",
+                "date": "aug 2008 - june 2010"
+              },
+              {
+                "level": "High school",
+                "title": ["Health and social care", "Targeting geriatrics"],
+                "description": "Included topics such as supervision, ethics, human social and cultural, social care, nursing psychology, work environment and safety, etc. The studies also included LIA, which was conducted at Sekelbo nursing home in Gothenburg at the end of the education.",
+                "organization": "Lernia",
+                "city": "Gothenburg",
+                "date": "June 2002 - Nov 2003"
+              }
+            ]
+          },
+          {
+            "type": "Independent courses",
+            "programs": [
+              {
+                "level": "University",
+                "title": ["Applied IoT", "Computer Science"],
+                "description": "The course provides knowledge and experience of using microcontrollers to handle different types of sensors. The language was micropython and the hardware was Pycom LoPy4. Also included knowledge and experience of 3D design for printing and how these work.",
+                "organization": "Linnéuniversitetet",
+                "city": "Distance",
+                "date": "june - aug 2020",
+                "points": "7.5 hp"
+              },
+              {
+                "level": "University",
+                "title": [
+                  "Introduction to Game Development",
+                  "Computer Science"
+                ],
+                "description": "The education involved planning, design and program a 3D game with C# and Unity game engine, where two of the characters are a very simple AI.",
+                "organization": "Linnéuniversitetet",
+                "city": "Distance",
+                "date": "june - aug 2020",
+                "points": "7.5 hp"
+              },
+              {
+                "level": "University",
+                "title": ["Project Management", "Mechanical Engineering"],
+                "description": "Provided basic knowledge in project work, project organization, project management, project management and project economics. The course also provided an understanding of the formation of projects, the choice of the appropriate project model, the project's goal formulation, planning, follow-up and evaluation. Included understanding of both traditional and agile project work.",
+                "organization": "Mid Sweden University",
+                "city": "Distance",
+                "date": "june - aug 2018",
+                "points": "7.5 hp"
+              },
+              {
+                "level": "University",
+                "title": ["Corporate Ethics", "Business Administration"],
+                "description": "The course provided theoretical knowledge of ethics and entrepreneurship using different ethical models and different ways of writing normative corporate ethics. The course provided a basic skill to reflect on ethical issues both in entrepreneurship and in general.",
+                "organization": "Mid Sweden University",
+                "city": "Distance",
+                "date": "june - aug 2010",
+                "points": "7.5 hp"
+              }
+            ]
+          }
+        ]
+      },
+      "work": {
+        "header": "Work",
+        "workExperiences": [
+          {
+            "title": ["IT-consult", "AstraZeneca"],
+            "description": "Plans, designs and builds relational database to track documents in the sale and acquisition of pharmaceuticals. Managed larger amounts of data that were processed and imported with SQL*Loader. In addition to the above project, I was also part of a project of migration of a cms system and analyzed, cleaned and mapped data.",
+            "organization": "Randstad",
+            "city": "Gothenburg",
+            "date": "June 2019- Dec 2019"
+          },
+          {
+            "title": ["Accounting", ""],
+            "description": "Handles bookkeeping, uncomplicated tax deductions and VAT issues, and other administrative tasks.",
+            "organization": "Alienus Visuals",
+            "city": "Gothenburg",
+            "date": "2011"
+          },
+          {
+            "title": ["Associate nurse", ""],
+            "description": "Itinerant hourly vicarage in health and social care and habilitation/LSS. The work involved caring for caretakers who lived in special accommodation as needed, which could involve personal hygiene, food support, transfer and medication after prescription. The work placed high demands on flexibility and an educational, methodical and low-impact approach.",
+            "organization": "Mölndal Municipality",
+            "city": "Mölndal",
+            "date": "2010-2011"
+          },
+          {
+            "title": ["Personal Assistant/Coordinator", ""],
+            "description": "In addition to customary tasks to support the user in everyday life, planning of doctor's appointments and other important meetings, follow-up of work routines and planning shifts is also included.",
+            "organization": "Aleris Group AB",
+            "city": "Gothenburg",
+            "date": "2009-2010"
+          },
+          {
+            "title": ["Associate  nurse", "Gerås hus"],
+            "description": "Supports care recipients with general daily lifestyles such as personal hygiene, eating and communicating. Other common tasks were the transfer of patients, the distribution of medicine and documentation and deviation reports.",
+            "organization": "Gothenburg Municipality",
+            "city": "Gothenburg",
+            "date": "2008"
+          },
+          {
+            "title": ["Associate nurse", "Lovisagården"],
+            "description": "Works with patients with different types of dementia with support in general daily lifestyle such as personal hygiene, food, physical activation and communication. In addition to the usual tasks in elderly care, conflict management and low-impact treatment were also included.",
+            "organization": "Lovisa gården vård AB",
+            "city": "Stockholm",
+            "date": "2008"
+          },
+          {
+            "title": ["Associate nurse", ""],
+            "description": "Care and care of the elderly with different types of problems and needs. Customary tasks such as personal hygiene, eating and communicating as well as transfers, wound diversions, medication distribution and end-of-life care. The work also includes documentation such as deviation and case reports and follow-up of plans.",
+            "organization": "Gothenburg Municipality",
+            "city": "Gothenburg",
+            "date": "2003-2007"
+          }
+        ]
+      },
+      "competence": {
+        "header": "Overview",
+        "competences": [
+          {
+            "title": "Language",
+            "skills": [
+              { "skill": "C#" },
+              { "skill": "JavaScript" },
+              { "skill": "HTML/HTML5" },
+              { "skill": "CSS" },
+              { "skill": "SQL" },
+              { "skill": "XML, XSD, DTD" },
+              { "skill": "Micropython" },
+              { "skill": "PL/SQL" },
+              { "skill": "c++" },
+              { "skill": "JSON" },
+              { "skill": "XAML" }
+            ]
+          },
+          {
+            "title": "Projects",
+            "skills": [
+              { "skill": "SCRUM / Agile" },
+              { "skill": "Project planning" },
+              { "skill": "Requirements" },
+              { "skill": "pre-study" },
+              { "skill": "User stories" },
+              { "skill": "Backlog" },
+              { "skill": "usability test" }
+            ]
+          },
+
+          {
+            "title": "Misc",
+            "skills": [
+              { "skill": "Unit test" },
+              { "skill": "Unity game engine" },
+              { "skill": "MVC" },
+              { "skill": "ASP.Net" },
+              { "skill": "Entity framework" },
+              { "skill": "SQL*Loader" },
+              { "skill": "Versionshantering" }
+            ]
+          },
+          {
+            "title": "Databases",
+            "skills": [
+              { "skill": "PostgreSQL" },
+              { "skill": "Oracle" },
+              { "skill": "MySQL" }
+            ]
+          }
+        ]
+      },
+      "portpolio": {
+        "header": "Project",
+        "projects": [
+          {
+            "projectname": "SpiderFeed",
+            "info": "The game is about staying alive for as long as possible by eating people. The longer you stay alive, the fewer people are generated.",
+            "link": " https://github.com/alienarex/SpiderFeed.git"
+          },
+          {
+            "projectname": "Tv guide - XML.",
+            "info": "Tv tableau in XHTML with XSL, DTD. Also log in SVG",
+            "link": "https://github.com/alienarex/xml_final_project.git"
+          },
+          {
+            "projectname": "SalamiTV",
+            "info": "Tvtablå in MVC, ASP.Net Identity and data from own database. The website and server have been taken down and it can no longer be viewed live in its entirety on the web. The source code is available on GitHub.",
+            "link": "https://github.com/alienarex/SalamiTV.git"
+          },
+          {
+            "projectname": "Humidity and temperature monitoring",
+            "info": "IoT project in MicroPython with Node.js and microcontrollers. One of the main focuses of the course was the need for collaboration and sharing each other's knowledge and the project results were reported with the publication of an audience tutorial on hackmd.io.",
+            "link": "hackmd.io/W4BD7bZNQw6ScU0zW_Q0tg#Humidity-and-temperature-monitoring"
+          }
+        ]
+      }
     }
-  ],
-  "education": {
-    "header": "Utbildning",
-    "educations": [
-      {
-        "type": "Program",
-
-        "programs": [
-          {
-            "level": "University",
-            "title": ["Informatik", "Inriktining systemutveckling"],
-            "description": "Under studietiden designade och utvecklades it-lösningar utifrån ett användarcentrerat perspektiv, ofta tillsammans med andra studenter, där färdigheter i kommunikation och samarbete tillsammans med utvecklare, användare och beställare utvecklas. Dessutom genomfördes samtliga projekt distribuerat och gav god erfarenhet av systemutveckling i distribuerade team och många av de verktyg som användes i distribuerade projekt. Den tekniska kompetensen är bland annat inom webb, databaser och utvecklingsmiljöer som bland annat Visual Studio och VS Code,  tillsammans med tekniker som agila metoder, SQL, ASP.NET och C#. Upplägget gav kunskap och erfarenhet av hela stacken och en bred kompetens ett antal verktyg och metoder.",
-            "organisation": "Mittuniversitetet",
-            "city": "Östersund",
-            "date": "2017 - 2021",
-            "points": "180 hp"
-          },
-          {
-            "level": "Gymnasie",
-            "title": ["Ekonomi", "inriktning ekonomiassistent"],
-            "description": "Gymnasiala kärnämnen inklusive företagsekonomi, redovisning och beskattning samt rättskunskap. Utbildningen gav goda teoretiska kunskaper i företagsredovisning, bokföring, skatter och regulatoriska regler.",
-            "organisation": "Lernia",
-            "city": "Göteborg",
-            "date": "aug 2008 - juni 2010"
-          },
-          {
-            "level": "Gymnasie",
-            "title": ["Vård och omsorg", "Inriktning geriatrik"],
-            "description": "Inkluderade ämnen som handledning, etik, människan socialt och kulturellt, social omsorg, omvårdnad psykologi, arbetsmiljö och säkerhet m.fl. Studierna inkluderade även LIA som genomfördes på Sekelbo vård- och omsorgsboende i Göteborg i slutet av utbildningen.",
-            "organisation": "Lernia",
-            "city": "Göteborg",
-            "date": "juni 2002 - nov 2003"
-          }
-        ]
-      },
-      {
-        "type": "Fristående kurser",
-        "programs": [
-          {
-            "level": "Univeristy",
-            "title": ["Tillämpad IoT", "Datavetenskap"],
-            "description": "Kursen ger kunskaper och erfarenhet av att använda mikrokontroller för att hantera olika typer av sensorer. Språket var micropython och hårdvara var Pycom LoPy4. Inkluderade även kunskap och erfarenhet av 3D-design för utskrift och hur dessa fungerar.",
-            "organisation": "Linnéuniversitetet",
-            "city": "Distans",
-            "date": "juni - aug 2020",
-            "points": "7.5 hp"
-          },
-          {
-            "level": "Univeristy",
-            "title": ["Introduktion till spelutveckling", "Datavetenskap"],
-            "description": "Utbildningen omfattade planering, design och utförande av ett 3D-spel med C# och Unity game engine, där två av karaktärerna är en mycket enkel AI.",
-            "organisation": "Linnéuniversitetet",
-            "city": "Distans",
-            "date": "juni - aug 2020",
-            "points": "7.5 hp"
-          },
-          {
-            "level": "Univeristy",
-            "title": ["Projektledning", "Maskinteknik"],
-            "description": "Gav grundläggande kunskaper i projektarbete, projektorganisering, projektledning, projektstyrning och projektekonomi. Kursen gav dessutom en förståelse för formering av projekt, val av lämplig projektmodell, projektets målformulering, planering, uppföljning och utvärdering. Inkluderade förståelse för både traditionell och agil projektarbete.",
-            "organisation": "Mittuniversitetet",
-            "city": "Distans",
-            "date": "juni - aug 2018",
-            "points": "7.5 hp"
-          },
-          {
-            "level": "Univeristy",
-            "title": ["Företagsetik", "Företagsekonomi"],
-            "description": "Kursen gav teoretiska kunskaper kring etik och företagande med hjälp av skilda etiska modeller och olika sätt att skriva normativ företagsetik. Kursen gav en grundläggande färdighet att reflektera kring etiska frågeställningar både i företagande och i allmänhet.",
-            "organisation": "Mittuniversitetet",
-            "city": "Distans",
-            "date": "juni - aug 2010",
-            "points": "7.5 hp"
-          }
-        ]
-      }
-    ]
-  },
-  "work": {
-    "header": "Arbete",
-    "workExperiences": [
-      {
-        "title": ["IT-konsult", "AstraZeneca"],
-        "description": "Planerar, designar och bygger relationsdatabas för att spåra dokument vid försäljning och förvärv av läkemedel. Hanterade större mängder data som bearbetades och importerades med SQL*Loader. Utöver ovanstående projektet ingick jag även i ett projekt av migrering av ett cms-system och analyserade, städade och mappade data.",
-        "organisation": "Randstad",
-        "city": "Göteborg",
-        "date": "juni 2019- dec 2019"
-      },
-      {
-        "title": ["Ekonomiassistent", ""],
-        "description": "Hanterar löpande bokföring, enklare frågor kring skatteavdrag och momsfrågor samt andra administrativa uppgifter.",
-        "organisation": "Alienus Visuals",
-        "city": "Göteborg",
-        "date": "2011"
-      },
-      {
-        "title": ["Undersköterska", ""],
-        "description": "Ambulerande timvikariat inom vård och omsorg samt habilitering/LSS. Arbetet innebar att ta hand om vårdtagare som bodde på särskilt boende efter behov, vilket kunde innebära personlig hygien, matstöd, förflyttning och medicinering efter ordination. Arbetet ställde höga krav på flexibilitet och ett pedagogiskt, metodisk och lågaffektivt arbetssätt.",
-        "organisation": "Mölndals stad",
-        "city": "Mölndal",
-        "date": "2010-2011"
-      },
-      {
-        "title": ["Personlig assistent/samordnare", ""],
-        "description": "Utöver sedvanliga uppgifter för att stötta brukaren i vardagen ingår även planering av läkartider och andra viktiga möten, uppföljning av arbetsrutiner och planering av arbetspass.",
-        "organisation": "Aleris Group AB",
-        "city": "Göteborg",
-        "date": "2009-2010"
-      },
-      {
-        "title": ["Undersköterska", "Gerås hus"],
-        "description": "Stöttar vårdtagare med allmän daglig livsföring som personlig hygien, äta och kommunicera. Andra vanligt förekommande arbetsuppgifter var förflyttning av vårdtagare, medicinutdelning samt dokumentation och avvikelserapporter.",
-        "organisation": "Göteborgs stad",
-        "city": "Göteborg",
-        "date": "2008"
-      },
-      {
-        "title": ["Undersköterska", "Lovisagården"],
-        "description": "Arbetar med vårdtagare med olika typer av demenssjukdomar med stöttning i allmän daglig livsföring som personlig hygien, mat, fysiskt aktivering och kommunikation. Utöver sedvanliga uppgifter inom äldreomsorgen ingick även konflikthantering och lågaffektivt bemötande.",
-        "organisation": "Lovisa gården vård AB",
-        "city": "Stockholm",
-        "date": "2008"
-      },
-      {
-        "title": ["Undersköterska", ""],
-        "description": "Vård och omsorg av äldre med olika typer av problematik och behov. Sedvanliga arbetsuppgifter såsom personlig hygien, äta och kommunicera samt förflyttningar, såromläggningar, medicinutdelning samt vård i livets slutskede. Arbetet innefattar även dokumentation som avvike- och fallrapporter samt uppföljning av planeringar.",
-        "organisation": "Göteborgs stad",
-        "city": "Göteborg",
-        "date": "2003-2007"
-      }
-    ]
-  },
-  "competence": {
-    "header": "Översikt",
-    "competences": [
-      {
-        "title": "Språk",
-        "skills": [
-          { "skill": "C#" },
-          { "skill": "JavaScript" },
-          { "skill": "HTML/HTML5" },
-          { "skill": "CSS" },
-          { "skill": "SQL" },
-          { "skill": "XML, XSD, DTD" },
-          { "skill": "Micropython" },
-          { "skill": "PL/SQL" },
-          { "skill": "c++" },
-          { "skill": "JSON" },
-          { "skill": "XAML" }
-        ]
-      },
-      {
-        "title": "Projektarbete",
-        "skills": [
-          { "skill": "SCRUM / Agile" },
-          { "skill": "Projektplanering" },
-          { "skill": "Kravhantering" },
-          { "skill": "Förstudie" },
-          { "skill": "User stories" },
-          { "skill": "Backlog" },
-          { "skill": "Användartest" }
-        ]
-      },
-
-      {
-        "title": "Övrigt",
-        "skills": [
-          { "skill": "Enhetstest" },
-          { "skill": "Unity game engine" },
-          { "skill": "MVC" },
-          { "skill": "ASP.Net" },
-          { "skill": "Entity framework" },
-          { "skill": "SQL*Loader" },
-          { "skill": "Versionshantering" }
-        ]
-      },
-      {
-        "title": "Databaser",
-        "skills": [
-          { "skill": "PostgreSQL" },
-          { "skill": "Oracle" },
-          { "skill": "MySQL" }
-        ]
-      }
-    ]
-  },
-  "portpolio": {
-    "header": "Projekt",
-    "projects": [
-      {
-        "projectname": "SpiderFeed",
-        "info": "Spelet går ut på att hålla sig vid liv så länge som möjligt genom att äta människor. Ju längre man hållit sig vid liv, desto färre människor genereras.",
-        "link": " https://github.com/alienarex/SpiderFeed.git"
-      },
-      {
-        "projectname": "Tv Tablå - XML.",
-        "info": "Tv tablå i XHTML med XSL, DTD. Även logga i SVG",
-        "link": "https://github.com/alienarex/xml_final_project.git"
-      },
-      {
-        "projectname": "SalamiTV",
-        "info": "Tvtablå i MVC, ASP.Net Identity och data från egen databas. Webbplatsen och servern har tagits ner och den kan inte längre ses på live i sin helhet på webben. Källkoden finns tillgånglig på github.",
-        "link": "https://github.com/alienarex/SalamiTV.git"
-      },
-      {
-        "projectname": "Fukt- och temperaturövervakning",
-        "info": "IoT projekt i MicroPython med Node.js och mikrokontroller. En av tyngdpunkterna i kursen var behovet av samarbete och dela varandras kunskap och projektresultatet redovisades med publiceringen av en publik tutorial på hackmd.io.",
-        "link": "hackmd.io/W4BD7bZNQw6ScU0zW_Q0tg#Humidity-and-temperature-monitoring"
-      }
-    ]
-  }
+  ]
 }
