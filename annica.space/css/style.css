@@ -316,9 +316,15 @@ ul.socials li.linkedin::before {
     height: 200px;
     width: auto;
   }
+  #lang .socials {
+    margin-right: auto;
+  }
 }
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 767px) {
+  #section-topbar ul#nav > li {
+    min-width: 50%;
+  }
   #lang {
     margin-top: 0;
   }
