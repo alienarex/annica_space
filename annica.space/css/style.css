@@ -102,6 +102,7 @@ By default, top navigation bar uses "fixed" position
 
 #section-topbar ul#nav {
   display: inline-block;
+  inline-size: max-content;
   position: relative;
   margin: 0;
   padding: 0;
@@ -119,7 +120,7 @@ By default, top navigation bar uses "fixed" position
   padding: 18px 20px 18px 20px;
   border-left: 1px solid #2c3e50;
 }
-#section-topbar ul#nav a:hover {
+#section-topbar ul.nav a:hover {
   background: #44bbaa;
 }
 #section-topbar ul#nav .active a {
@@ -131,9 +132,6 @@ By default, top navigation bar uses "fixed" position
 #lang {
   margin-top: 1em;
   color: #fff;
-}
-#lang .socials {
-  flex-wrap: nowrap;
 }
 /*---------------------------------------------------
 SECTION WRAPS
@@ -177,8 +175,8 @@ SECTION WRAPS
 }
 .profile-pic {
   display: none;
-  height: 0;
-  width: 0;
+  height: auto;
+  width: 50%;
 }
 .readmore {
   font-weight: 500;
@@ -322,23 +320,21 @@ ul.socials li.linkedin::before {
 }
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 767px) {
-  #section-topbar ul#nav > li {
-    min-width: 50%;
-  }
   #lang {
     margin-top: 0;
   }
   #lang .socials {
-    display: flex;
+    /*! display: flex; */
     flex-wrap: wrap;
     height: 4em;
     margin-top: 0;
+    margin-left: 2em;
   }
 
   .profile-pic {
     display: flex;
     height: auto;
-    width: 30%;
+    width: 22%;
     float: right;
     padding: inherit;
   }

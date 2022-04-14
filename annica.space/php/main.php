@@ -5,7 +5,7 @@
  */
 function get_json()
 {
-    $getLang = empty($_GET["lang"]) ? "sv" : $_GET["lang"]; //set default if empty
+    $getLang = empty($_GET["lang"]) ? "sv" : $_GET["lang"]; //set default if em
 
     $strJsonFileContents = file_get_contents("info.json");
     $array = json_decode($strJsonFileContents, true);

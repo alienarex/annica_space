@@ -69,12 +69,12 @@
                     </div>
                     <div class="clear"></div>
                     <div class="col-xs-3 col-md-2" id="lang">
-                        <ul class="socials d-flex">
+                        <ul class="nav d-flex">
                             <li>
-                                <a href="?lang=sv">Svenska</a>
+                                <a href="?lang=sv">Sv</a>
                             </li>
                             <li>
-                                <a href="?lang=en">English</a>
+                                <a href="?lang=en">Eng</a>
                             </li>
                         </ul>
                         <!-- .socials -->
