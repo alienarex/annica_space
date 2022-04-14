@@ -3,8 +3,9 @@
 
 <head>
     <title>Annica Alienus | Kreativ utvecklare</title>
-    <!-- Freddo start -->
 
+    <!-- Site verification -->
+    <meta name="google-site-verification" content="Mu3qd4RdZefoN4bs8BFzRoPS6mOkWDt2j8xvgChyNtI" />
     <!-- Facebook, LinkedIn -->
     <meta property="og:title" content="Annica Alienus | Kreativ utvecklare">
     <meta property="og:description" content="Jag är en engagerad, nyfiken och vetgirig utvecklare som söker efter mitt nya drömjobb.">
